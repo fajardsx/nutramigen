@@ -1,0 +1,63 @@
+/*FONTS*/
+@font-face {
+  font-family: "ITCAvantGradePro_MD";
+  src: local("ITCAvantGradePro_MD"), url(../fonts/ITCAvantGardePro-Md.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro";
+  src: local("ITCAvantGradePro_DEMI"), url(../fonts/ITCAvantGardePro-Demi.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro";
+  src: local("ITCAvantGradePro_EXTRALIGHT"),
+    url(../fonts/ITCAvantGardePro-XLt.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro_BOLD";
+  font-weight: 900;
+  src: local(""), url(../fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+}
+.Home-container {
+  display: flex;
+}
+.observer-demo {
+  padding: 20px 10px;
+}
+.Box-Demo {
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+
+  border-radius: 0;
+  border: 1px solid black;
+  position: relative;
+  opacity: 1;
+  align-items: center;
+  height: 500px;
+}
+.TitlePage1 {
+  width: 400px;
+  /* height: 200px; */
+  position: relative;
+  opacity: 1;
+}
+
+#TitleText {
+  text-align: "center";
+}
+.titlestyle {
+  font-family: ITCAvantGradePro_BOLD;
+  text-align: center;
+}
+.content1style {
+  font-family: ITCAvantGradePro_MD;
+}
+.contentRefstyle {
+  font-family: ITCAvantGradePro_MD;
+  font-size: x-small;
+}
+.contentRefstyle ol li {
+  font-family: ITCAvantGradePro_MD;
+  font-size: x-small;
+}

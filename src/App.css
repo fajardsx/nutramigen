@@ -1,7 +1,29 @@
+/*FONTS*/
+@font-face {
+  font-family: "ITCAvantGradePro";
+  src: local("ITCAvantGradePro_MD"), url(./fonts/ITCAvantGardePro-Md.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro";
+  src: local("ITCAvantGradePro_DEMI"), url(./fonts/ITCAvantGardePro-Demi.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro";
+  src: local("ITCAvantGradePro_EXTRALIGHT"),
+    url(./fonts/ITCAvantGardePro-XLt.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro_BOLD";
+  font-weight: 900;
+  src: local(""), url(./fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+}
+
 .App {
   text-align: center;
 }
-
+div {
+  white-space: pre-wrap;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,25 +36,56 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #502c0d;
+  font-family: ITCAvantGradePro_MD, Arial, serif;
+  max-height: 100vh;
+  max-width: 100vw;
+  background-image: url("./assets/bg.png");
+  position: fixed;
+  background-size: cover;
+  background-position: center;
 }
+.App-Container {
+  width: auto;
+  height: 100vh;
 
+  overflow: hidden;
+}
 .App-link {
   color: #61dafb;
 }
+.switch-wrapper {
+  position: relative;
+}
 
+.switch-wrapper > div {
+  position: absolute;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* MOBILE ViEW */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .App-header {
+    width: 1024px;
+  }
+  .App-Container {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .App-Container {
+    width: auto;
   }
 }

@@ -1,0 +1,78 @@
+.page1titles {
+  height: 100px;
+  text-align: left;
+  width: 1000px;
+  background-image: url("../../assets/bgtitlepage1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.page1Box {
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+
+  border-radius: 0;
+  position: relative;
+  opacity: 1;
+  align-items: center;
+}
+.bayihex {
+  z-index: 1;
+  height: 30vh;
+  width: 29vh;
+  background-image: url("../../assets/hexapage1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.Titlebayi {
+  width: auto;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  opacity: 1;
+  text-align: center;
+}
+.titlebg {
+  width: 1000px;
+  background-image: url("../../assets/bgtitlepage1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+/* MOBILE ViEW */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .page1titles {
+    width: 468px;
+    height: 100px;
+  }
+  .page1Box {
+    top: 30vh;
+    left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page1titles {
+    width: 426px;
+    height: 100px;
+  }
+  .page1Box {
+    top: 30vh;
+    left: 0;
+    justify-content: normal;
+  }
+}

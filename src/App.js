@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { AsyncStorage } from "AsyncStorage";
+import "./App.css";
+import RouteApp from "./component/Route";
+import { Container } from "react-bootstrap";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    this.resetDefault();
+  }
+  async resetDefault() {
+    await AsyncStorage.setItem("PAGE", 0);
+  }
+  render() {
+    return (
+      <Container style={{ paddingLeft: 0, paddingRight: 0, marginLeft: 0, marginRight: 0 }}>
+        <BrowserRouter>
+          <RouteApp />
+        </BrowserRouter>
+      </Container>
+    );
+  }
 }
 
 export default App;
