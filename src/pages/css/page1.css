@@ -1,5 +1,5 @@
 .page1titles {
-  width: 500px;
+  width: 520px;
   height: 100px;
   text-align: left;
   font-size: calc(12px + 2vmin);
@@ -8,7 +8,7 @@
 .page1Box {
   display: flex;
   flex-direction: row;
-  top: 0;
+  top: 30vh;
   left: 0;
 
   border-radius: 0;
@@ -80,7 +80,12 @@
 @media only screen and (max-width: 768px) {
   .page1titles {
     width: 426px;
-    height: 100px;
+    height: auto;
+    font-size: calc(7px + 2vmin);
+  }
+  .titleBig {
+    padding: 0px 10px;
+    font-size: calc(50px + 2vmin);
   }
   .page1Box {
     top: 30vh;
