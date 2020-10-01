@@ -1,15 +1,9 @@
 .page1titles {
+  width: 500px;
   height: 100px;
   text-align: left;
-  width: 1000px;
-  background-image: url("../../assets/bgtitlepage1.png");
-  background-repeat: no-repeat;
-  text-align: center;
-  background-size: contain;
-  background-position: center;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  font-size: calc(12px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
 }
 .page1Box {
   display: flex;
@@ -24,8 +18,8 @@
 }
 .bayihex {
   z-index: 1;
-  height: 30vh;
-  width: 29vh;
+  height: auto;
+  width: 30vw;
   background-image: url("../../assets/hexapage1.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -33,7 +27,7 @@
   background-position: center;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
 }
 .Titlebayi {
   width: auto;
@@ -44,7 +38,10 @@
   text-align: center;
 }
 .titlebg {
-  width: 1000px;
+  width: 82vw;
+  position: absolute;
+  left: 11vw;
+  height: 164px;
   background-image: url("../../assets/bgtitlepage1.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -53,6 +50,20 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
+  color: #fff;
+}
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  margin-left: 23%;
+  height: 100%;
+}
+.titleBig {
+  padding: 10px;
+  font-family: ITCAvantGradePro_DEMI;
+  font-size: calc(80px + 2vmin);
 }
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 768px) {

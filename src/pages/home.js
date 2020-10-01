@@ -70,9 +70,12 @@ const Home = (props) => {
               </div>
             </div>
 
-            <Tweenful.div className="TitlePage1" {...propsAnim2}>
-              <div className="titlestyle page1titles">
-                {"Langkah Mudah\nMengenali Gejala Alergi Susu Sapi"}
+            <Tweenful.div className="titlebg" {...propsAnim2}>
+              <div className="titleContainer">
+                <div className="titlestyle titleBig">{"5"}</div>
+                <div className="titlestyle page1titles">
+                  {"Langkah Mudah\nMengenali Gejala Alergi Susu Sapi"}
+                </div>
               </div>
             </Tweenful.div>
           </Tweenful.div>

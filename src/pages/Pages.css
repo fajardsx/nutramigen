@@ -4,7 +4,7 @@
   src: local("ITCAvantGradePro_MD"), url(../fonts/ITCAvantGardePro-Md.otf) format("opentype");
 }
 @font-face {
-  font-family: "ITCAvantGradePro";
+  font-family: "ITCAvantGradePro_DEMI";
   src: local("ITCAvantGradePro_DEMI"), url(../fonts/ITCAvantGardePro-Demi.otf) format("opentype");
 }
 @font-face {
