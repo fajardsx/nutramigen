@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../component/Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
@@ -8,20 +7,32 @@ import "./css/page1.css";
 import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
-const propsAnim = {
+const propsAnimLogo = {
   delay: 1000,
   render: true,
   duration: 1600,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: {},
+  animate: { opacity: [0, 1] },
+  events: {
+    onAnimationStart: () => console.log("AnimationStart"),
+    onAnimationEnd: () => console.log("AnimationEnd"),
+  },
+};
+const propsAnim = {
+  delay: 1300,
+  render: true,
+  duration: 1600,
+  easing: elastic(1, 0.1),
+  loop: false,
+  animate: { opacity: [0, 1] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
 const propsAnim2 = {
-  delay: 1100,
+  delay: 1500,
   render: true,
   duration: 1600,
   easing: elastic(1, 0.1),
@@ -38,7 +49,7 @@ const Home = (props) => {
   const [shouldRender, setShouldRender] = useState(true);
 
   useEffect(() => {
-    //setTimeout(() => setShouldRender(false), 3000);
+    setTimeout(() => setShouldRender(true), 3000);
   }, []);
   function onNext() {
     console.log("home props", props);
@@ -63,13 +74,15 @@ const Home = (props) => {
         unmount={[{ opacity: 0 }]}
         easing="linear">
         <div className="observer-demo">
+          <Tweenful.div className="page1Box" {...propsAnimLogo}>
+            <div class="logoMj" />
+          </Tweenful.div>
           <Tweenful.div className="page1Box" {...propsAnim}>
-            <div class="bayihex">
+            <div className="bayihex">
               <div className="Titlebayi">
                 <img src={loadingicon} alt="bayi" style={{ width: "100%" }} />
               </div>
             </div>
-
             <Tweenful.div className="titlebg" {...propsAnim2}>
               <div className="titleContainer">
                 <div className="titlestyle titleBig">{"5"}</div>

@@ -51,6 +51,7 @@
   justify-content: center;
   padding: 10px;
   color: #fff;
+  line-height: 23px;
 }
 .titleContainer {
   display: flex;
@@ -65,15 +66,27 @@
   font-family: ITCAvantGradePro_DEMI;
   font-size: calc(80px + 2vmin);
 }
+.logoMj {
+  position: absolute;
+  top: -7px;
+  left: 50px;
+  height: 45px;
+  width: 100vw;
+  background-image: url("../../assets/logomj.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
 
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   .page1titles {
     width: 468px;
-    height: 100px;
+    height: auto;
   }
   .page1Box {
-    top: 30vh;
+    top: 0;
     left: 0;
   }
 }
@@ -81,15 +94,24 @@
   .page1titles {
     width: 426px;
     height: auto;
-    font-size: calc(7px + 2vmin);
+    font-size: calc(12px + 2vmin);
   }
   .titleBig {
     padding: 0px 10px;
     font-size: calc(50px + 2vmin);
   }
   .page1Box {
-    top: 30vh;
-    left: 0;
+    top: 90px;
+    left: 10px;
     justify-content: normal;
+  }
+  .logoMj {
+    top: -7px;
+    left: 50px;
+    height: 45px;
+    width: 100vw;
+  }
+  .Titlebayi {
+    padding: 10px;
   }
 }

@@ -14,7 +14,7 @@ const ContainerSwipe = (props) => {
 
   return (
     <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
-      <div className="App-Container">{props.children}</div>
+      {props.children}
     </Swipe>
   );
 };

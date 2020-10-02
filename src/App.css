@@ -81,7 +81,12 @@ div {
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   .App-header {
     width: 1024px;
+    height: 100vh;
   }
 }
 @media only screen and (max-width: 768px) {
+  .App-header {
+    width: 1024px;
+    height: 100vh;
+  }
 }

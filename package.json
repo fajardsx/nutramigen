@@ -2,11 +2,12 @@
   "name": "nutramigenapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dotcomsolution.000webhostapp.com/enfamicrosite/",
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "AsyncStorage": "^0.1.5",
     "bootstrap": "^4.5.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
@@ -18,6 +19,7 @@
     "react-router-transition": "^2.0.0",
     "react-scripts": "3.4.3",
     "react-tweenful": "^0.1.0",
+    "reactjs-localstorage": "^1.0.1",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0"
   },

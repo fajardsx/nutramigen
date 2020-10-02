@@ -8,20 +8,27 @@
   src: local("ITCAvantGradePro_DEMI"), url(../fonts/ITCAvantGardePro-Demi.otf) format("opentype");
 }
 @font-face {
-  font-family: "ITCAvantGradePro";
+  font-family: "ITCAvantGradePro_EL";
   src: local("ITCAvantGradePro_EXTRALIGHT"),
     url(../fonts/ITCAvantGardePro-XLt.otf) format("opentype");
 }
 @font-face {
   font-family: "ITCAvantGradePro_BOLD";
   font-weight: 900;
-  src: local(""), url(../fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+  src: local("ITCAvantGradePro_BOLD"), url(../fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro_BOOK";
+  font-weight: 900;
+  src: local("ITCAvantGradePro_BOOK"), url(../fonts/ITCAvantGardePro-Bk.otf) format("opentype");
 }
 .Home-container {
   display: flex;
 }
 .observer-demo {
-  padding: 20px 10px;
+  padding: 10px 15px;
+  height: 100vh;
+  width: 100vw;
 }
 .Box-Demo {
   display: flex;
@@ -50,14 +57,38 @@
   font-family: ITCAvantGradePro_BOLD;
   text-align: center;
 }
+.titlestyle2 {
+  font-family: ITCAvantGradePro_DEMI;
+  text-align: left;
+}
 .content1style {
-  font-family: ITCAvantGradePro_MD;
+  font-family: ITCAvantGradePro_DEMI;
 }
 .contentRefstyle {
-  font-family: ITCAvantGradePro_MD;
-  font-size: x-small;
+  font-family: ITCAvantGradePro_BOOK;
+  font-size: calc(0.1px + 1.5vmin);
+  color: #58595b;
 }
-.contentRefstyle ol li {
-  font-family: ITCAvantGradePro_MD;
-  font-size: x-small;
+ol.horizontal li {
+  float: left;
+  width: 200px;
+  padding: 2px 0px;
+}
+.logoLgg {
+  height: 70px;
+  width: 16vw;
+  background-image: url("../assets//lgglogo.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#footer {
+  position: fixed;
+  bottom: 20px;
 }
