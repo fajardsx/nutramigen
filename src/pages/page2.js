@@ -30,6 +30,18 @@ const propsAnim2 = {
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
+const propsMask = {
+  delay: 1100,
+  render: true,
+  duration: 1600,
+  easing: elastic(1, 0.1),
+  loop: false,
+  animate: { width: [0, "50vw"] },
+  events: {
+    onAnimationStart: () => console.log("AnimationStart"),
+    onAnimationEnd: () => console.log("AnimationEnd"),
+  },
+};
 class Page2 extends Component {
   constructor(props, context) {
     super(props, context);
@@ -101,6 +113,7 @@ class Page2 extends Component {
                 <Tweenful.div {...propsAnim}>
                   <div className="bgDiagram">
                     <div className="bgDiagramEnd" />
+                    <Tweenful.div className="diagramMask" {...propsMask}></Tweenful.div>
                   </div>
                 </Tweenful.div>
               </div>

@@ -38,6 +38,14 @@ li.content1style.content1textbullet {
   background-size: contain;
   background-position: center;
 }
+.diagramMask {
+  z-index: 1;
+  position: absolute;
+  top: 28vh;
+  background-color: aqua;
+  width: 50vw;
+  height: 30vh;
+}
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
 }
