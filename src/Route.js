@@ -3,12 +3,16 @@ import { Route } from "react-router-dom";
 
 import { spring, AnimatedSwitch } from "react-router-transition";
 import { reactLocalStorage } from "reactjs-localstorage";
-import "../App.css";
-import { ROUTE_KEY } from "../config/ROUTE_KEY";
-import Home from "../pages/home";
-import Page2 from "../pages/page2";
-import Constant from "../config/Constant";
 import { connect } from "react-redux";
+
+
+import "./App.css";
+import { ROUTE_KEY } from "./config/ROUTE_KEY";
+import Home from "./pages/home";
+import Page2 from "./pages/page2";
+import Constant from "./config/Constant";
+
+import page3 from "./pages/page3";
 const RouteApp = (props) => {
   function mapStyles(styles) {
     return {
@@ -37,6 +41,7 @@ const RouteApp = (props) => {
       mapStyles={mapStyles}>
       <Route exact path={ROUTE_KEY[Constant.PAGE_HOME].PATH} component={Home} />
       <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} />
+      <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={page3} />
     </AnimatedSwitch>
   );
 };

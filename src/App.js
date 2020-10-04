@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { reactLocalStorage } from "reactjs-localstorage";
 import "./App.css";
-import RouteApp from "./component/Route";
+import RouteApp from "./Route";
 import { Container } from "react-bootstrap";
 
 class App extends Component {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ContainerSwipe from "../container";
-import { NaviNext, NaviGoback } from "../component/Route";
+import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
 import "./css/page1.css";

@@ -81,47 +81,33 @@ class Page2 extends Component {
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage2">
                   {
-                    "Anak dengan alergi susu sapi akan mengalami risiko \nmanifestasi alergi hingga usia 5 tahun"
+                    "Proses alergi di awal kehidupan akan memicu terjadinya inflamasi\nsistemik yang menimbulkan rangkaian Allergic March."
                   }
                 </div>
               </Tweenful.div>
             </div>
-            <div className="row-container content1Container">
+            <div className="content1Container">
               <div>
                 <Tweenful.div {...propsAnim}>
                   <div className="content1style content1text">
                     {
-                      "Studi pada 97 anak dengan alergi protein \nsusu sapi yang dipantau hingga usia 5 tahun,\nmasih mengalami gejala alergi"
+                      "Proses ini dapat diinfervensi dengan tata laksana alergi susu sapi yang tepat.\nInflamasi sistemik dapat dicegah dengan diet probiotik 2"
                     }
                   </div>
-                </Tweenful.div>
-                <Tweenful.div {...propsAnim}>
-                  <ul style={{ marginBottom: 0, paddingInlineStart: 20, marginBlockEnd: 10 }}>
-                    <li key={"1"} className="content1style content1textbullet">
-                      {"40% asma"}
-                    </li>
-                    <li key={"2"} className="content1style content1textbullet">
-                      {"20% eksim atopik"}
-                    </li>
-                    <li key={"3"} className="content1style content1textbullet">
-                      {"43% rhinitis alergika"}
-                    </li>
-                  </ul>
                 </Tweenful.div>
               </div>
               <div>
                 <Tweenful.div {...propsAnim}>
-                  <div className="bgDiagram">
-                    <div className="bgDiagramEnd" />
-                    <Tweenful.div className="diagramMask" {...propsMask}>
-                      <div className="bgDiagramLine"/>
-                    </Tweenful.div>
+                  <div className="content1style content1text">
+                    {
+                      "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin dan mengambil langkah-langkah\nyang tepat sesuai dengan tata laksana alergi susu sapi"
+                    }
                   </div>
                 </Tweenful.div>
               </div>
             </div>
 
-            <Tweenful.div {...propsAnim}>
+            {/* <Tweenful.div {...propsAnim}>
               <div id="footer">
                 <div className="contentRefstyle">{"Referensi"}</div>
                 <ol
@@ -135,7 +121,7 @@ class Page2 extends Component {
                   </li>
                 </ol>
               </div>
-            </Tweenful.div>
+            </Tweenful.div> */}
           </div>
         </Observer>
       </ContainerSwipe>
