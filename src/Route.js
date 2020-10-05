@@ -5,7 +5,6 @@ import { spring, AnimatedSwitch } from "react-router-transition";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { connect } from "react-redux";
 
-
 import "./App.css";
 import { ROUTE_KEY } from "./config/ROUTE_KEY";
 import Home from "./pages/home";
@@ -13,6 +12,7 @@ import Page2 from "./pages/page2";
 import Constant from "./config/Constant";
 
 import page3 from "./pages/page3";
+import page4 from "./pages/page4";
 const RouteApp = (props) => {
   function mapStyles(styles) {
     return {
@@ -42,6 +42,7 @@ const RouteApp = (props) => {
       <Route exact path={ROUTE_KEY[Constant.PAGE_HOME].PATH} component={Home} />
       <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} />
       <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={page3} />
+      <Route path={ROUTE_KEY[Constant.PAGE_4].PATH} component={page4} />
     </AnimatedSwitch>
   );
 };

@@ -3,7 +3,7 @@ import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
-import "./css/page2.css";
+import "./css/page3.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 const propsAnim = {
@@ -36,13 +36,13 @@ const propsMask = {
   duration: 1600,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: { width: [0, "31.5vw"],height:["30vh","30vh"] },
+  animate: { width: [0, "31.5vw"], height: ["30vh", "30vh"] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
-class Page2 extends Component {
+class Page3 extends Component {
   constructor(props, context) {
     super(props, context);
     console.log(this.props);
@@ -81,26 +81,27 @@ class Page2 extends Component {
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage2">
                   {
-                    "Proses alergi di awal kehidupan akan memicu terjadinya inflamasi\nsistemik yang menimbulkan rangkaian Allergic March."
+                    "Proses alergi di awal kehidupan akan memicu terjadinya\ninflamasi sistemik yang menimbulkan rangkaian Allergic March"
                   }
                 </div>
               </Tweenful.div>
             </div>
             <div className="content1Container">
               <div>
-                <Tweenful.div {...propsAnim}>
+                <Tweenful.div className="bgArrow" {...propsAnim}>
                   <div className="content1style content1text">
                     {
-                      "Proses ini dapat diinfervensi dengan tata laksana alergi susu sapi yang tepat.\nInflamasi sistemik dapat dicegah dengan diet probiotik 2"
+                      "Proses ini dapat diinfervensi dengan tata laksana alergi susu\nsapi yang tepat. Inflamasi sistemik dapat dicegah dengan\ndiet probiotik"
                     }
+                    <sup>2</sup>
                   </div>
                 </Tweenful.div>
               </div>
               <div>
                 <Tweenful.div {...propsAnim}>
-                  <div className="content1style content1text">
+                  <div className="content1style content2text">
                     {
-                      "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin dan mengambil langkah-langkah\nyang tepat sesuai dengan tata laksana alergi susu sapi"
+                      "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin dan\nmengambil langkah-langkah yang tepat sesuai dengan tata laksana alergi susu sapi"
                     }
                   </div>
                 </Tweenful.div>
@@ -144,4 +145,4 @@ const mapDispatchToProps = (dispatch) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Page2);
+export default connect(mapStateToProps, mapDispatchToProps)(Page3);

@@ -7,8 +7,19 @@
 .content1text {
   width: auto;
   height: auto;
-  font-size: calc(5px + 2vmin);
-  padding: 10px 0px;
+  font-size: calc(7px + 2vmin);
+  padding: 14px 25px;
+  text-align: left;
+  color: #fff;
+  font-family: ITCAvantGradePro_DEMI;
+}
+.content2text {
+  width: auto;
+  height: auto;
+  font-size: calc(6px + 2vmin);
+  padding: 15px 0px 0px 0px;
+  text-align: center;
+  font-family: ITCAvantGradePro_BOOK;
 }
 li.content1style.content1textbullet {
   width: 830;
@@ -20,14 +31,17 @@ li.content1style.content1textbullet {
   align-items: unset;
   padding-left: 10px;
 }
-.bgDiagram {
-  height: 50vh;
-  width: 50vw;
-  background-image: url("../../assets/diagram1.png");
+.bgArrow {
+  height: 27vh;
+  width: 74vw;
+  background-image: url("../../assets/bgtitlepage2.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
   background-position: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 10%;
 }
 .bgDiagramEnd {
   height: 50vh;
@@ -47,19 +61,19 @@ li.content1style.content1textbullet {
   width: 45vw;
   height: 30vh;
   overflow: hidden;
-   /*background-image: url("../../assets/diagram1_anim.png");
+  /*background-image: url("../../assets/diagram1_anim.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size:contain;
   background-position: center;*/
 }
-.diagramMask .bgDiagramLine{
-  width:31.5vw;
+.diagramMask .bgDiagramLine {
+  width: 31.5vw;
   height: 30vh;
   background-image: url("../../assets/diagram1_anim.png");
   background-repeat: no-repeat;
   text-align: center;
-  background-size:contain;
+  background-size: contain;
   background-position: center;
 }
 /* MOBILE ViEW */
@@ -70,6 +84,6 @@ li.content1style.content1textbullet {
     width: 550px;
     height: auto;
     padding: 0px 25px;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(8px + 2vmin);
   }
 }

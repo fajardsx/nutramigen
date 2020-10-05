@@ -8,18 +8,21 @@
   src: local("ITCAvantGradePro_DEMI"), url(../fonts/ITCAvantGardePro-Demi.otf) format("opentype");
 }
 @font-face {
+  font-family: "ITCAvantGradePro_DEMI_OBL";
+  src: local("ITCAvantGradePro_DEMI_OBL"),
+    url(../fonts/ITCAvantGardePro-DemiObl.otf) format("opentype");
+}
+@font-face {
   font-family: "ITCAvantGradePro_EL";
   src: local("ITCAvantGradePro_EXTRALIGHT"),
     url(../fonts/ITCAvantGardePro-XLt.otf) format("opentype");
 }
 @font-face {
   font-family: "ITCAvantGradePro_BOLD";
-  font-weight: 900;
   src: local("ITCAvantGradePro_BOLD"), url(../fonts/ITCAvantGardePro-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: "ITCAvantGradePro_BOOK";
-  font-weight: 900;
   src: local("ITCAvantGradePro_BOOK"), url(../fonts/ITCAvantGardePro-Bk.otf) format("opentype");
 }
 .Home-container {

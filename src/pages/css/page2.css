@@ -32,7 +32,7 @@ li.content1style.content1textbullet {
 .bgDiagramEnd {
   height: 50vh;
   width: 50vw;
-  background-image: url("../../assets/diagram1.png");
+  background-image: url("../../assets/diagram1_done.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
@@ -47,19 +47,19 @@ li.content1style.content1textbullet {
   width: 45vw;
   height: 30vh;
   overflow: hidden;
-   /*background-image: url("../../assets/diagram1_anim.png");
+  /*background-image: url("../../assets/diagram1_anim.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size:contain;
   background-position: center;*/
 }
-.diagramMask .bgDiagramLine{
-  width:31.5vw;
+.diagramMask .bgDiagramLine {
+  width: 31.5vw;
   height: 30vh;
   background-image: url("../../assets/diagram1_anim.png");
   background-repeat: no-repeat;
   text-align: center;
-  background-size:contain;
+  background-size: contain;
   background-position: center;
 }
 /* MOBILE ViEW */

@@ -36,7 +36,19 @@ const propsMask = {
   duration: 1600,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: { width: [0, "31.5vw"],height:["30vh","30vh"] },
+  animate: { width: [0, "31.5vw"], height: ["30vh", "30vh"] },
+  events: {
+    onAnimationStart: () => console.log("AnimationStart"),
+    onAnimationEnd: () => console.log("AnimationEnd"),
+  },
+};
+const propsMaskDone = {
+  delay: 1600,
+  render: true,
+  duration: 1600,
+  easing: elastic(1, 0.1),
+  loop: false,
+  animate: { opacity: [0, 1] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -112,9 +124,11 @@ class Page2 extends Component {
               <div>
                 <Tweenful.div {...propsAnim}>
                   <div className="bgDiagram">
-                    <div className="bgDiagramEnd" />
                     <Tweenful.div className="diagramMask" {...propsMask}>
-                      <div className="bgDiagramLine"/>
+                      <div className="bgDiagramLine" />
+                    </Tweenful.div>
+                    <Tweenful.div {...propsMaskDone}>
+                      <div className="bgDiagramEnd" />
                     </Tweenful.div>
                   </div>
                 </Tweenful.div>
