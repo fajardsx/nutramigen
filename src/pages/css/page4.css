@@ -298,6 +298,41 @@ li.content1style.content1textbullet {
   background-color: rgba(247, 230, 205, 0.4);
   border: 5px solid #f2d5ad;
 }
+.quizResultTitleCaraContextPadding {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.quizResultTitleCaraContext {
+  display: flex;
+  font-size: calc(1px + 1.2vmin);
+  font-family: ITCAvantGradePro_EL;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.quizResultTitleCaraContextBorder {
+  height: 14px;
+  border: 1px solid #f2d5ad;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+}
+.quizResultTitleCaraContextBorderLine {
+  display: flex;
+  width: 100vw;
+  height: 10px;
+  border: 1px solid #f2d5ad;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.quizref {
+  width: 95vw;
+  position: fixed;
+  bottom: 10px;
+  font-size: calc(1px + 1vmin);
+  font-family: ITCAvantGradePro_BOOK;
+  text-align: center;
+}
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
 }

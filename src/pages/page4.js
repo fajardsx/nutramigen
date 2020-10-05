@@ -376,12 +376,33 @@ class Page4 extends Component {
         <div className="content1style containerResult">
           <div className="quizResultDescHex">
             {
-              "Kemungkinan pasien Dokter mengalami masalah pencernaan fungsional jika\ntanpa disertai gejala pada kulit dan pernafasan.  "
+              "Kemungkinan pasien Dokter mengalami masalah pencernaan fungsional jika\ntanpa disertai gejala pada kulit dan pernafasan."
             }
           </div>
         </div>
         <div {...propsAnim}>
           <div className="content1style quizResultTitleCara">CARA INTERPRETASI HASIL/SKOR</div>
+        </div>
+        <div className="row-container quizResultTitleCaraContextPadding">
+          <div className="quizResultTitleCaraContext">
+            {"Skor >=12, curiga anak alergi susu sapi"}
+          </div>
+          <dev className="quizResultTitleCaraContextBorder" />
+          <div className="quizResultTitleCaraContext ">
+            {"Skor < 12, gejala tidak terkait dengan alergi susu sapi"}
+          </div>
+          <dev className="quizResultTitleCaraContextBorder" />
+          <div className="quizResultTitleCaraContext">
+            {
+              "Bila skor <12 tanpa disertai gejala pada kulit dan pernafasan maka anak Anda\nmungkin mengalami masalah pencernaan fungsional (buka halaman 6)"
+            }
+          </div>
+        </div>
+        <dev className="quizResultTitleCaraContextBorderLine" />
+        <div className="quizref">
+          {
+            "Reference : Diadaptasi dari: Vandenplas, Y., Duport, C., Eigenmann, P., Host, A, Kuitunen, M., Ribes-Koninck, C., Shah, N., Shamir, R., Staiano, a, Szajewska, H. and Von Berg, A. (2015). A workshop report on the development of the\ncow,s Milk-related Symptom Score awareness tool for young children, Acta Paediatrica. doi; 101111/apa.12902"
+          }
         </div>
       </div>
     </div>
