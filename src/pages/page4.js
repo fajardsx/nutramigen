@@ -67,7 +67,7 @@ class Page4 extends Component {
   }
   componentDidMount() {
     this.setState({
-      currentQuiz: 6,
+      currentQuiz: 1,
     });
   }
   onNext() {
@@ -200,7 +200,7 @@ class Page4 extends Component {
       </div>
 
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz">SKOR</div>
+        <div className="content1style content4text titleQuiz">SKOR</div>
         {this.cellQuestion(0, "≤ 1 jam/hari")}
         {this.cellQuestion(1, "1-1,5 jam/hari")}
         {this.cellQuestion(2, "1,5 - 2 jam/hari")}
@@ -208,7 +208,7 @@ class Page4 extends Component {
         {this.cellQuestion(4, "3 - 4 jam/hari")}
       </div>
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz"></div>
+        <div className="content1style content4text titleQuiz"></div>
         {this.cellQuestion(5, "4 - 5 jam/hari")}
         {this.cellQuestion(6, "≥ 5 jam/hari")}
       </div>
@@ -225,7 +225,7 @@ class Page4 extends Component {
       </div>
 
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz">SKOR</div>
+        <div className="content1style content4text titleQuiz">SKOR</div>
         {this.cellQuestion(0, "2 kali/hari", "customquiz2")}
         {this.cellQuestion(1, "≥  3 - ≤5 jam/hari,\nsedikit", "customquiz2")}
         {this.cellQuestion(2, "1> 5 kali/hari, kira-kira\n1 sendok teh", "customquiz2")}
@@ -236,7 +236,7 @@ class Page4 extends Component {
         )}
       </div>
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz"></div>
+        <div className="content1style content4text titleQuiz"></div>
         {this.cellQuestion(
           4,
           "Muntah berkelanjutan,\nsedikit demi sedikit 30 menit\nsetelah selesai makan",
@@ -266,13 +266,13 @@ class Page4 extends Component {
       </div>
 
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz">SKOR</div>
+        <div className="content1style content4text titleQuiz">SKOR</div>
         {this.cellQuestion3(4, "BAB keras", "customquiz2", "eek4")}
         {this.cellQuestion3(0, "BAB normal", "customquiz2", "eek0")}
         {this.cellQuestion3(2, "BAB lembek", "customquiz2", "eek2")}
       </div>
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz"></div>
+        <div className="content1style content4text titleQuiz"></div>
         {this.cellQuestion3(4, "BAB agak cair,\nbukan karena infeksi", "customquiz2", "eek4_2")}
         {this.cellQuestion3(6, "BAB cair dan\nencer", "customquiz2", "eek6")}
       </div>
@@ -351,12 +351,12 @@ class Page4 extends Component {
       </div>
 
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz">SKOR</div>
+        <div className="content1style content4text titleQuiz">SKOR</div>
         {this.cellQuestion(0, "Tidak ada gejala")}
         {this.cellQuestion(1, "Ringan")}
       </div>
       <div {...propsAnim}>
-        <div className="content1style content2text titleQuiz"></div>
+        <div className="content1style content4text titleQuiz"></div>
         {this.cellQuestion(2, "Sedang")}
         {this.cellQuestion(3, "Berat")}
       </div>

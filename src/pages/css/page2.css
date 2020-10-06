@@ -4,10 +4,12 @@
   padding: 0px 25px;
   font-size: calc(10px + 2vmin);
 }
-.content1text {
+.content2text {
   width: auto;
   height: auto;
   font-size: calc(5px + 2vmin);
+  text-align: left;
+  font-family: ITCAvantGradePro_DEMI;
   padding: 10px 0px;
 }
 li.content1style.content1textbullet {

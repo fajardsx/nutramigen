@@ -3,7 +3,7 @@ import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
-import "./css/page2.css";
+import "./css/page5.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 const propsAnim = {
@@ -42,19 +42,7 @@ const propsMask = {
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
-const propsMaskDone = {
-  delay: 1600,
-  render: true,
-  duration: 1600,
-  easing: elastic(1, 0.1),
-  loop: false,
-  animate: { opacity: [0, 1] },
-  events: {
-    onAnimationStart: () => console.log("AnimationStart"),
-    onAnimationEnd: () => console.log("AnimationEnd"),
-  },
-};
-class Page2 extends Component {
+class Page5 extends Component {
   constructor(props, context) {
     super(props, context);
     console.log(this.props);
@@ -93,49 +81,34 @@ class Page2 extends Component {
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage2">
                   {
-                    "Anak dengan alergi susu sapi akan mengalami risiko \nmanifestasi alergi hingga usia 5 tahun"
+                    "Percayakan tatalaksana nutrisi alergi susu sapi (ASS) pada\nrangkaian produk Mead Johnson"
                   }
                 </div>
               </Tweenful.div>
             </div>
-            <div className="row-container content1Container">
-              <div>
-                <Tweenful.div {...propsAnim}>
-                  <div className="content1style content2text">
-                    {
-                      "Studi pada 97 anak dengan alergi protein \nsusu sapi yang dipantau hingga usia 5 tahun,\nmasih mengalami gejala alergi"
-                    }
+            <div className="content1Container">
+              <div className="row-container contentRow">
+                <div className="colmContainer">
+                  <div className="titletext">Ass Ringan/Sedang</div>
+                  <div className="bgKalengLgg" />
+                  <div className="bgBox">
+                    <div className="boxtext">
+                      {"Formula Protein Terhidrolisa Ekstensif\ndengan Probiotik Lactobacillus GG"}
+                    </div>
                   </div>
-                </Tweenful.div>
-                <Tweenful.div {...propsAnim}>
-                  <ul style={{ marginBottom: 0, paddingInlineStart: 20, marginBlockEnd: 10 }}>
-                    <li key={"1"} className="content1style content1textbullet">
-                      {"40% asma"}
-                    </li>
-                    <li key={"2"} className="content1style content1textbullet">
-                      {"20% eksim atopik"}
-                    </li>
-                    <li key={"3"} className="content1style content1textbullet">
-                      {"43% rhinitis alergika"}
-                    </li>
-                  </ul>
-                </Tweenful.div>
-              </div>
-              <div>
-                <Tweenful.div {...propsAnim}>
-                  <div className="bgDiagram">
-                    <Tweenful.div className="diagramMask" {...propsMask}>
-                      <div className="bgDiagramLine" />
-                    </Tweenful.div>
-                    <Tweenful.div {...propsMaskDone}>
-                      <div className="bgDiagramEnd" />
-                    </Tweenful.div>
+                </div>
+                <div className="colmContainer addPadding">
+                  <div className="titletext">Ass Berat</div>
+                  <div className="bgKalengPuramino" />
+                  <div className="bgBox">
+                    <div className="boxtext">{"Formula asam amino dengan\nMCT Oil 33%"}</div>
                   </div>
-                </Tweenful.div>
+                </div>
               </div>
             </div>
+            <div className="ciclebenefit" />
 
-            <Tweenful.div {...propsAnim}>
+            {/* <Tweenful.div {...propsAnim}>
               <div id="footer">
                 <div className="contentRefstyle">{"Referensi"}</div>
                 <ol
@@ -149,7 +122,7 @@ class Page2 extends Component {
                   </li>
                 </ol>
               </div>
-            </Tweenful.div>
+            </Tweenful.div> */}
           </div>
         </Observer>
       </ContainerSwipe>
@@ -172,4 +145,4 @@ const mapDispatchToProps = (dispatch) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Page2);
+export default connect(mapStateToProps, mapDispatchToProps)(Page5);

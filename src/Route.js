@@ -13,6 +13,7 @@ import Constant from "./config/Constant";
 
 import page3 from "./pages/page3";
 import page4 from "./pages/page4";
+import page5 from "./pages/page5";
 const RouteApp = (props) => {
   function mapStyles(styles) {
     return {
@@ -43,6 +44,7 @@ const RouteApp = (props) => {
       <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} />
       <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={page3} />
       <Route path={ROUTE_KEY[Constant.PAGE_4].PATH} component={page4} />
+      <Route path={ROUTE_KEY[Constant.PAGE_5].PATH} component={page5} />
     </AnimatedSwitch>
   );
 };

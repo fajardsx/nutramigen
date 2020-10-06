@@ -99,7 +99,7 @@ class Page3 extends Component {
               </div>
               <div>
                 <Tweenful.div {...propsAnim}>
-                  <div className="content1style content2text">
+                  <div className="content1style content3text">
                     {
                       "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin dan\nmengambil langkah-langkah yang tepat sesuai dengan tata laksana alergi susu sapi"
                     }
