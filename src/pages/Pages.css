@@ -735,6 +735,12 @@ li.content1style.content1textbullet {
     padding: 0px 25px;
     font-size: calc(17px + 1vmin);
   }
+  .titlePage5 {
+    width: auto;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(17px + 1vmin);
+  }
   .titlestyle2 {
     font-family: ITCAvantGradePro_DEMI;
     text-align: left;
@@ -842,6 +848,36 @@ li.content1style.content1textbullet {
   }
   .quizResultTitleCara {
     padding: 35px 0px;
+  }
+  .quizResultTitleCaraContextBorder {
+    height: 35px;
+  }
+  .quizResultTitleCaraContextPadding {
+    padding: 15px 0px;
+  }
+  .quizref {
+    padding: 30px 10px;
+    font-size: 8px;
+  }
+  .bgBox {
+    padding: 10px;
+  }
+  .titletext {
+    padding: 30px 0px 10px 0px;
+  }
+  .ciclebenefit {
+    top: 30%;
+    left: 42%;
+    height: 25vh;
+    width: 23vh;
+  }
+  .bgKalengLgg {
+    height: 35vh;
+    margin: 15px 0px 15px 0px;
+  }
+  .bgKalengPuramino {
+    height: 35vh;
+    margin: 15px 0px 15px 0px;
   }
 }
 @media only screen and (max-width: 768px) {
