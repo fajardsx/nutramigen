@@ -3,7 +3,7 @@ import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
-import "./css/page4.css";
+//import "./css/page4.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
@@ -56,6 +56,7 @@ const propsMask = {
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
+
 class Page4 extends Component {
   constructor(props, context) {
     super(props, context);
@@ -63,6 +64,9 @@ class Page4 extends Component {
     this.state = {
       shouldRender: true,
       currentQuiz: 1,
+      score: 0,
+      scorePage: [0],
+      page4skor: [-1, -1],
     };
   }
   componentDidMount() {
@@ -73,17 +77,47 @@ class Page4 extends Component {
   onNext() {
     console.log("page2 props", this.props);
     //this.props.history.push("/");
-    //this.props.updateDirection("left");
-    //NaviNext(this.props);
+    if (this.state.currentQuiz == 6) {
+      this.props.updateDirection("left");
+      NaviNext(this.props);
+    }
   }
   onBack() {
     console.log("page2 props", this.props);
     //this.props.updateDirection("right");
     //NaviGoback(this.props);
+    if (this.state.currentQuiz == 6) {
+      this.props.updateDirection("right");
+      NaviGoback(this.props);
+    }
   }
   onClickHandle = (e) => {
     console.log("click ", e);
-    this.setState({ currentQuiz: this.state.currentQuiz + 1 });
+    if (this.state.currentQuiz !== 4) {
+      let scorePage = [...this.state.scorePage];
+      let score = this.state.score;
+      scorePage[this.state.currentQuiz - 1] = { score: e };
+      score += e;
+      this.setState({ currentQuiz: this.state.currentQuiz + 1, scorePage, score });
+    }
+  };
+  onClickHandle1 = (e, part) => {
+    console.log("click ", e);
+    //console.log("part ", part);
+    let page4skor = [...this.state.page4skor];
+    page4skor[part] = e;
+    this.setState({ page4skor }, () => {
+      if (this.state.page4skor[0] > -1 && this.state.page4skor[1] > -1) {
+        let scorePage = [...this.state.scorePage];
+        let score = this.state.score;
+        scorePage[this.state.currentQuiz - 1] = { score: page4skor[0] + page4skor[1] };
+        score += page4skor[0] + page4skor[1];
+        this.setState({ currentQuiz: this.state.currentQuiz + 1, scorePage, score });
+      }
+    });
+  };
+  getScore = () => {
+    return this.state.score;
   };
 
   getQuiz = () => {
@@ -121,13 +155,13 @@ class Page4 extends Component {
                 <div className="logoLgg" />
               </Tweenful.div>
               <Tweenful.div {...propsAnim2}>
-                <div className="titlestyle2 titlePage2">
+                <div className="titlestyle2 titlePage4">
                   {"5 Langkah mudah untuk membantu dokter mengenali\ngejala alergi susu sapi"}
                 </div>
               </Tweenful.div>
             </div>
 
-            <div className="content1Container ">
+            <div className="content4Container ">
               <Tweenful.div {...propsAnim3} render={this.state.currentQuiz < 6 ? true : false}>
                 <div className="content1style SubtitlePage">
                   {
@@ -136,11 +170,10 @@ class Page4 extends Component {
                 </div>
               </Tweenful.div>
             </div>
-
-            {this.getQuiz()}
             <Tweenful.div {...propsAnim} render={this.state.currentQuiz < 6 ? true : false}>
               <div className="imagePita" />
             </Tweenful.div>
+            {this.getQuiz()}
           </div>
         </Observer>
       </ContainerSwipe>
@@ -149,7 +182,7 @@ class Page4 extends Component {
   //
   cellQuestion = (index, title, custom) => {
     return (
-      <div className={`row-container addPadding `} {...propsAnim}>
+      <div className={`row-container addPaddingQuiz `} {...propsAnim}>
         <a
           href="#"
           className="content1style numberAnswerContainer"
@@ -175,14 +208,17 @@ class Page4 extends Component {
       </div>
     );
   };
-  cellQuestion4 = (index) => {
+  cellQuestion4 = (index, part) => {
     return (
       <div className={`row-container addPadding4 `} {...propsAnim}>
         <a
           href="#"
-          className="content1style numberAnswerContainer"
-          style={{ marginRight: 0 }}
-          onClick={() => this.onClickHandle(index)}>
+          className={`content1style numberAnswerContainer`}
+          style={{
+            marginRight: 0,
+            backgroundColor: this.state.page4skor[part] > -1 ? "#bd6300" : "#f59933",
+          }}
+          onClick={() => this.onClickHandle1(index, part)}>
           {}
         </a>
       </div>
@@ -190,7 +226,7 @@ class Page4 extends Component {
   };
   // QUESTION LIST
   quest1 = () => (
-    <div className="row-container content1Container ">
+    <div className="row-container content4Container ">
       <div {...propsAnim}>
         <div className="content1style numberContainer">1</div>
       </div>
@@ -215,7 +251,7 @@ class Page4 extends Component {
     </div>
   );
   quest2 = () => (
-    <div className="row-container content1Container ">
+    <div className="row-container content4Container ">
       <div {...propsAnim}>
         <div className="content1style numberContainer">2</div>
       </div>
@@ -256,7 +292,7 @@ class Page4 extends Component {
     </div>
   );
   quest3 = () => (
-    <div className="row-container content1Container ">
+    <div className="row-container content4Container ">
       <div {...propsAnim}>
         <div className="content1style numberContainer">3</div>
       </div>
@@ -279,7 +315,7 @@ class Page4 extends Component {
     </div>
   );
   quest4 = () => (
-    <div className="row-container content1Container ">
+    <div className="row-container content4Container ">
       <div {...propsAnim}>
         <div className="content1style numberContainer">4</div>
       </div>
@@ -309,17 +345,17 @@ class Page4 extends Component {
             </tr>
             <tr>
               <td>Kepala, Leher</td>
-              <td>{this.cellQuestion4(0)}</td>
-              <td>{this.cellQuestion4(1)}</td>
-              <td>{this.cellQuestion4(2)}</td>
-              <td>{this.cellQuestion4(3)}</td>
+              <td>{this.cellQuestion4(0, 0)}</td>
+              <td>{this.cellQuestion4(1, 0)}</td>
+              <td>{this.cellQuestion4(2, 0)}</td>
+              <td>{this.cellQuestion4(3, 0)}</td>
             </tr>
             <tr>
               <td>Lengan, Tangan, Kaki</td>
-              <td>{this.cellQuestion4(0)}</td>
-              <td>{this.cellQuestion4(1)}</td>
-              <td>{this.cellQuestion4(2)}</td>
-              <td>{this.cellQuestion4(3)}</td>
+              <td>{this.cellQuestion4(0, 0)}</td>
+              <td>{this.cellQuestion4(1, 0)}</td>
+              <td>{this.cellQuestion4(2, 0)}</td>
+              <td>{this.cellQuestion4(3, 0)}</td>
             </tr>
             <tr>
               <td></td>
@@ -330,8 +366,8 @@ class Page4 extends Component {
             </tr>
             <tr>
               <td>Biduran</td>
-              <td>{this.cellQuestion4(0)}</td>
-              <td>{this.cellQuestion4(6)}</td>
+              <td>{this.cellQuestion4(0, 1)}</td>
+              <td>{this.cellQuestion4(6, 1)}</td>
               <td></td>
               <td></td>
             </tr>
@@ -341,7 +377,7 @@ class Page4 extends Component {
     </div>
   );
   quest5 = () => (
-    <div className="row-container content1Container ">
+    <div className="row-container content4Container ">
       <div {...propsAnim}>
         <div className="content1style numberContainer">5</div>
       </div>
@@ -363,13 +399,13 @@ class Page4 extends Component {
     </div>
   );
   questResult = () => (
-    <div className="content1ContainerResult ">
+    <div className="content4ContainerResult ">
       <div {...propsAnim}>
         <div className="content1style quizResultTitle">TOTAL SCORE</div>
       </div>
       <div {...propsAnim}>
         <div className="content1style imageHexScore">
-          <div className="quizResultHex">{0}</div>
+          <div className="quizResultHex">{this.getScore()}</div>
         </div>
       </div>
       <div {...propsAnim}>
@@ -387,21 +423,21 @@ class Page4 extends Component {
           <div className="quizResultTitleCaraContext">
             {"Skor >=12, curiga anak alergi susu sapi"}
           </div>
-          <dev className="quizResultTitleCaraContextBorder" />
+          <div className="quizResultTitleCaraContextBorder" />
           <div className="quizResultTitleCaraContext ">
             {"Skor < 12, gejala tidak terkait dengan alergi susu sapi"}
           </div>
-          <dev className="quizResultTitleCaraContextBorder" />
+          <div className="quizResultTitleCaraContextBorder" />
           <div className="quizResultTitleCaraContext">
             {
               "Bila skor <12 tanpa disertai gejala pada kulit dan pernafasan maka anak Anda\nmungkin mengalami masalah pencernaan fungsional (buka halaman 6)"
             }
           </div>
         </div>
-        <dev className="quizResultTitleCaraContextBorderLine" />
+        <div className="quizResultTitleCaraContextBorderLine" />
         <div className="quizref">
           {
-            "Reference : Diadaptasi dari: Vandenplas, Y., Duport, C., Eigenmann, P., Host, A, Kuitunen, M., Ribes-Koninck, C., Shah, N., Shamir, R., Staiano, a, Szajewska, H. and Von Berg, A. (2015). A workshop report on the development of the\ncow,s Milk-related Symptom Score awareness tool for young children, Acta Paediatrica. doi; 101111/apa.12902"
+            "Reference : Diadaptasi dari: Vandenplas, Y., Duport, C., Eigenmann, P., Host, A, Kuitunen, M., Ribes-Koninck, C., Shah, N., Shamir, R., Staiano, a, Szajewska, H. and Von Berg, A. (2015). A workshop report on the divelopment of the\ncow,s Milk-related Symptom Score awareness tool for young children, Acta Paediatrica. doi; 101111/apa.12902"
           }
         </div>
       </div>

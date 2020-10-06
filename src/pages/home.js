@@ -3,7 +3,7 @@ import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
-import "./css/page1.css";
+//import "./css/page1.css";
 import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";

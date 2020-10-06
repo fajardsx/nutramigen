@@ -1,30 +1,3 @@
-/*FONTS*/
-@font-face {
-  font-family: "ITCAvantGradePro_MD";
-  src: local("ITCAvantGradePro_MD"), url(../fonts/ITCAvantGardePro-Md.otf) format("opentype");
-}
-@font-face {
-  font-family: "ITCAvantGradePro_DEMI";
-  src: local("ITCAvantGradePro_DEMI"), url(../fonts/ITCAvantGardePro-Demi.otf) format("opentype");
-}
-@font-face {
-  font-family: "ITCAvantGradePro_DEMI_OBL";
-  src: local("ITCAvantGradePro_DEMI_OBL"),
-    url(../fonts/ITCAvantGardePro-DemiObl.otf) format("opentype");
-}
-@font-face {
-  font-family: "ITCAvantGradePro_EL";
-  src: local("ITCAvantGradePro_EXTRALIGHT"),
-    url(../fonts/ITCAvantGardePro-XLt.otf) format("opentype");
-}
-@font-face {
-  font-family: "ITCAvantGradePro_BOLD";
-  src: local("ITCAvantGradePro_BOLD"), url(../fonts/ITCAvantGardePro-Bold.otf) format("opentype");
-}
-@font-face {
-  font-family: "ITCAvantGradePro_BOOK";
-  src: local("ITCAvantGradePro_BOOK"), url(../fonts/ITCAvantGardePro-Bk.otf) format("opentype");
-}
 .Home-container {
   display: flex;
 }
@@ -63,24 +36,25 @@
 .titlestyle2 {
   font-family: ITCAvantGradePro_DEMI;
   text-align: left;
+  line-height: 6vh;
 }
 .content1style {
   font-family: ITCAvantGradePro_DEMI;
 }
 .contentRefstyle {
   font-family: ITCAvantGradePro_BOOK;
-  font-size: calc(0.1px + 1.5vmin);
+  font-size: calc(0.5px + 1.5vmin);
   color: #58595b;
 }
 ol.horizontal li {
   float: left;
-  width: 200px;
+  width: 150px;
   padding: 2px 0px;
 }
 .logoLgg {
   height: 70px;
   width: 16vw;
-  background-image: url("../assets//lgglogo.png");
+  background-image: url("../assets/lgglogo.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
@@ -94,4 +68,833 @@ ol.horizontal li {
 #footer {
   position: fixed;
   bottom: 20px;
+  padding-left: 10px;
+}
+
+/*PAGE 1*/
+.page1titles {
+  width: 520px;
+  height: 100px;
+  text-align: left;
+  font-size: calc(12px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+}
+.page1Box {
+  display: flex;
+  flex-direction: row;
+  top: 30vh;
+  left: 0;
+
+  border-radius: 0;
+  position: relative;
+  opacity: 1;
+  align-items: center;
+}
+.bayihex {
+  z-index: 1;
+  height: auto;
+  width: 30vw;
+  background-image: url("../assets/hexapage1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.Titlebayi {
+  width: auto;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  opacity: 1;
+  text-align: center;
+}
+.titlebg {
+  width: 82vw;
+  position: absolute;
+  left: 11vw;
+  height: 164px;
+  background-image: url("../assets/bgtitlepage1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #fff;
+  line-height: 23px;
+}
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  margin-left: 23%;
+  height: 100%;
+}
+.titleBig {
+  padding: 10px;
+  font-family: ITCAvantGradePro_DEMI;
+  font-size: calc(80px + 2vmin);
+}
+.logoMj {
+  position: absolute;
+  top: -7px;
+  left: 50px;
+  height: 45px;
+  width: 100vw;
+  background-image: url("../assets/logomj.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+/*PAGE 2*/
+.titlePage2 {
+  width: 550px;
+  height: auto;
+  padding: 0px 25px;
+  font-size: calc(10px + 2vmin);
+}
+.content2text {
+  width: auto;
+  height: auto;
+  font-size: calc(5px + 2vmin);
+  text-align: left;
+  font-family: ITCAvantGradePro_DEMI;
+  padding: 10px 0px;
+}
+li.content1style.content1textbullet {
+  width: 830;
+  height: 100;
+  font-size: calc(6px + 2vmin);
+}
+.content2Container {
+  padding-top: 20px;
+  align-items: unset;
+  padding-left: 5px;
+}
+.bgDiagram {
+  height: 50vh;
+  width: 50vw;
+  background-image: url("../assets/diagram1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.bgDiagramEnd {
+  height: 50vh;
+  width: 50vw;
+  background-image: url("../assets/diagram1_done.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.diagramMask {
+  z-index: 1;
+  position: absolute;
+  top: 28vh;
+  margin-left: 73px;
+  /*background-color: aqua; */
+  width: 45vw;
+  height: 30vh;
+  overflow: hidden;
+  /*background-image: url("../assets/diagram1_anim.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size:contain;
+  background-position: center;*/
+}
+.diagramMask .bgDiagramLine {
+  width: 31.5vw;
+  height: 30vh;
+  background-image: url("../assets/diagram1_anim.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+/* PAGE 3 */
+.titlePage3 {
+  width: 550px;
+  height: auto;
+  padding: 0px 25px;
+  font-size: calc(10px + 2vmin);
+}
+.content3text {
+  width: auto;
+  height: auto;
+  font-size: calc(7px + 2vmin);
+  padding: 14px 25px;
+  text-align: left;
+  color: #fff;
+  font-family: ITCAvantGradePro_DEMI;
+}
+.content3_2text {
+  width: auto;
+  height: auto;
+  font-size: calc(6px + 2vmin);
+  padding: 14px 25px;
+  text-align: center;
+  color: #532c13;
+  font-family: ITCAvantGradePro_BOOK;
+}
+li.content1style.content1textbullet {
+  width: 830;
+  height: 100;
+  font-size: calc(6px + 2vmin);
+}
+.content1Container {
+  padding-top: 20px;
+  align-items: unset;
+  padding-left: 10px;
+}
+.bgArrow {
+  height: 27vh;
+  width: 74vw;
+  background-image: url("../assets/bgtitlepage2.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+/* PAGE 4 */
+.titlePage4 {
+  width: 550px;
+  height: auto;
+  padding: 0px 25px;
+  font-size: calc(10px + 2vmin);
+}
+.SubtitlePage {
+  width: 550px;
+  height: auto;
+  padding: 10px 0px;
+  font-size: calc(4px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI_OBL;
+}
+.content1text {
+  width: auto;
+  height: auto;
+  font-size: calc(7px + 2vmin);
+  padding: 14px 25px;
+  text-align: left;
+  color: #fff;
+  font-family: ITCAvantGradePro_DEMI;
+}
+.content4text {
+  width: auto;
+  height: auto;
+  font-size: calc(6px + 2vmin);
+  padding: 15px 0px 0px 0px;
+  text-align: center;
+  font-family: ITCAvantGradePro_BOOK;
+}
+li.content1style.content1textbullet {
+  width: 830;
+  height: 100;
+  font-size: calc(6px + 2vmin);
+}
+.content1Container {
+  padding-top: 10px;
+  align-items: unset;
+  padding-left: 10px;
+}
+.content1ContainerResult {
+  padding-top: 0px;
+  align-items: unset;
+  padding-left: 0px;
+}
+.numberContainer {
+  height: 20px;
+  width: 20px;
+  background-color: #f59933;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-size: calc(5px + 2vmin);
+  border-radius: 5px;
+
+  font-family: ITCAvantGradePro_DEMI;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.addPaddingQuiz {
+  padding: 5px 5px 0px 0px;
+  align-items: flex-start;
+  min-height: 29px;
+  width: 29vw;
+}
+.addPadding3 {
+  padding: 5px 5px 0px 0px;
+  align-items: flex-start;
+  min-height: 35px;
+  width: 29vw;
+}
+.addPadding4 {
+  padding: 0px;
+  justify-content: center;
+  min-height: 20px;
+  width: auto;
+}
+.numberAnswerContainer {
+  height: 20px;
+  width: 20px;
+
+  background-color: #f59933;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-size: calc(5px + 2vmin);
+  border-radius: 20px;
+  margin-right: 10px;
+  font-family: ITCAvantGradePro_BOOK;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.imageHex1 {
+  height: 30vh;
+  width: 32vw;
+  background-image: url("../assets/quizhex1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.imageHex2 {
+  height: 30vh;
+  width: 32vw;
+  background-image: url("../assets/quizhex2.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.imageHex3 {
+  height: 30vh;
+  width: 32vw;
+  background-image: url("../assets/quizhex3.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.imageHex4 {
+  height: 30vh;
+  width: 32vw;
+  background-image: url("../assets/quizhex4.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.imageHex5 {
+  height: 30vh;
+  width: 32vw;
+  background-image: url("../assets/quizhex5.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.imageHexScore {
+  height: 20vh;
+  background-image: url("../assets/hexascore.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.subTextHex {
+  color: #f59933;
+  text-align: center;
+  font-size: calc(4px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+  padding-top: 5px;
+}
+.titleQuiz {
+  color: #f59933;
+  text-align: left;
+  font-size: calc(3px + 2vmin);
+  font-family: ITCAvantGradePro_BOOK;
+  padding: 0px;
+  min-height: 17px;
+}
+.answerText {
+  text-align: left;
+  font-size: calc(5px + 2vmin);
+  font-family: ITCAvantGradePro_BOOK;
+}
+.imagePita {
+  height: 20vh;
+  width: 102vw;
+  background-image: url("../assets/pita.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  position: fixed;
+  left: -10px;
+  bottom: 6px;
+}
+.customquiz2 {
+  font-size: calc(3px + 2vmin);
+}
+.eek0 {
+  margin: 0px 10px 0px 5px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/eek0.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.eek2 {
+  margin: 0px 10px 0px 5px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/eek2.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.eek4 {
+  margin: 0px 10px 0px 5px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/eek4.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.eek4_2 {
+  margin: 0px 10px 0px 5px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/eek42.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.eek6 {
+  margin: 0px 10px 0px 5px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/eek6.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+
+.QuizTable .table {
+  width: 120%;
+}
+.QuizTable thead tr {
+  background-color: rgba(247, 148, 32, 0.2);
+}
+.QuizTable thead tr th {
+  font-size: calc(2px + 2vmin);
+  color: #532c13;
+  font-family: ITCAvantGradePro_DEMI;
+  text-align: center;
+}
+.QuizTable tbody tr {
+  background-color: #fffcf8;
+}
+.QuizTable tbody tr td {
+  font-size: calc(3px + 2vmin);
+  color: #532c13;
+  font-family: ITCAvantGradePro_DEMI;
+  padding: 5px 15px;
+}
+.QuizTable tbody tr td#skortitle {
+  font-size: calc(1px + 1.5vmin);
+  color: #f59933;
+  text-align: center;
+}
+.QuizTable tbody tr td#skortitle2 {
+  font-size: calc(1px + 2vmin);
+
+  text-align: center;
+}
+.quizResultTitle {
+  font-size: calc(5px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+  text-align: center;
+  padding: 5px 0px;
+}
+.quizResultTitleCara {
+  font-size: calc(3px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+  text-align: center;
+  padding: 15px 0px;
+}
+.quizResultHex {
+  font-size: calc(43px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+  text-align: center;
+  color: #f7e6cd;
+}
+.quizResultDescHex {
+  font-size: calc(3px + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+  text-align: center;
+}
+.containerResult {
+  width: 70vw;
+  margin-left: 14vw;
+  padding: 7px 10px;
+  margin-top: 10px;
+  background-color: rgba(247, 230, 205, 0.4);
+  border: 5px solid #f2d5ad;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.quizResultTitleCaraContextPadding {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.quizResultTitleCaraContext {
+  display: flex;
+  font-size: calc(1px + 1.2vmin);
+  font-family: ITCAvantGradePro_EL;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.quizResultTitleCaraContextBorder {
+  height: 14px;
+  border: 1px solid #f2d5ad;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+}
+.quizResultTitleCaraContextBorderLine {
+  display: flex;
+  width: 100vw;
+  height: 10px;
+  border: 1px solid #f2d5ad;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.quizref {
+  width: 95vw;
+  padding: 10px 10px;
+  font-size: calc(1px + 1.1vmin);
+  font-family: ITCAvantGradePro_BOOK;
+  text-align: center;
+}
+/* PAGE5 */
+.titlePage5 {
+  width: 550px;
+  height: auto;
+  padding: 0px 25px;
+  font-size: calc(10px + 2vmin);
+}
+.content5text {
+  width: auto;
+  height: auto;
+  font-size: calc(5px + 2vmin);
+  padding: 10px 0px;
+}
+li.content1style.content1textbullet {
+  width: 830;
+  height: 100;
+  font-size: calc(6px + 2vmin);
+}
+.contentRow {
+  justify-content: center;
+}
+.content5Container {
+  padding-top: 5px;
+  align-items: unset;
+}
+.bgBox {
+  height: auto;
+  width: auto;
+  padding: 5px;
+  background-image: url("../assets/backbox.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.bgKalengLgg {
+  height: 45vh;
+  width: 100%;
+  background-image: url("../assets/kalenglgg.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  margin: 15px 0px 10px 0px;
+}
+.bgKalengPuramino {
+  height: 45vh;
+  width: 100%;
+  background-image: url("../assets/kalengpiramino.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  margin: 15px 0px 10px 0px;
+}
+.colmContainer {
+  text-align: center;
+  width: 35vw;
+}
+.titletext {
+  width: auto;
+  height: auto;
+  font-size: calc(6px + 2vmin);
+  color: #58595b;
+  font-family: ITCAvantGradePro_DEMI;
+}
+.boxtext {
+  width: auto;
+  height: auto;
+  font-size: calc(2px + 2vmin);
+  color: #fff;
+  font-family: ITCAvantGradePro_DEMI;
+}
+.addPadding {
+  padding-left: 40px;
+}
+.ciclebenefit {
+  position: absolute;
+  top: 39%;
+  left: 48%;
+  height: 125px;
+  width: 125px;
+  background-image: url("../assets/circlebg.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.QuizTable thead tr th {
+  font-family: ITCAvantGradePro_BOOK;
+}
+
+/* MOBILE ViEW */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .page1titles {
+    width: auto;
+    height: auto;
+    font-size: calc(21px + 1vmin);
+    line-height: 1.2em;
+  }
+  .page1Box {
+    top: 30%;
+    left: 5%;
+  }
+  .titleBig {
+    font-size: calc(80px + 1vmin);
+  }
+  .logoLgg {
+    height: 87px;
+    width: 16vw;
+  }
+  .titlePage2 {
+    width: auto;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(19px + 1vmin);
+  }
+  .titlePage3 {
+    width: auto;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(17px + 1vmin);
+  }
+  .titlePage4 {
+    width: auto;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(17px + 1vmin);
+  }
+  .titlestyle2 {
+    font-family: ITCAvantGradePro_DEMI;
+    text-align: left;
+    line-height: 4.5vh;
+  }
+  .content2Container {
+    padding-top: 10%;
+  }
+  .bgDiagram {
+    height: 40vh;
+  }
+  .bgDiagramEnd {
+    height: 40vh;
+  }
+  .diagramMask {
+    top: 24vh;
+    margin-left: 12%;
+  }
+  ol.horizontal li {
+    width: 29vw;
+  }
+  .content3text {
+    padding: 50px 25px;
+  }
+  .bgArrow {
+    margin-top: 15%;
+  }
+  .SubtitlePage {
+    width: auto;
+    padding: 40px 0px 0px 0px;
+  }
+  .content4Container {
+    padding-top: 40px;
+    align-items: unset;
+    padding-left: 20px;
+  }
+  .numberContainer {
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+  }
+  .imageHex1 {
+    height: 25vh;
+  }
+  .imageHex2 {
+    height: 25vh;
+  }
+  .imageHex3 {
+    height: 25vh;
+  }
+  .imageHex4 {
+    height: 25vh;
+  }
+  .imageHex5 {
+    height: 25vh;
+  }
+  .addPaddingQuiz {
+    min-height: 50px;
+  }
+  .numberAnswerContainer {
+    height: 35px;
+    width: 35px;
+    margin-right: 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  .titleQuiz {
+    min-height: 25px;
+  }
+  .addPadding3 {
+    min-height: 70px;
+    align-items: center;
+  }
+  .eek0 {
+    width: 45px;
+    height: 45px;
+  }
+  .eek2 {
+    width: 45px;
+    height: 45px;
+  }
+  .eek4 {
+    width: 45px;
+    height: 45px;
+  }
+  .eek4_2 {
+    width: 45px;
+    height: 45px;
+  }
+  .eek6 {
+    width: 45px;
+    height: 45px;
+  }
+  .QuizTable tbody tr {
+    height: 60px;
+  }
+  .quizResultHex {
+    font-size: calc(90px + 1vmin);
+  }
+  .quizResultDescHex {
+    font-size: calc(2px + 2vmin);
+  }
+  .quizResultTitleCara {
+    padding: 35px 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page1titles {
+    width: 426px;
+    height: auto;
+    font-size: calc(15px + 1vmin);
+  }
+  .titleBig {
+    padding: 0px 10px;
+    font-size: calc(50px + 2vmin);
+  }
+  .page1Box {
+    top: 90px;
+    left: 10px;
+    justify-content: normal;
+  }
+  .logoMj {
+    top: -7px;
+    left: 50px;
+    height: 45px;
+    width: 100vw;
+  }
+  .Titlebayi {
+    padding: 10px;
+  }
+  .titlePage2 {
+    width: 550px;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(10px + 2vmin);
+  }
+  .titlePage3 {
+    width: 550px;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(8px + 2vmin);
+  }
+  .titlePage4 {
+    width: 550px;
+    height: auto;
+    padding: 0px 25px;
+    font-size: calc(8px + 2vmin);
+  }
+  .titlePage5 {
+    width: 550px;
+    height: auto;
+    padding: 0px 18px;
+    font-size: calc(10px + 2vmin);
+  }
+  .content4Container {
+    padding-top: 10px;
+    align-items: unset;
+    padding-left: 10px;
+  }
 }

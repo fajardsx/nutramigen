@@ -3,7 +3,7 @@ import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
-import "./css/page3.css";
+//import "./css/page3.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 const propsAnim = {
@@ -79,7 +79,7 @@ class Page3 extends Component {
                 <div className="logoLgg" />
               </Tweenful.div>
               <Tweenful.div {...propsAnim2}>
-                <div className="titlestyle2 titlePage2">
+                <div className="titlestyle2 titlePage3">
                   {
                     "Proses alergi di awal kehidupan akan memicu terjadinya\ninflamasi sistemik yang menimbulkan rangkaian Allergic March"
                   }
@@ -89,17 +89,17 @@ class Page3 extends Component {
             <div className="content1Container">
               <div>
                 <Tweenful.div className="bgArrow" {...propsAnim}>
-                  <div className="content1style content1text">
+                  <div className="content1style content3text">
                     {
                       "Proses ini dapat diinfervensi dengan tata laksana alergi susu\nsapi yang tepat. Inflamasi sistemik dapat dicegah dengan\ndiet probiotik"
                     }
-                    <sup>2</sup>
+                    <sup id="custom">2</sup>
                   </div>
                 </Tweenful.div>
               </div>
               <div>
                 <Tweenful.div {...propsAnim}>
-                  <div className="content1style content3text">
+                  <div className="content1style content3_2text">
                     {
                       "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin dan\nmengambil langkah-langkah yang tepat sesuai dengan tata laksana alergi susu sapi"
                     }

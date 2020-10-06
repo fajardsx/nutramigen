@@ -1,6 +1,6 @@
 /*FONTS*/
 @font-face {
-  font-family: "ITCAvantGradePro";
+  font-family: "ITCAvantGradePro_MD";
   src: local("ITCAvantGradePro_MD"), url(./fonts/ITCAvantGardePro-Md.otf) format("opentype");
 }
 @font-face {
@@ -8,14 +8,22 @@
   src: local("ITCAvantGradePro_DEMI"), url(./fonts/ITCAvantGardePro-Demi.otf) format("opentype");
 }
 @font-face {
-  font-family: "ITCAvantGradePro";
+  font-family: "ITCAvantGradePro_DEMI_OBL";
+  src: local("ITCAvantGradePro_DEMI_OBL"),
+    url(./fonts/ITCAvantGardePro-DemiObl.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro_EL";
   src: local("ITCAvantGradePro_EXTRALIGHT"),
     url(./fonts/ITCAvantGardePro-XLt.otf) format("opentype");
 }
 @font-face {
   font-family: "ITCAvantGradePro_BOLD";
-  font-weight: 900;
-  src: local(""), url(./fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+  src: local("ITCAvantGradePro_BOLD"), url(./fonts/ITCAvantGardePro-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "ITCAvantGradePro_BOOK";
+  src: local("ITCAvantGradePro_BOOK"), url(./fonts/ITCAvantGardePro-Bk.otf) format("opentype");
 }
 
 .App {
@@ -23,6 +31,13 @@
 }
 div {
   white-space: pre-wrap;
+}
+sup#custom {
+  top: -1em;
+}
+sub,
+sup#custom {
+  font-size: 50%;
 }
 .App-logo {
   height: 40vmin;

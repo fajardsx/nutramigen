@@ -3,7 +3,7 @@ import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
 import Tweenful, { Observer, elastic } from "react-tweenful";
 import "./Pages.css";
-import "./css/page2.css";
+//import "./css/page2.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 const propsAnim = {
@@ -95,10 +95,11 @@ class Page2 extends Component {
                   {
                     "Anak dengan alergi susu sapi akan mengalami risiko \nmanifestasi alergi hingga usia 5 tahun"
                   }
+                  <sup id="custom">1</sup>
                 </div>
               </Tweenful.div>
             </div>
-            <div className="row-container content1Container">
+            <div className="row-container content2Container">
               <div>
                 <Tweenful.div {...propsAnim}>
                   <div className="content1style content2text">
