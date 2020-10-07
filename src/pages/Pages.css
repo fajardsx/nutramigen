@@ -48,7 +48,7 @@
 }
 ol.horizontal li {
   float: left;
-  width: 150px;
+  width: 23vw;
   padding: 2px 0px;
 }
 .logoLgg {
@@ -68,7 +68,7 @@ ol.horizontal li {
 #footer {
   position: fixed;
   bottom: 20px;
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
 /*PAGE 1*/
@@ -154,7 +154,7 @@ ol.horizontal li {
 }
 /*PAGE 2*/
 .titlePage2 {
-  width: 550px;
+  width: 80vw;
   height: auto;
   padding: 0px 25px;
   font-size: calc(10px + 2vmin);
@@ -165,15 +165,18 @@ ol.horizontal li {
   font-size: calc(5px + 2vmin);
   text-align: left;
   font-family: ITCAvantGradePro_DEMI;
-  padding: 10px 0px;
+  padding: 10px 0px 0px 0px;
 }
-li.content1style.content1textbullet {
+.content1textbullet {
+  align-items: center;
+}
+/* li.content1style.content1textbullet {
   width: 830;
   height: 100;
   font-size: calc(6px + 2vmin);
-}
+} */
 .content2Container {
-  padding-top: 20px;
+  padding-top: 5%;
   align-items: unset;
   padding-left: 5px;
 }
@@ -229,42 +232,47 @@ li.content1style.content1textbullet {
 .content3text {
   width: auto;
   height: auto;
-  font-size: calc(7px + 2vmin);
+  font-size: calc(11px + 2vmin);
   padding: 14px 25px;
   text-align: left;
   color: #fff;
-  font-family: ITCAvantGradePro_DEMI;
+  font-family: ITCAvantGradePro_BOOK;
+}
+.content3text a#customtext {
+  font-family: ITCAvantGradePro_BOLD;
+}
+.titlePage3 a#customtext {
+  font-family: ITCAvantGradePro_DEMI_OBL;
 }
 .content3_2text {
   width: auto;
   height: auto;
-  font-size: calc(6px + 2vmin);
-  padding: 14px 25px;
-  text-align: center;
+
+  padding: 14px 0px;
+  text-align: left;
   color: #532c13;
-  font-family: ITCAvantGradePro_BOOK;
+  font-family: ITCAvantGradePro_DEMI;
 }
-li.content1style.content1textbullet {
+/* li.content1style.content1textbullet {
   width: 830;
   height: 100;
   font-size: calc(6px + 2vmin);
-}
+} */
 .content1Container {
   padding-top: 20px;
   align-items: unset;
   padding-left: 10px;
 }
 .bgArrow {
-  height: 27vh;
-  width: 74vw;
-  background-image: url("../assets/bgtitlepage2.png");
+  height: 30vh;
+  width: auto;
+  background-image: url("../assets/bgtitlepage1a.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
   background-position: center;
   align-items: center;
-  margin-left: 10%;
-  margin-top: 10%;
+  margin: 20px 0px;
 }
 /* PAGE 4 */
 .titlePage4 {
@@ -274,11 +282,36 @@ li.content1style.content1textbullet {
   font-size: calc(10px + 2vmin);
 }
 .SubtitlePage {
-  width: 550px;
+  width: auto;
   height: auto;
+  text-align: center;
   padding: 10px 0px;
   font-size: calc(4px + 2vmin);
   font-family: ITCAvantGradePro_DEMI_OBL;
+}
+.bgScore {
+  background-image: url("../assets/boxResult.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  width: auto;
+  height: 62vh;
+  padding: 6% 0px 0px 0px;
+}
+.titleScore {
+  background-image: url("../assets/boxResulttitle.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  width: 25vw;
+  height: auto;
+  padding: 3%;
+  position: fixed;
+  top: -0.5em;
+  color: #fff;
+  left: 37vw;
 }
 .content1text {
   width: auto;
@@ -297,11 +330,11 @@ li.content1style.content1textbullet {
   text-align: center;
   font-family: ITCAvantGradePro_BOOK;
 }
-li.content1style.content1textbullet {
+/* li.content1style.content1textbullet {
   width: 830;
   height: 100;
   font-size: calc(6px + 2vmin);
-}
+} */
 .content1Container {
   padding-top: 10px;
   align-items: unset;
@@ -322,7 +355,10 @@ li.content1style.content1textbullet {
   text-align: center;
   font-size: calc(5px + 2vmin);
   border-radius: 5px;
-
+  background-image: url("../assets/boxquestion.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   font-family: ITCAvantGradePro_DEMI;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -430,7 +466,7 @@ li.content1style.content1textbullet {
   color: #f59933;
   text-align: left;
   font-size: calc(3px + 2vmin);
-  font-family: ITCAvantGradePro_BOOK;
+  font-family: ITCAvantGradePro_DEMI;
   padding: 0px;
   min-height: 17px;
 }
@@ -538,14 +574,15 @@ li.content1style.content1textbullet {
 }
 .quizResultTitle {
   font-size: calc(5px + 2vmin);
-  font-family: ITCAvantGradePro_DEMI;
+  font-family: ITCAvantGradePro_BOLD;
   text-align: center;
   padding: 5px 0px;
 }
 .quizResultTitleCara {
   font-size: calc(3px + 2vmin);
-  font-family: ITCAvantGradePro_DEMI;
+  font-family: ITCAvantGradePro_BOLD;
   text-align: center;
+  color: #f59933;
   padding: 15px 0px;
 }
 .quizResultHex {
@@ -559,22 +596,30 @@ li.content1style.content1textbullet {
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
 }
+.content4ContainerResult {
+  height: 90vh;
+}
 .containerResult {
-  width: 70vw;
+  width: 65vw;
   margin-left: 14vw;
   padding: 7px 10px;
   margin-top: 10px;
   background-color: rgba(247, 230, 205, 0.4);
-  border: 5px solid #f2d5ad;
+  border: 0px solid #f2d5ad;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+.resultDesc {
+  position: fixed;
+  bottom: 5%;
+}
 .quizResultTitleCaraContextPadding {
   align-items: flex-start;
   justify-content: space-around;
+  width: 100%;
 }
 .quizResultTitleCaraContext {
   display: flex;
@@ -592,7 +637,7 @@ li.content1style.content1textbullet {
 }
 .quizResultTitleCaraContextBorderLine {
   display: flex;
-  width: 100vw;
+  width: 95vw;
   height: 10px;
   border: 1px solid #f2d5ad;
   border-top-width: 0px;
@@ -608,7 +653,7 @@ li.content1style.content1textbullet {
 }
 /* PAGE5 */
 .titlePage5 {
-  width: 550px;
+  width: auto;
   height: auto;
   padding: 0px 25px;
   font-size: calc(10px + 2vmin);
@@ -619,11 +664,11 @@ li.content1style.content1textbullet {
   font-size: calc(5px + 2vmin);
   padding: 10px 0px;
 }
-li.content1style.content1textbullet {
+/* li.content1style.content1textbullet {
   width: 830;
   height: 100;
   font-size: calc(6px + 2vmin);
-}
+} */
 .contentRow {
   justify-content: center;
 }
@@ -634,7 +679,7 @@ li.content1style.content1textbullet {
 .bgBox {
   height: auto;
   width: auto;
-  padding: 5px;
+  padding: 6px;
   background-image: url("../assets/backbox.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -697,6 +742,65 @@ li.content1style.content1textbullet {
 .QuizTable thead tr th {
   font-family: ITCAvantGradePro_BOOK;
 }
+/* PAGE 6 */
+.ciclebenefitheader {
+  height: 80px;
+  width: 80px;
+  background-image: url("../assets/circlebg_header.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.colmContainerPage6 {
+  text-align: center;
+  width: 45vw;
+}
+.diagramMaskPage6 .bgDiagramLinePage6 {
+  width: 21vw;
+  height: 41vh;
+  text-align: center;
+  background-image: url("../assets/diagramVFill.png");
+  background-repeat: no-repeat;
+
+  background-size: contain;
+  background-position: center;
+}
+.titletextPage6 {
+  width: auto;
+  height: auto;
+  font-size: calc(6px + 2vmin);
+  color: #f59933;
+  font-family: ITCAvantGradePro_DEMI;
+}
+.diagramMaskPage6 {
+  z-index: 1;
+  position: absolute;
+  bottom: 27vh;
+  margin-left: 10%;
+  /*background-color: aqua;*/
+  width: 21vw;
+  height: 41vh;
+  overflow: hidden;
+}
+.bgDiagramPage6 {
+  height: 70vh;
+  width: 100%;
+  background-image: url("../assets/diagramVBlank.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
+.bgDiagramEndPage6 {
+  height: 70vh;
+  width: 100%;
+  background-image: url("../assets/diagramVDone.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+}
 
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
@@ -735,6 +839,7 @@ li.content1style.content1textbullet {
     padding: 0px 25px;
     font-size: calc(17px + 1vmin);
   }
+
   .titlePage5 {
     width: auto;
     height: auto;
@@ -764,13 +869,16 @@ li.content1style.content1textbullet {
   }
   .content3text {
     padding: 50px 25px;
+    font-size: calc(13px + 2vmin);
   }
   .bgArrow {
-    margin-top: 15%;
+    margin-top: 10%;
   }
   .SubtitlePage {
     width: auto;
-    padding: 40px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    font-size: calc(6px + 2vmin);
   }
   .content4Container {
     padding-top: 40px;
@@ -778,9 +886,9 @@ li.content1style.content1textbullet {
     padding-left: 20px;
   }
   .numberContainer {
-    height: 30px;
-    width: 30px;
-    margin-right: 30px;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
   }
   .imageHex1 {
     height: 25vh;
@@ -879,8 +987,23 @@ li.content1style.content1textbullet {
     height: 35vh;
     margin: 15px 0px 15px 0px;
   }
+  .bgScore {
+    height: 55vh;
+  }
+  .containerResult {
+    width: 66vw;
+    padding: 12px 10px;
+  }
+  ul {
+    margin-bottom: 0px;
+    padding-inline-start: 44px;
+    margin-block-end: 0px;
+  }
 }
 @media only screen and (max-width: 768px) {
+  .content2Container {
+    padding-top: 3%;
+  }
   .page1titles {
     width: 426px;
     height: auto;
@@ -910,6 +1033,9 @@ li.content1style.content1textbullet {
     padding: 0px 25px;
     font-size: calc(10px + 2vmin);
   }
+  .SubtitlePage {
+    font-size: calc(6px + 2vmin);
+  }
   .titlePage3 {
     width: 550px;
     height: auto;
@@ -923,7 +1049,7 @@ li.content1style.content1textbullet {
     font-size: calc(8px + 2vmin);
   }
   .titlePage5 {
-    width: 550px;
+    width: auto;
     height: auto;
     padding: 0px 18px;
     font-size: calc(10px + 2vmin);
@@ -932,5 +1058,10 @@ li.content1style.content1textbullet {
     padding-top: 10px;
     align-items: unset;
     padding-left: 10px;
+  }
+  ul {
+    margin-bottom: 0px;
+    padding-inline-start: 32px;
+    margin-block-end: 0px;
   }
 }

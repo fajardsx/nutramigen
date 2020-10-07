@@ -81,8 +81,9 @@ class Page3 extends Component {
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage3">
                   {
-                    "Proses alergi di awal kehidupan akan memicu terjadinya\ninflamasi sistemik yang menimbulkan rangkaian Allergic March"
+                    "Proses alergi di awal kehidupan akan memicu terjadinya\ninflamasi sistemik yang menimbulkan rangkaian "
                   }
+                  <a id="customtext">{"Allergic March"}</a>
                 </div>
               </Tweenful.div>
             </div>
@@ -91,9 +92,12 @@ class Page3 extends Component {
                 <Tweenful.div className="bgArrow" {...propsAnim}>
                   <div className="content1style content3text">
                     {
-                      "Proses ini dapat diinfervensi dengan tata laksana alergi susu\nsapi yang tepat. Inflamasi sistemik dapat dicegah dengan\ndiet probiotik"
+                      "Proses ini dapat diinfervensi dengan tata laksana alergi susu\nsapi yang tepat. Inflamasi sistemik dapat dicegah dengan"
                     }
-                    <sup id="custom">2</sup>
+                    <a id="customtext">
+                      {" diet probiotik."}
+                      <sup id="custom">2</sup>
+                    </a>
                   </div>
                 </Tweenful.div>
               </div>
@@ -101,28 +105,12 @@ class Page3 extends Component {
                 <Tweenful.div {...propsAnim}>
                   <div className="content1style content3_2text">
                     {
-                      "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin dan\nmengambil langkah-langkah yang tepat sesuai dengan tata laksana alergi susu sapi"
+                      "Untuk itu penting dapat mengenali gejala alergi susu sapi sedini mungkin\ndan mengambil langkah-langkah yang tepat sesuai dengan tata laksana\nalergi susu sapi"
                     }
                   </div>
                 </Tweenful.div>
               </div>
             </div>
-
-            {/* <Tweenful.div {...propsAnim}>
-              <div id="footer">
-                <div className="contentRefstyle">{"Referensi"}</div>
-                <ol
-                  className="horizontal"
-                  style={{ marginBottom: 0, paddingInlineStart: 7, marginBlockEnd: 10 }}>
-                  <li key={"1"} className="contentRefstyle">
-                    {"Bishop JM et al Pediatr. 1990 Jun:116(6)-862-7"}
-                  </li>
-                  <li key={"2"} className="contentRefstyle">
-                    {"Herz et al Clin. Ep Allergy 35:397-402"}
-                  </li>
-                </ol>
-              </div>
-            </Tweenful.div> */}
           </div>
         </Observer>
       </ContainerSwipe>

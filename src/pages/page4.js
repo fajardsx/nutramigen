@@ -92,7 +92,7 @@ class Page4 extends Component {
     }
   }
   onClickHandle = (e) => {
-    console.log("click ", e);
+    //console.log("click ", e);
     if (this.state.currentQuiz !== 4) {
       let scorePage = [...this.state.scorePage];
       let score = this.state.score;
@@ -102,7 +102,7 @@ class Page4 extends Component {
     }
   };
   onClickHandle1 = (e, part) => {
-    console.log("click ", e);
+    // console.log("click ", e);
     //console.log("part ", part);
     let page4skor = [...this.state.page4skor];
     page4skor[part] = e;
@@ -151,21 +151,21 @@ class Page4 extends Component {
           easing="linear">
           <div className="observer-demo">
             <div className="row-container">
-              <Tweenful.div {...propsAnim}>
+              {/* <Tweenful.div {...propsAnim}>
                 <div className="logoLgg" />
               </Tweenful.div>
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage4">
                   {"5 Langkah mudah untuk membantu dokter mengenali\ngejala alergi susu sapi"}
                 </div>
-              </Tweenful.div>
+              </Tweenful.div> */}
             </div>
 
             <div className="content4Container ">
               <Tweenful.div {...propsAnim3} render={this.state.currentQuiz < 6 ? true : false}>
                 <div className="content1style SubtitlePage">
                   {
-                    "Isi skor di setiap gejala yang dialami pasien dokter dan temukan hasil skor di akhir questioner"
+                    "Isi skor (klik bulatan) di setiap gejala yang dialami pasien dokter dan temukan hasil skor\ndi akhir questioner"
                   }
                 </div>
               </Tweenful.div>
@@ -400,22 +400,28 @@ class Page4 extends Component {
   );
   questResult = () => (
     <div className="content4ContainerResult ">
-      <div {...propsAnim}>
-        <div className="content1style quizResultTitle">TOTAL SCORE</div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style imageHexScore">
-          <div className="quizResultHex">{this.getScore()}</div>
+      <div className="titleScore">Hasil Akhir</div>
+      <div className="bgScore">
+        <div {...propsAnim}>
+          <div className="content1style quizResultTitle">TOTAL SCORE</div>
         </div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style containerResult">
-          <div className="quizResultDescHex">
-            {
-              "Kemungkinan pasien Dokter mengalami masalah pencernaan fungsional jika\ntanpa disertai gejala pada kulit dan pernafasan."
-            }
+        <div {...propsAnim}>
+          <div className="content1style imageHexScore">
+            <div className="quizResultHex">{this.getScore()}</div>
           </div>
         </div>
+        <div {...propsAnim}>
+          <div className="content1style containerResult">
+            <div className="quizResultDescHex">
+              {
+                "Kemungkinan pasien Dokter mengalami masalah pencernaan fungsional jika\ntanpa disertai gejala pada kulit dan pernafasan."
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="resultDesc">
         <div {...propsAnim}>
           <div className="content1style quizResultTitleCara">CARA INTERPRETASI HASIL/SKOR</div>
         </div>

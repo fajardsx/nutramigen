@@ -93,14 +93,14 @@ class Page2 extends Component {
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage2">
                   {
-                    "Anak dengan alergi susu sapi akan mengalami risiko \nmanifestasi alergi hingga usia 5 tahun"
+                    "Anak dengan alergi susu sapi akan mengalami risiko \nmanifestasi alergi hingga usia 5 tahun."
                   }
                   <sup id="custom">1</sup>
                 </div>
               </Tweenful.div>
             </div>
             <div className="row-container content2Container">
-              <div>
+              <div id="page2Col1">
                 <Tweenful.div {...propsAnim}>
                   <div className="content1style content2text">
                     {
@@ -109,15 +109,15 @@ class Page2 extends Component {
                   </div>
                 </Tweenful.div>
                 <Tweenful.div {...propsAnim}>
-                  <ul style={{ marginBottom: 0, paddingInlineStart: 20, marginBlockEnd: 10 }}>
-                    <li key={"1"} className="content1style content1textbullet">
-                      {"40% asma"}
+                  <ul>
+                    <li key={"1"} className="content1style ">
+                      <span>{"40% asma"}</span>
                     </li>
-                    <li key={"2"} className="content1style content1textbullet">
-                      {"20% eksim atopik"}
+                    <li key={"2"} className="content1style ">
+                      <span>{"20% eksim atopik"}</span>
                     </li>
-                    <li key={"3"} className="content1style content1textbullet">
-                      {"43% rhinitis alergika"}
+                    <li key={"3"} className="content1style ">
+                      <span>{"43% rhinitis alergika"}</span>
                     </li>
                   </ul>
                 </Tweenful.div>
@@ -141,7 +141,7 @@ class Page2 extends Component {
                 <div className="contentRefstyle">{"Referensi"}</div>
                 <ol
                   className="horizontal"
-                  style={{ marginBottom: 0, paddingInlineStart: 7, marginBlockEnd: 10 }}>
+                  style={{ marginBottom: 0, paddingInlineStart: 5, marginBlockEnd: 10 }}>
                   <li key={"1"} className="contentRefstyle">
                     {"Bishop JM et al Pediatr. 1990 Jun:116(6)-862-7"}
                   </li>

@@ -34,15 +34,28 @@ const propsMask = {
   delay: 1100,
   render: true,
   duration: 1600,
-  easing: elastic(1, 0.1),
+  easing: elastic(1, 1),
   loop: false,
-  animate: { width: [0, "31.5vw"], height: ["30vh", "30vh"] },
+  animate: { width: ["10vw", "10vw"], height: ["0px", "41vh"] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
-class Page5 extends Component {
+
+const propsMaskDone = {
+  delay: 1600,
+  render: true,
+  duration: 1600,
+  easing: elastic(1, 0.1),
+  loop: false,
+  animate: { opacity: [0, 1] },
+  events: {
+    onAnimationStart: () => console.log("AnimationStart"),
+    onAnimationEnd: () => console.log("AnimationEnd"),
+  },
+};
+class Page5_1 extends Component {
   constructor(props, context) {
     super(props, context);
     console.log(this.props);
@@ -80,33 +93,45 @@ class Page5 extends Component {
               </Tweenful.div>
               <Tweenful.div {...propsAnim2}>
                 <div className="titlestyle2 titlePage5">
-                  {
-                    "Percayakan tatalaksana nutrisi alergi susu sapi (ASS) pada\nrangkaian produk Mead Johnson"
-                  }
+                  {"Mengurangi risiko Allergic March ketika\nusia 3 tahun "}
+                  <sup id="custom">13</sup>
                 </div>
+              </Tweenful.div>
+              <Tweenful.div {...propsAnim}>
+                <div className="ciclebenefitheader" />
               </Tweenful.div>
             </div>
             <div className="content5Container">
               <div className="row-container contentRow">
-                <div className="colmContainer">
-                  <div className="titletext">Ass Ringan/Sedang</div>
+                <div className="colmContainerPage6">
+                  <Tweenful.div {...propsAnim}>
+                    <div className="bgDiagramPage6">
+                      <Tweenful.div className="diagramMaskPage6" {...propsMask}>
+                        <div className="bgDiagramLinePage6" />
+                      </Tweenful.div>
+                      <Tweenful.div {...propsMaskDone}>
+                        <div className="bgDiagramEndPage6" />
+                      </Tweenful.div>
+                    </div>
+                  </Tweenful.div>
+                  {/* <div className="titletext">Ass Ringan/Sedang</div>
                   <div className="bgKalengLgg" />
                   <div className="bgBox">
                     <div className="boxtext">
                       {"Formula Protein Terhidrolisa Ekstensif\ndengan Probiotik Lactobacillus GG"}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-                <div className="colmContainer addPadding">
-                  <div className="titletext">Ass Berat</div>
+                <div className="colmContainerPage6 addPadding">
+                  <div className="titletextPage6">Menurunkan Kejadian</div>
+                  {/* <div className="titletext">Ass Berat</div>
                   <div className="bgKalengPuramino" />
                   <div className="bgBox">
                     <div className="boxtext">{"Formula asam amino dengan\nMCT Oil 33%"}</div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
-            <div className="ciclebenefit" />
           </div>
         </Observer>
       </ContainerSwipe>
@@ -129,4 +154,4 @@ const mapDispatchToProps = (dispatch) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Page5);
+export default connect(mapStateToProps, mapDispatchToProps)(Page5_1);
