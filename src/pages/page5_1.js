@@ -36,7 +36,7 @@ const propsMask = {
   duration: 1600,
   easing: elastic(1, 1),
   loop: false,
-  animate: { width: ["10vw", "10vw"], height: ["0px", "41vh"] },
+  animate: { height: ["1vh", "44vh"] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -104,7 +104,7 @@ class Page5_1 extends Component {
             <div className="content5Container">
               <div className="row-container contentRow">
                 <div className="colmContainerPage6">
-                  <Tweenful.div {...propsAnim}>
+                  <div>
                     <div className="bgDiagramPage6">
                       <Tweenful.div className="diagramMaskPage6" {...propsMask}>
                         <div className="bgDiagramLinePage6" />
@@ -113,14 +113,7 @@ class Page5_1 extends Component {
                         <div className="bgDiagramEndPage6" />
                       </Tweenful.div>
                     </div>
-                  </Tweenful.div>
-                  {/* <div className="titletext">Ass Ringan/Sedang</div>
-                  <div className="bgKalengLgg" />
-                  <div className="bgBox">
-                    <div className="boxtext">
-                      {"Formula Protein Terhidrolisa Ekstensif\ndengan Probiotik Lactobacillus GG"}
-                    </div>
-                  </div> */}
+                  </div>
                 </div>
                 <div className="colmContainerPage6 addPadding">
                   <div className="titletextPage6">Menurunkan Kejadian</div>

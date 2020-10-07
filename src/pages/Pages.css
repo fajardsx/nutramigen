@@ -756,16 +756,16 @@ ol.horizontal li {
   text-align: center;
   width: 45vw;
 }
-.diagramMaskPage6 .bgDiagramLinePage6 {
-  width: 21vw;
-  height: 41vh;
-  text-align: center;
-  background-image: url("../assets/diagramVFill.png");
+.bgDiagramPage6 {
+  height: 70vh;
+  width: 100%;
+  background-image: url("../assets/diagramVBlank.png");
   background-repeat: no-repeat;
-
+  text-align: center;
   background-size: contain;
   background-position: center;
 }
+
 .titletextPage6 {
   width: auto;
   height: auto;
@@ -774,21 +774,19 @@ ol.horizontal li {
   font-family: ITCAvantGradePro_DEMI;
 }
 .diagramMaskPage6 {
-  z-index: 1;
-  position: absolute;
-  bottom: 27vh;
+  position: fixed;
+  bottom: 26vh;
   margin-left: 10%;
   /*background-color: aqua;*/
-  width: 21vw;
-  height: 41vh;
+  width: 18vw;
+  height: 1vh;
   overflow: hidden;
 }
-.bgDiagramPage6 {
-  height: 70vh;
-  width: 100%;
-  background-image: url("../assets/diagramVBlank.png");
+.diagramMaskPage6 .bgDiagramLinePage6 {
+  width: 18vw;
+  height: 46vh;
+  background-image: url("../assets/diagramVFill.png");
   background-repeat: no-repeat;
-  text-align: center;
   background-size: contain;
   background-position: center;
 }
@@ -800,6 +798,7 @@ ol.horizontal li {
   text-align: center;
   background-size: contain;
   background-position: center;
+  z-index: 1;
 }
 
 /* MOBILE ViEW */
