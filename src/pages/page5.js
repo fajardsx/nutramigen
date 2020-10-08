@@ -31,13 +31,25 @@ const propsAnim2 = {
     onAnimationEnd: () => console.log("AnimationEnd"),
   },
 };
-const propsMask = {
+const propsMaskMove = {
   delay: 1100,
   render: true,
   duration: 1600,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: { width: [0, "31.5vw"], height: ["30vh", "30vh"] },
+  animate: { top: ["-31px", "0px"], opacity: [0, 1] },
+  events: {
+    onAnimationStart: () => console.log("AnimationStart"),
+    onAnimationEnd: () => console.log("AnimationEnd"),
+  },
+};
+const propsMaskMove2 = {
+  delay: 1100,
+  render: true,
+  duration: 1600,
+  easing: elastic(1, 0.1),
+  loop: false,
+  animate: { rotate: ["-90deg", "0deg"], opacity: [0, 1] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -108,10 +120,10 @@ class Page5 extends Component {
                   </Tweenful.div>
                   <Tweenful.div
                     className="bgKalengLgg"
-                    {...propsAnim}
+                    {...propsMaskMove}
                     delay={Constant.NORMAL_DURATION * 2.3}
                     duration={Constant.NORMAL_DURATION}
-                    style={{ opacity: 0 }}
+                    style={{ top: -39, opacity: 0 }}
                   />
                   <Tweenful.div
                     className="bgBox"
@@ -135,10 +147,10 @@ class Page5 extends Component {
                   </Tweenful.div>
                   <Tweenful.div
                     className="bgKalengPuramino"
-                    {...propsAnim}
+                    {...propsMaskMove}
                     delay={Constant.NORMAL_DURATION * 3.5}
                     duration={Constant.NORMAL_DURATION}
-                    style={{ opacity: 0 }}
+                    style={{ top: -39, opacity: 0 }}
                   />
                   <Tweenful.div
                     className="bgBox"
@@ -153,7 +165,7 @@ class Page5 extends Component {
             </div>
             <Tweenful.div
               className="ciclebenefit"
-              {...propsAnim}
+              {...propsMaskMove2}
               delay={Constant.NORMAL_DURATION * 3}
               duration={Constant.NORMAL_DURATION}
               style={{ opacity: 0 }}

@@ -1,8 +1,9 @@
-import { CURRENT_PAGE, PAGE_DIRECTION } from "../actions/actions";
+import { CURRENT_PAGE, PAGE_DIRECTION, PAGE_ORIENTATION } from "../actions/actions";
 
 const initialState = {
   page: 0,
   direction: "left",
+  deviceOrientation: "portaid",
 };
 
 const reducer = (state = initialState, action) => {
@@ -11,6 +12,8 @@ const reducer = (state = initialState, action) => {
       return { ...state, page: action.value };
     case PAGE_DIRECTION:
       return { ...state, direction: action.value };
+    case PAGE_ORIENTATION:
+      return { ...state, deviceOrientation: action.value };
     default:
       return state;
   }

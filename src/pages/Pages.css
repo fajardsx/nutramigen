@@ -228,7 +228,7 @@ ol.horizontal li {
   width: 550px;
   height: auto;
   padding: 0px 25px;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1.3vw + 2vmin);
 }
 .content3text {
   width: auto;
@@ -238,6 +238,7 @@ ol.horizontal li {
   text-align: left;
   color: #fff;
   font-family: ITCAvantGradePro_BOOK;
+  font-size: calc(1.5vw + 2vmin);
 }
 .content3text a#customtext {
   font-family: ITCAvantGradePro_BOLD;
@@ -253,6 +254,7 @@ ol.horizontal li {
   text-align: left;
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
+  font-size: calc(1.3vw + 2vmin);
 }
 /* li.content1style.content1textbullet {
   width: 830;
@@ -697,6 +699,7 @@ ol.horizontal li {
   background-size: contain;
   background-position: center;
   margin: 15px 0px 10px 0px;
+  position: relative;
 }
 .bgKalengPuramino {
   height: 45vh;
@@ -707,6 +710,7 @@ ol.horizontal li {
   background-size: contain;
   background-position: center;
   margin: 15px 0px 10px 0px;
+  position: relative;
 }
 .colmContainer {
   text-align: center;
@@ -863,7 +867,7 @@ ol.horizontal li {
     width: auto;
     height: auto;
     padding: 0px 25px;
-    font-size: calc(17px + 1vmin);
+    font-size: calc(1.1vw + 2vmin);
   }
   .titlePage4 {
     width: auto;
@@ -871,7 +875,9 @@ ol.horizontal li {
     padding: 0px 25px;
     font-size: calc(17px + 1vmin);
   }
-
+  .content3_2text {
+    font-size: calc(1.1vw + 2vmin);
+  }
   .titlePage5 {
     width: auto;
     height: auto;
@@ -901,7 +907,7 @@ ol.horizontal li {
   }
   .content3text {
     padding: 50px 25px;
-    font-size: calc(13px + 2vmin);
+    font-size: calc(1.5vw + 2vmin);
   }
   .bgArrow {
     margin-top: 10%;
@@ -1078,7 +1084,7 @@ ol.horizontal li {
     width: 550px;
     height: auto;
     padding: 0px 25px;
-    font-size: calc(8px + 2vmin);
+    font-size: calc(1.3vw + 2vmin);
   }
   .titlePage4 {
     width: 550px;

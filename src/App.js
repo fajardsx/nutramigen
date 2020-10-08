@@ -4,13 +4,40 @@ import { reactLocalStorage } from "reactjs-localstorage";
 import "./App.css";
 import RouteApp from "./Route";
 import { Container } from "react-bootstrap";
+import { connect } from "react-redux";
+import {
+  updateCurrentOrentation,
+  updateCurrentDirection,
+  updateCurrentPage,
+} from "./redux/actions/actions";
+
+let that = null;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    that = this;
+  }
+
   componentDidMount() {
+    window.addEventListener(
+      "orientationchange",
+      function () {
+        if (window.innerWidth > window.innerHeight) {
+          that.getOrientation("portrait");
+        } else {
+          that.getOrientation("landscape");
+        }
+      },
+      false
+    );
     this.resetDefault();
   }
   async resetDefault() {
     await reactLocalStorage.set("PAGE", 0);
+  }
+  async getOrientation(type) {
+    console.log("Device Orientation ", type);
   }
   render() {
     return (
@@ -30,4 +57,22 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    page: state.page,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updatePage: (data) => {
+      dispatch(updateCurrentPage(data));
+    },
+    updateDirection: (data) => {
+      dispatch(updateCurrentDirection(data));
+    },
+    updateOrientation: (data) => {
+      dispatch(updateCurrentOrentation(data));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);
