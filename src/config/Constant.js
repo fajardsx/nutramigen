@@ -1,4 +1,6 @@
 class Constant {
+  static ROOT_URL = "/nutramigen/";
+  static NORMAL_DURATION = 1300;
   static MAX_PAGE = 6;
   //
   static PAGE_HOME = 0;

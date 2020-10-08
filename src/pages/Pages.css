@@ -6,6 +6,7 @@
   height: 100vh;
   width: 100vw;
 }
+
 .Box-Demo {
   display: flex;
   flex-direction: row;
@@ -273,6 +274,7 @@ ol.horizontal li {
   background-position: center;
   align-items: center;
   margin: 20px 0px;
+  position: relative;
 }
 /* PAGE 4 */
 .titlePage4 {
@@ -831,6 +833,9 @@ ol.horizontal li {
 }
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .logoMj {
+    height: 9vh;
+  }
   .page1titles {
     width: auto;
     height: auto;
@@ -1085,7 +1090,7 @@ ol.horizontal li {
     width: auto;
     height: auto;
     padding: 0px 18px;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(1.4vw + 2vmin);
   }
   .content4Container {
     padding-top: 10px;

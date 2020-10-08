@@ -7,10 +7,11 @@ import "./Pages.css";
 import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
+import Constant from "../config/Constant";
 const propsAnimLogo = {
   delay: 1200,
   render: true,
-  duration: 1600,
+  duration: Constant.NORMAL_DURATION,
   easing: elastic(1, 0.1),
   loop: false,
   animate: { opacity: [0, 1] },
@@ -22,7 +23,7 @@ const propsAnimLogo = {
 const propsAnim = {
   delay: 1300,
   render: true,
-  duration: 1600,
+  duration: Constant.NORMAL_DURATION,
   easing: elastic(1, 0.1),
   loop: false,
   animate: { opacity: [0, 1] },
@@ -34,10 +35,10 @@ const propsAnim = {
 const propsAnim2 = {
   delay: 1500,
   render: true,
-  duration: 1600,
+  duration: Constant.NORMAL_DURATION,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: { opacity: [0, 1] },
+  animate: { left: ["-300px", "11vw"], opacity: [0, 1] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -46,7 +47,7 @@ const propsAnim2 = {
 
 //
 const Home = (props) => {
-  const [shouldRender, setShouldRender] = useState(true);
+  const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setShouldRender(true), 3000);
@@ -67,16 +68,31 @@ const Home = (props) => {
   return (
     <ContainerSwipe callNext={onNext.bind(this)} callPrev={onBack.bind(this)}>
       <div className="observer-demo">
-        <Tweenful.div className="page1Box" {...propsAnimLogo}>
+        <Tweenful.div
+          className="page1Box"
+          {...propsAnimLogo}
+          delay={Constant.NORMAL_DURATION}
+          duration={Constant.NORMAL_DURATION}
+          style={{ opacity: 0 }}>
           <div class="logoMj" />
         </Tweenful.div>
-        <Tweenful.div className="page1Box" {...propsAnim}>
+        <Tweenful.div
+          className="page1Box"
+          {...propsAnim}
+          delay={Constant.NORMAL_DURATION * 1.5}
+          duration={Constant.NORMAL_DURATION}
+          style={{ opacity: 0 }}>
           <div className="bayihex">
             <div className="Titlebayi">
               <img src={loadingicon} alt="bayi" style={{ width: "100%" }} />
             </div>
           </div>
-          <Tweenful.div className="titlebg" {...propsAnim2}>
+          <Tweenful.div
+            className="titlebg"
+            {...propsAnim2}
+            delay={Constant.NORMAL_DURATION * 2}
+            duration={Constant.NORMAL_DURATION}
+            style={{ opacity: 0 }}>
             <div className="titleContainer">
               <div className="titlestyle titleBig">{"5"}</div>
               <div className="titlestyle page1titles">

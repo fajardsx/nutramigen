@@ -2,7 +2,7 @@
   "name": "nutramigenapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dotcomsolution.000webhostapp.com/enfamicrosite/",
+  "homepage": "https://beta4.dotcomsolution.co.id/nutramigen/",
   "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

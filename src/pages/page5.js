@@ -6,6 +6,7 @@ import "./Pages.css";
 //import "./css/page5.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
+import Constant from "../config/Constant";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -75,10 +76,18 @@ class Page5 extends Component {
           easing="linear">
           <div className="observer-demo">
             <div className="row-container">
-              <Tweenful.div {...propsAnim}>
+              <Tweenful.div
+                {...propsAnim}
+                delay={Constant.NORMAL_DURATION}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="logoLgg" />
               </Tweenful.div>
-              <Tweenful.div {...propsAnim2}>
+              <Tweenful.div
+                {...propsAnim2}
+                delay={Constant.NORMAL_DURATION * 1.3}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="titlestyle2 titlePage5">
                   {
                     "Percayakan tatalaksana nutrisi alergi susu sapi (ASS) pada\nrangkaian produk Mead Johnson"
@@ -89,24 +98,66 @@ class Page5 extends Component {
             <div className="content5Container">
               <div className="row-container contentRow">
                 <div className="colmContainer">
-                  <div className="titletext">Ass Ringan/Sedang</div>
-                  <div className="bgKalengLgg" />
-                  <div className="bgBox">
+                  <Tweenful.div
+                    className="titletext"
+                    {...propsAnim}
+                    delay={Constant.NORMAL_DURATION * 2}
+                    duration={Constant.NORMAL_DURATION}
+                    style={{ opacity: 0 }}>
+                    Ass Ringan/Sedang
+                  </Tweenful.div>
+                  <Tweenful.div
+                    className="bgKalengLgg"
+                    {...propsAnim}
+                    delay={Constant.NORMAL_DURATION * 2.3}
+                    duration={Constant.NORMAL_DURATION}
+                    style={{ opacity: 0 }}
+                  />
+                  <Tweenful.div
+                    className="bgBox"
+                    {...propsAnim}
+                    delay={Constant.NORMAL_DURATION * 2.5}
+                    duration={Constant.NORMAL_DURATION}
+                    style={{ opacity: 0 }}>
                     <div className="boxtext">
                       {"Formula Protein Terhidrolisa Ekstensif\ndengan Probiotik Lactobacillus GG"}
                     </div>
-                  </div>
+                  </Tweenful.div>
                 </div>
                 <div className="colmContainer addPadding">
-                  <div className="titletext">Ass Berat</div>
-                  <div className="bgKalengPuramino" />
-                  <div className="bgBox">
+                  <Tweenful.div
+                    className="titletext"
+                    {...propsAnim}
+                    delay={Constant.NORMAL_DURATION * 3.3}
+                    duration={Constant.NORMAL_DURATION}
+                    style={{ opacity: 0 }}>
+                    Ass Berat
+                  </Tweenful.div>
+                  <Tweenful.div
+                    className="bgKalengPuramino"
+                    {...propsAnim}
+                    delay={Constant.NORMAL_DURATION * 3.5}
+                    duration={Constant.NORMAL_DURATION}
+                    style={{ opacity: 0 }}
+                  />
+                  <Tweenful.div
+                    className="bgBox"
+                    {...propsAnim}
+                    delay={Constant.NORMAL_DURATION * 3.7}
+                    duration={Constant.NORMAL_DURATION}
+                    style={{ opacity: 0 }}>
                     <div className="boxtext">{"Formula asam amino dengan\nMCT Oil 33%"}</div>
-                  </div>
+                  </Tweenful.div>
                 </div>
               </div>
             </div>
-            <div className="ciclebenefit" />
+            <Tweenful.div
+              className="ciclebenefit"
+              {...propsAnim}
+              delay={Constant.NORMAL_DURATION * 3}
+              duration={Constant.NORMAL_DURATION}
+              style={{ opacity: 0 }}
+            />
           </div>
         </Observer>
       </ContainerSwipe>

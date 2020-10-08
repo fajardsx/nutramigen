@@ -7,6 +7,7 @@ import "./Pages.css";
 import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
+import Constant from "../config/Constant";
 const propsAnimLogo = {
   delay: 1000,
   render: true,
@@ -37,7 +38,7 @@ const propsAnim2 = {
   duration: 1600,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: { opacity: [0, 1] },
+  animate: { left: ["-300px", "11vw"], opacity: [0, 1] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -74,13 +75,23 @@ const Page41 = (props) => {
         unmount={[{ opacity: 0 }]}
         easing="linear">
         <div className="observer-demo">
-          <Tweenful.div className="page1Box" {...propsAnim}>
+          <Tweenful.div
+            className="page1Box"
+            {...propsAnim}
+            delay={Constant.NORMAL_DURATION}
+            duration={Constant.NORMAL_DURATION}
+            style={{ opacity: 0 }}>
             <div className="bayihex">
               <div className="Titlebayi">
                 <img src={loadingicon} alt="bayi" style={{ width: "100%" }} />
               </div>
             </div>
-            <Tweenful.div className="titlebg" {...propsAnim2}>
+            <Tweenful.div
+              className="titlebg"
+              {...propsAnim2}
+              delay={Constant.NORMAL_DURATION * 1.5}
+              duration={Constant.NORMAL_DURATION}
+              style={{ opacity: 0 }}>
               <div className="titleContainer">
                 <div className="titlestyle titleBig">{"5"}</div>
                 <div className="titlestyle page1titles">

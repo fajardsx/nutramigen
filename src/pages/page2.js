@@ -6,6 +6,7 @@ import "./Pages.css";
 //import "./css/page2.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
+import Constant from "../config/Constant";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -87,10 +88,18 @@ class Page2 extends Component {
           easing="linear">
           <div className="observer-demo">
             <div className="row-container">
-              <Tweenful.div {...propsAnim}>
+              <Tweenful.div
+                {...propsAnim}
+                delay={Constant.NORMAL_DURATION}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="logoLgg" />
               </Tweenful.div>
-              <Tweenful.div {...propsAnim2}>
+              <Tweenful.div
+                {...propsAnim}
+                delay={Constant.NORMAL_DURATION * 1.5}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="titlestyle2 titlePage2">
                   {
                     "Anak dengan alergi susu sapi akan mengalami risiko \nmanifestasi alergi hingga usia 5 tahun."
@@ -101,14 +110,22 @@ class Page2 extends Component {
             </div>
             <div className="row-container content2Container">
               <div id="page2Col1">
-                <Tweenful.div {...propsAnim}>
+                <Tweenful.div
+                  {...propsAnim}
+                  delay={Constant.NORMAL_DURATION * 2}
+                  duration={Constant.NORMAL_DURATION}
+                  style={{ opacity: 0 }}>
                   <div className="content1style content2text">
                     {
                       "Studi pada 97 anak dengan alergi protein \nsusu sapi yang dipantau hingga usia 5 tahun,\nmasih mengalami gejala alergi"
                     }
                   </div>
                 </Tweenful.div>
-                <Tweenful.div {...propsAnim}>
+                <Tweenful.div
+                  {...propsAnim}
+                  delay={Constant.NORMAL_DURATION * 2.1}
+                  duration={Constant.NORMAL_DURATION}
+                  style={{ opacity: 0 }}>
                   <ul>
                     <li key={"1"} className="content1style ">
                       <span>{"40% asma"}</span>
@@ -123,12 +140,25 @@ class Page2 extends Component {
                 </Tweenful.div>
               </div>
               <div>
-                <Tweenful.div {...propsAnim}>
+                <Tweenful.div
+                  {...propsAnim}
+                  delay={Constant.NORMAL_DURATION * 2.5}
+                  duration={Constant.NORMAL_DURATION}
+                  style={{ opacity: 0 }}>
                   <div className="bgDiagram">
-                    <Tweenful.div className="diagramMask" {...propsMask}>
+                    <Tweenful.div
+                      className="diagramMask"
+                      {...propsMask}
+                      delay={Constant.NORMAL_DURATION * 3}
+                      duration={Constant.NORMAL_DURATION}
+                      style={{ width: 0 }}>
                       <div className="bgDiagramLine" />
                     </Tweenful.div>
-                    <Tweenful.div {...propsMaskDone}>
+                    <Tweenful.div
+                      {...propsMaskDone}
+                      delay={Constant.NORMAL_DURATION * 3}
+                      duration={Constant.NORMAL_DURATION}
+                      style={{ opacity: 0 }}>
                       <div className="bgDiagramEnd" />
                     </Tweenful.div>
                   </div>
@@ -136,7 +166,11 @@ class Page2 extends Component {
               </div>
             </div>
 
-            <Tweenful.div {...propsAnim}>
+            <Tweenful.div
+              {...propsAnim}
+              delay={Constant.NORMAL_DURATION * 3.2}
+              duration={Constant.NORMAL_DURATION}
+              style={{ opacity: 0 }}>
               <div id="footer">
                 <div className="contentRefstyle">{"Referensi"}</div>
                 <ol

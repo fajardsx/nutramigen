@@ -6,6 +6,7 @@ import "./Pages.css";
 //import "./css/page5.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
+import Constant from "../config/Constant";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -88,34 +89,65 @@ class Page5_1 extends Component {
           easing="linear">
           <div className="observer-demo">
             <div className="row-container">
-              <Tweenful.div {...propsAnim}>
+              <Tweenful.div
+                {...propsAnim}
+                delay={Constant.NORMAL_DURATION}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="logoLgg" />
               </Tweenful.div>
-              <Tweenful.div {...propsAnim2}>
+              <Tweenful.div
+                {...propsAnim}
+                delay={Constant.NORMAL_DURATION * 1.3}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="titlestyle2 titlePage5">
                   {"Mengurangi risiko Allergic March ketika\nusia 3 tahun "}
                   <sup id="custom">13</sup>
                 </div>
               </Tweenful.div>
-              <Tweenful.div {...propsAnim}>
+              <Tweenful.div
+                {...propsAnim}
+                delay={Constant.NORMAL_DURATION * 1.6}
+                duration={Constant.NORMAL_DURATION}
+                style={{ opacity: 0 }}>
                 <div className="ciclebenefitheader" />
               </Tweenful.div>
             </div>
             <div className="content5Container">
               <div className="row-container contentRow">
-                <div className="colmContainerPage6">
+                <Tweenful.div
+                  className="colmContainerPage6"
+                  {...propsAnim}
+                  delay={Constant.NORMAL_DURATION * 2}
+                  duration={Constant.NORMAL_DURATION}
+                  style={{ opacity: 0 }}>
                   <div>
                     <div className="bgDiagramPage6">
-                      <Tweenful.div className="diagramMaskPage6" {...propsMask}>
+                      <Tweenful.div
+                        className="diagramMaskPage6"
+                        {...propsMask}
+                        delay={Constant.NORMAL_DURATION * 2.2}
+                        duration={Constant.NORMAL_DURATION}
+                        style={{ opacity: 0 }}>
                         <div className="bgDiagramLinePage6" />
                       </Tweenful.div>
-                      <Tweenful.div {...propsMaskDone}>
+                      <Tweenful.div
+                        {...propsMaskDone}
+                        delay={Constant.NORMAL_DURATION * 2.4}
+                        duration={Constant.NORMAL_DURATION}
+                        style={{ opacity: 0 }}>
                         <div className="bgDiagramEndPage6" />
                       </Tweenful.div>
                     </div>
                   </div>
-                </div>
-                <div className="colmContainerPage6">
+                </Tweenful.div>
+                <Tweenful.div
+                  className="colmContainerPage6"
+                  {...propsAnim}
+                  delay={Constant.NORMAL_DURATION * 2.8}
+                  duration={Constant.NORMAL_DURATION}
+                  style={{ opacity: 0 }}>
                   <div className="titletextPage6">Menurunkan Kejadian</div>
                   <div className="grid-container">
                     {this.addHex("Rhino-\nconjunctivitis\nsebanyak", "68%")}
@@ -128,7 +160,7 @@ class Page5_1 extends Component {
                   <div className="bgBox">
                     <div className="boxtext">{"Formula asam amino dengan\nMCT Oil 33%"}</div>
                   </div> */}
-                </div>
+                </Tweenful.div>
               </div>
             </div>
           </div>
