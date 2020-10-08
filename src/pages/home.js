@@ -8,7 +8,7 @@ import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 const propsAnimLogo = {
-  delay: 1000,
+  delay: 1200,
   render: true,
   duration: 1600,
   easing: elastic(1, 0.1),
@@ -66,34 +66,26 @@ const Home = (props) => {
   // render() {
   return (
     <ContainerSwipe callNext={onNext.bind(this)} callPrev={onBack.bind(this)}>
-      <Observer
-        render={shouldRender}
-        duration={1200}
-        style={{ opacity: 0 }}
-        mount={{ opacity: 1 }}
-        unmount={[{ opacity: 0 }]}
-        easing="linear">
-        <div className="observer-demo">
-          <Tweenful.div className="page1Box" {...propsAnimLogo}>
-            <div class="logoMj" />
-          </Tweenful.div>
-          <Tweenful.div className="page1Box" {...propsAnim}>
-            <div className="bayihex">
-              <div className="Titlebayi">
-                <img src={loadingicon} alt="bayi" style={{ width: "100%" }} />
+      <div className="observer-demo">
+        <Tweenful.div className="page1Box" {...propsAnimLogo}>
+          <div class="logoMj" />
+        </Tweenful.div>
+        <Tweenful.div className="page1Box" {...propsAnim}>
+          <div className="bayihex">
+            <div className="Titlebayi">
+              <img src={loadingicon} alt="bayi" style={{ width: "100%" }} />
+            </div>
+          </div>
+          <Tweenful.div className="titlebg" {...propsAnim2}>
+            <div className="titleContainer">
+              <div className="titlestyle titleBig">{"5"}</div>
+              <div className="titlestyle page1titles">
+                {"Langkah Mudah\nMengenali Gejala Alergi Susu Sapi"}
               </div>
             </div>
-            <Tweenful.div className="titlebg" {...propsAnim2}>
-              <div className="titleContainer">
-                <div className="titlestyle titleBig">{"5"}</div>
-                <div className="titlestyle page1titles">
-                  {"Langkah Mudah\nMengenali Gejala Alergi Susu Sapi"}
-                </div>
-              </div>
-            </Tweenful.div>
           </Tweenful.div>
-        </div>
-      </Observer>
+        </Tweenful.div>
+      </div>
     </ContainerSwipe>
   );
   //}

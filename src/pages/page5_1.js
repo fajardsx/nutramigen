@@ -34,9 +34,9 @@ const propsMask = {
   delay: 1100,
   render: true,
   duration: 1600,
-  easing: elastic(1, 1),
+  easing: elastic(1, 0.1),
   loop: false,
-  animate: { height: ["1vh", "44vh"] },
+  animate: { opacity: [0, 1] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -115,8 +115,14 @@ class Page5_1 extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="colmContainerPage6 addPadding">
+                <div className="colmContainerPage6">
                   <div className="titletextPage6">Menurunkan Kejadian</div>
+                  <div className="grid-container">
+                    {this.addHex("Rhino-\nconjunctivitis\nsebanyak", "68%")}
+                    {this.addHex("Urtikaria\nsebanyak", "61%")}
+                    {this.addHex("Eczema\nsebanyak", "44%")}
+                    {this.addHex("Asma\nsebanyak", "51%")}
+                  </div>
                   {/* <div className="titletext">Ass Berat</div>
                   <div className="bgKalengPuramino" />
                   <div className="bgBox">
@@ -130,6 +136,17 @@ class Page5_1 extends Component {
       </ContainerSwipe>
     );
   }
+  //
+  addHex = (title, value) => {
+    return (
+      <div className="MinihexBg">
+        <div className="title">
+          {title + "\n"}
+          <div className="value">{value}</div>
+        </div>
+      </div>
+    );
+  };
 }
 const mapStateToProps = (state) => {
   return {
