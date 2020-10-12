@@ -35,7 +35,7 @@ const propsMaskMove = {
   delay: 1100,
   render: true,
   duration: 1600,
-  easing: elastic(1, 0.1),
+  easing: elastic(1, 1),
   loop: false,
   animate: { top: ["-31px", "0px"], opacity: [0, 1] },
   events: {

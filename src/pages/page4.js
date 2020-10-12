@@ -427,17 +427,18 @@ class Page4 extends Component {
         </div>
         <div className="row-container quizResultTitleCaraContextPadding">
           <div className="quizResultTitleCaraContext">
-            {"Skor >=12, curiga anak alergi susu sapi"}
+            <a id="customtext">{"Skor >=12,"}</a>
+            {" curiga anak alergi susu sapi"}
           </div>
           <div className="quizResultTitleCaraContextBorder" />
           <div className="quizResultTitleCaraContext ">
-            {"Skor < 12, gejala tidak terkait dengan alergi susu sapi"}
+            <a id="customtext">{"Skor < 12,"}</a>
+            {" gejala tidak terkait dengan alergi susu sapi"}
           </div>
           <div className="quizResultTitleCaraContextBorder" />
           <div className="quizResultTitleCaraContext">
-            {
-              "Bila skor <12 tanpa disertai gejala pada kulit dan pernafasan maka anak Anda\nmungkin mengalami masalah pencernaan fungsional (buka halaman 6)"
-            }
+            <a id="customtext">{"Bila skor <12"}</a>
+            {` tanpa disertai gejala pada kulit dan pernafasan maka anak Anda\nmungkin mengalami masalah pencernaan fungsional (buka halaman 6)`}
           </div>
         </div>
         <div className="quizResultTitleCaraContextBorderLine" />

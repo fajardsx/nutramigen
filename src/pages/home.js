@@ -74,7 +74,7 @@ const Home = (props) => {
           delay={Constant.NORMAL_DURATION}
           duration={Constant.NORMAL_DURATION}
           style={{ opacity: 0 }}>
-          <div class="logoMj" />
+          <div className="logoMj" />
         </Tweenful.div>
         <Tweenful.div
           className="page1Box"
@@ -94,9 +94,9 @@ const Home = (props) => {
             duration={Constant.NORMAL_DURATION}
             style={{ opacity: 0 }}>
             <div className="titleContainer">
-              <div className="titlestyle titleBig">{"5"}</div>
+              {/* <div className="titlestyle titleBig">{"5"}</div> */}
               <div className="titlestyle page1titles">
-                {"Langkah Mudah\nMengenali Gejala Alergi Susu Sapi"}
+                {"Tes Alergi Protein Susu Sapi: Proses\ndan Solusinya"}
               </div>
             </div>
           </Tweenful.div>

@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import ContainerSwipe from "../container";
 import { NaviNext, NaviGoback } from "../Route";
-import Tweenful, { Observer, elastic } from "react-tweenful";
+import Tweenful, { Observer, elastic, percentage } from "react-tweenful";
 import "./Pages.css";
 //import "./css/page2.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
+import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -37,7 +39,7 @@ const propsMask = {
   duration: 1600,
   easing: elastic(1, 0.1),
   loop: false,
-  animate: { width: [0, "31.5vw"], height: ["30vh", "30vh"] },
+  animate: { width: ["0px"] },
   events: {
     onAnimationStart: () => console.log("AnimationStart"),
     onAnimationEnd: () => console.log("AnimationEnd"),
@@ -61,9 +63,26 @@ class Page2 extends Component {
     console.log(this.props);
     this.state = {
       shouldRender: true,
+      slideAnim: null,
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    console.log(window.innerWidth);
+    if (window.innerWidth >= 1024) {
+      // slideAnim = percentage({
+      //   "0%": { width: "0px" },
+      //   "1%": { width: "20vw" },
+      //   "2%": { width: "40vw" },
+      // });
+      this.setState({
+        slideAnim: { width: ["0px", "40vw"] },
+      });
+    } else {
+      this.setState({
+        slideAnim: { width: ["0px", "50vw"] },
+      });
+    }
+  }
   onNext() {
     console.log("page2 props", this.props);
     //this.props.history.push("/");
@@ -146,21 +165,25 @@ class Page2 extends Component {
                   duration={Constant.NORMAL_DURATION}
                   style={{ opacity: 0 }}>
                   <div className="bgDiagram">
-                    <Tweenful.div
-                      className="diagramMask"
-                      {...propsMask}
-                      delay={Constant.NORMAL_DURATION * 3}
-                      duration={Constant.NORMAL_DURATION}
-                      style={{ width: 0 }}>
-                      <div className="bgDiagramLine" />
-                    </Tweenful.div>
-                    <Tweenful.div
+                    {this.state.slideAnim && (
+                      <Tweenful.div
+                        className="diagramMask"
+                        {...propsMask}
+                        delay={Constant.NORMAL_DURATION * 3}
+                        duration={Constant.NORMAL_DURATION * 2}
+                        animate={this.state.slideAnim}
+                        style={{ width: 0 }}>
+                        <div className="bgDiagramLine" />
+                      </Tweenful.div>
+                    )}
+
+                    {/* <Tweenful.div
                       {...propsMaskDone}
                       delay={Constant.NORMAL_DURATION * 3}
                       duration={Constant.NORMAL_DURATION}
                       style={{ opacity: 0 }}>
                       <div className="bgDiagramEnd" />
-                    </Tweenful.div>
+                    </Tweenful.div> */}
                   </div>
                 </Tweenful.div>
               </div>

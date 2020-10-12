@@ -110,7 +110,7 @@ class Page3 extends Component {
                     }
                     <a id="customtext">
                       {" diet probiotik."}
-                      <sup id="custom">2</sup>
+                      <sup id="custom">*</sup>
                     </a>
                   </div>
                 </Tweenful.div>
@@ -129,6 +129,19 @@ class Page3 extends Component {
                 </Tweenful.div>
               </div>
             </div>
+
+            <Tweenful.div
+              {...propsAnim}
+              delay={Constant.NORMAL_DURATION * 3.2}
+              duration={Constant.NORMAL_DURATION}
+              style={{ opacity: 0 }}>
+              <div id="footer" style={{ paddingLeft: "2%" }}>
+                <div className="contentRefstyle">{"Referensi"}</div>
+                <div className="contentRefstyle">
+                  {"*.Ref.Herz et al Clin Ep.Allergy 35: 397 - 402"}
+                </div>
+              </div>
+            </Tweenful.div>
           </div>
         </Observer>
       </ContainerSwipe>

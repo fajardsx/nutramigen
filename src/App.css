@@ -80,10 +80,11 @@ li span {
   background-position: center;
 }
 .App-Container {
-  width: 100vw;
+  padding-left: 0;
+  padding-top: 0;
+  margin-left: auto;
   height: 100vh;
-
-  overflow: hidden;
+  width: 100vw;
 }
 .App-link {
   color: #61dafb;
@@ -103,7 +104,9 @@ li span {
     transform: rotate(360deg);
   }
 }
-
+.colorTest1 {
+  color: #f05a29;
+}
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   .App-header {
@@ -116,4 +119,27 @@ li span {
     width: 1024px;
     height: 100vh;
   }
+}
+.btnFullScreen {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.App-BG {
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  height: auto;
+}
+
+.fullscreen-enabled .App-BG {
+  background: #fff;
+  background-image: url("./assets/bg.png");
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  height: auto;
 }

@@ -74,9 +74,9 @@ const Page41 = (props) => {
         mount={{ opacity: 1 }}
         unmount={[{ opacity: 0 }]}
         easing="linear">
-        <div className="observer-demo">
+        <div className="observer-demo centers">
           <Tweenful.div
-            className="page1Box"
+            className="page4_1Box"
             {...propsAnim}
             delay={Constant.NORMAL_DURATION}
             duration={Constant.NORMAL_DURATION}
@@ -94,8 +94,8 @@ const Page41 = (props) => {
               style={{ opacity: 0 }}>
               <div className="titleContainer">
                 <div className="titlestyle titleBig">{"5"}</div>
-                <div className="titlestyle page1titles">
-                  {"Langkah Mudah\nMengenali Gejala Alergi Susu Sapi"}
+                <div className="titlestyle page41titles">
+                  {"Langkah Mudah Mengenali Gejala\nAlergi Susu Sapi"}
                 </div>
               </div>
             </Tweenful.div>

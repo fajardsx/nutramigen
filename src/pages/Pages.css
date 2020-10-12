@@ -68,7 +68,7 @@ ol.horizontal li {
 }
 #footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 2%;
   padding-left: 0px;
 }
 
@@ -77,7 +77,7 @@ ol.horizontal li {
   width: 520px;
   height: 100px;
   text-align: left;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(2.8vw + 1vmin);
   font-family: ITCAvantGradePro_DEMI;
 }
 .page1Box {
@@ -85,6 +85,19 @@ ol.horizontal li {
   flex-direction: row;
   top: 30vh;
   left: 0;
+
+  border-radius: 0;
+  position: relative;
+  opacity: 1;
+  align-items: center;
+}
+.centers {
+  align-items: center;
+  display: flex;
+}
+.page4_1Box {
+  display: flex;
+  flex-direction: row;
 
   border-radius: 0;
   position: relative;
@@ -133,8 +146,9 @@ ol.horizontal li {
   flex-direction: row;
   position: relative;
   align-items: center;
-  margin-left: 23%;
+  margin-left: 25%;
   height: 100%;
+  line-height: 8vh;
 }
 .titleBig {
   padding: 10px;
@@ -202,11 +216,11 @@ ol.horizontal li {
 .diagramMask {
   z-index: 1;
   position: absolute;
-  top: 28vh;
-  margin-left: 73px;
+  /* top: 28vh;
+  margin-left: 73px; */
   /*background-color: aqua; */
   width: 45vw;
-  height: 30vh;
+  height: 50vh;
   overflow: hidden;
   /*background-image: url("../assets/diagram1_anim.png");
   background-repeat: no-repeat;
@@ -215,9 +229,9 @@ ol.horizontal li {
   background-position: center;*/
 }
 .diagramMask .bgDiagramLine {
-  width: 31.5vw;
-  height: 30vh;
-  background-image: url("../assets/diagram1_anim.png");
+  width: 50vw;
+  height: 50vh;
+  background-image: url("../assets/diagram1_done.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
@@ -234,7 +248,7 @@ ol.horizontal li {
   width: auto;
   height: auto;
   font-size: calc(11px + 2vmin);
-  padding: 14px 25px;
+  padding: 3% 25px;
   text-align: left;
   color: #fff;
   font-family: ITCAvantGradePro_BOOK;
@@ -246,11 +260,17 @@ ol.horizontal li {
 .titlePage3 a#customtext {
   font-family: ITCAvantGradePro_DEMI_OBL;
 }
+.titlePage5 a#customtext {
+  font-family: ITCAvantGradePro_DEMI_OBL;
+}
+.quizResultTitleCaraContext a#customtext {
+  font-family: ITCAvantGradePro_BOLD;
+}
 .content3_2text {
   width: auto;
   height: auto;
 
-  padding: 14px 0px;
+  padding: 1px 0px;
   text-align: left;
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
@@ -299,8 +319,8 @@ ol.horizontal li {
   text-align: center;
   background-size: contain;
   background-position: center;
-  width: auto;
-  height: 62vh;
+  width: 95vw;
+  height: 60vh;
   padding: 6% 0px 0px 0px;
 }
 .titleScore {
@@ -460,14 +480,14 @@ ol.horizontal li {
   background-position: center;
 }
 .subTextHex {
-  color: #f59933;
+  color: #f05a29;
   text-align: center;
   font-size: calc(4px + 2vmin);
   font-family: ITCAvantGradePro_DEMI;
   padding-top: 5px;
 }
 .titleQuiz {
-  color: #f59933;
+  color: #f05a29;
   text-align: left;
   font-size: calc(3px + 2vmin);
   font-family: ITCAvantGradePro_DEMI;
@@ -568,7 +588,7 @@ ol.horizontal li {
 }
 .QuizTable tbody tr td#skortitle {
   font-size: calc(1px + 1.5vmin);
-  color: #f59933;
+  color: #f05a29;
   text-align: center;
 }
 .QuizTable tbody tr td#skortitle2 {
@@ -586,7 +606,7 @@ ol.horizontal li {
   font-size: calc(3px + 2vmin);
   font-family: ITCAvantGradePro_BOLD;
   text-align: center;
-  color: #f59933;
+  color: #f05a29;
   padding: 15px 0px;
 }
 .quizResultHex {
@@ -626,11 +646,12 @@ ol.horizontal li {
   width: 100%;
 }
 .quizResultTitleCaraContext {
-  display: flex;
+  /* display: flex; */
   font-size: calc(1px + 1.2vmin);
   font-family: ITCAvantGradePro_EL;
   text-align: left;
   letter-spacing: 0.5px;
+  padding: 10px 5px;
 }
 .quizResultTitleCaraContextBorder {
   height: 14px;
@@ -843,7 +864,7 @@ ol.horizontal li {
   .page1titles {
     width: auto;
     height: auto;
-    font-size: calc(21px + 1vmin);
+    font-size: calc(2.3vw + 1vmin);
     line-height: 1.2em;
   }
   .page1Box {
@@ -864,7 +885,7 @@ ol.horizontal li {
     font-size: calc(19px + 1vmin);
   }
   .titlePage3 {
-    width: auto;
+    width: 90vw;
     height: auto;
     padding: 0px 25px;
     font-size: calc(1.1vw + 2vmin);
@@ -899,8 +920,12 @@ ol.horizontal li {
     height: 40vh;
   }
   .diagramMask {
-    top: 24vh;
-    margin-left: 12%;
+    /* //top: 24vh;
+    margin-left: 12%; */
+  }
+  .diagramMask .bgDiagramLine {
+    /* width: 40vw; */
+    height: 40vh;
   }
   ol.horizontal li {
     width: 29vw;
@@ -1043,6 +1068,14 @@ ol.horizontal li {
   .grid-container {
     grid-template-rows: 29vh auto;
   }
+  .page41titles {
+    width: 520px;
+    height: auto;
+    text-align: left;
+    font-size: calc(1.2vw + 2vmin);
+    font-family: ITCAvantGradePro_DEMI;
+    line-height: 5vh;
+  }
 }
 @media only screen and (max-width: 768px) {
   .content2Container {
@@ -1051,7 +1084,14 @@ ol.horizontal li {
   .page1titles {
     width: 426px;
     height: auto;
-    font-size: calc(15px + 1vmin);
+    font-size: calc(2.7vw + 1vmin);
+  }
+  .page41titles {
+    width: 520px;
+    height: auto;
+    text-align: left;
+    font-size: calc(1.7vw + 2vmin);
+    font-family: ITCAvantGradePro_DEMI;
   }
   .titleBig {
     padding: 0px 10px;
@@ -1081,7 +1121,7 @@ ol.horizontal li {
     font-size: calc(6px + 2vmin);
   }
   .titlePage3 {
-    width: 550px;
+    width: 90vw;
     height: auto;
     padding: 0px 25px;
     font-size: calc(1.3vw + 2vmin);
@@ -1110,5 +1150,32 @@ ol.horizontal li {
   }
   .grid-container {
     grid-template-rows: 33vh auto;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-height: 620px) {
+  .bgScore {
+    height: 53vh;
+  }
+  .content4ContainerResult {
+    height: 100vh;
+  }
+  .quizResultTitleCara {
+    padding: 0 0;
+  }
+  .resultDesc {
+    bottom: 1%;
+  }
+  .containerResult {
+    width: auto;
+    margin: 0vw 20vw;
+  }
+  .quizResultHex {
+    font-size: 14vh;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-height: 520px) {
+  .containerResult {
+    width: auto;
+    margin: 0vw 24vw;
   }
 }

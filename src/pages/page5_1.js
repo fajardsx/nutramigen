@@ -102,8 +102,9 @@ class Page5_1 extends Component {
                 duration={Constant.NORMAL_DURATION}
                 style={{ opacity: 0 }}>
                 <div className="titlestyle2 titlePage5">
-                  {"Mengurangi risiko Allergic March ketika\nusia 3 tahun "}
-                  <sup id="custom">13</sup>
+                  {"Mengurangi risiko"} <a id="customtext">{"Allergic March"}</a>
+                  {" ketika\nusia 3 tahun "}
+                  <sup>*</sup>
                 </div>
               </Tweenful.div>
               <Tweenful.div
