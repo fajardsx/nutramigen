@@ -16,6 +16,7 @@ ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={presistor}>
       <div className="App-header">
+      <div id="bg"/>
         <App />
       </div>
     </PersistGate>

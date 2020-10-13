@@ -8,6 +8,7 @@ import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 import Constant from "../config/Constant";
+import { navi } from "../component";
 const propsAnimLogo = {
   delay: 1000,
   render: true,
@@ -102,6 +103,9 @@ const Page41 = (props) => {
           </Tweenful.div>
         </div>
       </Observer>
+      {
+          navi(this.onBack.bind(this),this.onNext.bind(this))
+        }
     </ContainerSwipe>
   );
   //}

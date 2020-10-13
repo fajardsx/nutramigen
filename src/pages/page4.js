@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { Table } from "react-bootstrap";
+import { navi } from "../component";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -176,6 +177,9 @@ class Page4 extends Component {
             {this.getQuiz()}
           </div>
         </Observer>
+        {
+          navi(this.onBack.bind(this),this.onNext.bind(this))
+        }
       </ContainerSwipe>
     );
   }

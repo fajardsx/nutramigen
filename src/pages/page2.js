@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+import { navi } from './../component/index';
 
 const propsAnim = {
   delay: 1000,
@@ -210,6 +211,9 @@ class Page2 extends Component {
             </Tweenful.div>
           </div>
         </Observer>
+        {
+          navi(this.onBack.bind(this),this.onNext.bind(this))
+        }
       </ContainerSwipe>
     );
   }

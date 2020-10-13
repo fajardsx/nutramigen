@@ -13,7 +13,7 @@ const ContainerSwipe = (props) => {
   };
 
   return (
-    <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
+    <Swipe style={{width:'100%'}} onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
       {props.children}
     </Swipe>
   );

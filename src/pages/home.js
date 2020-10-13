@@ -8,6 +8,7 @@ import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 import Constant from "../config/Constant";
+import { Button } from "react-bootstrap";
 const propsAnimLogo = {
   delay: 1200,
   render: true,
@@ -101,7 +102,20 @@ const Home = (props) => {
             </div>
           </Tweenful.div>
         </Tweenful.div>
+      
       </div>
+      <Button
+              variant="nextscreen"
+              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
+              onClick={onNext}>
+              Next
+            </Button>
+        <Button
+              variant="backscreen"
+              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
+              onClick={onBack}>
+              Back
+            </Button>
     </ContainerSwipe>
   );
   //}

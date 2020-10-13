@@ -70,20 +70,23 @@ li span {
   font-size: calc(10px + 2vmin);
   color: #502c0d;
   font-family: ITCAvantGradePro_MD, Arial, serif;
-  max-height: 100vh;
-  max-width: 100vw;
-  width: 100vw;
+
+}
+.App-header #bg{
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
   height: auto;
-  background-image: url("./assets/bg.png");
+  top:0;
+  left: 0;
   position: fixed;
+  background: url("./assets/bg.png") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
 }
 .App-Container {
   padding-left: 0;
   padding-top: 0;
   margin-left: auto;
-  height: 100vh;
   width: 100vw;
 }
 .App-link {
@@ -111,19 +114,33 @@ li span {
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   .App-header {
     width: 1024px;
-    height: 100vh;
+    height: auto;
+    position: fixed;
   }
 }
 @media only screen and (max-width: 768px) {
   .App-header {
-    width: 1024px;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
+    position: fixed;
   }
 }
 .btn-tooglefullscreen {
   position: absolute;
   top: 2%;
   right: 2%;
+  background-color: #f05a29;
+}
+.btn-nextscreen {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  background-color: #f05a29;
+}
+.btn-backscreen {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
   background-color: #f05a29;
 }
 .App-BG {

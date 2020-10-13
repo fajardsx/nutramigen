@@ -7,6 +7,7 @@ import "./Pages.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
+import { navi } from "../component";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -144,6 +145,9 @@ class Page3 extends Component {
             </Tweenful.div>
           </div>
         </Observer>
+        {
+          navi(this.onBack.bind(this),this.onNext.bind(this))
+        }
       </ContainerSwipe>
     );
   }

@@ -67,6 +67,7 @@ const App = (props) => {
             marginLeft: 0,
             marginRight: "auto",
             height: "100vh",
+            width:'100vw'
           }}>
           <BrowserRouter>
             <RouteApp />
