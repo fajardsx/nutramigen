@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { reactLocalStorage } from "reactjs-localstorage";
 import "./App.css";
 import RouteApp from "./Route";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import {
@@ -72,9 +72,12 @@ const App = (props) => {
             <RouteApp />
           </BrowserRouter>
           {fullScreenMode == false && (
-            <button className="btnFullScreen" onClick={fullScreen}>
+            <Button
+              variant="tooglefullscreen"
+              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
+              onClick={fullScreen}>
               Enter FullScreen
-            </button>
+            </Button>
           )}
         </Container>
       </div>

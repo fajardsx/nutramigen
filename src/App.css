@@ -120,10 +120,11 @@ li span {
     height: 100vh;
   }
 }
-.btnFullScreen {
+.btn-tooglefullscreen {
   position: absolute;
-  top: 50%;
-  left: 40%;
+  top: 2%;
+  right: 2%;
+  background-color: #f05a29;
 }
 .App-BG {
   max-height: 100vh;

@@ -75,7 +75,7 @@ class Page2 extends Component {
       //   "2%": { width: "40vw" },
       // });
       this.setState({
-        slideAnim: { width: ["0px", "40vw"] },
+        slideAnim: { width: ["0px", "50vw"] },
       });
     } else {
       this.setState({

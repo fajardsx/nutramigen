@@ -69,12 +69,21 @@ ol.horizontal li {
 #footer {
   position: fixed;
   bottom: 2%;
-  padding-left: 0px;
+  padding-left: 1vw;
+}
+#footerLast {
+  position: fixed;
+  bottom: 2%;
+  padding-left: 1vw;
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /*PAGE 1*/
 .page1titles {
-  width: 520px;
+  width: 100%;
   height: 100px;
   text-align: left;
   font-size: calc(2.8vw + 1vmin);
@@ -115,28 +124,28 @@ ol.horizontal li {
   background-position: center;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 3vw;
 }
 .Titlebayi {
   width: auto;
   height: auto;
   position: relative;
-  padding: 20px;
+
   opacity: 1;
   text-align: center;
 }
 .titlebg {
-  width: 82vw;
+  display: flex;
+  width: 85vw;
   position: absolute;
   left: 11vw;
-  height: 164px;
+  height: 17vw;
   background-image: url("../assets/bgtitlepage1.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
   background-position: center;
   align-items: center;
-  justify-content: center;
   padding: 10px;
   color: #fff;
   line-height: 23px;
@@ -146,7 +155,7 @@ ol.horizontal li {
   flex-direction: row;
   position: relative;
   align-items: center;
-  margin-left: 25%;
+  margin-left: 18%;
   height: 100%;
   line-height: 8vh;
 }
@@ -157,9 +166,9 @@ ol.horizontal li {
 }
 .logoMj {
   position: absolute;
-  top: -7px;
+  top: 10px;
   left: 50px;
-  height: 45px;
+  height: 7vh;
   width: 100vw;
   background-image: url("../assets/logomj.png");
   background-repeat: no-repeat;
@@ -614,9 +623,10 @@ ol.horizontal li {
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
   color: #f7e6cd;
+  text-shadow: 3px 3px #f05a29;
 }
 .quizResultDescHex {
-  font-size: calc(3px + 2vmin);
+  font-size: 2.4vh;
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
 }
@@ -771,8 +781,8 @@ ol.horizontal li {
 }
 /* PAGE 6 */
 .ciclebenefitheader {
-  height: 80px;
-  width: 80px;
+  height: 10vw;
+  width: 10vw;
   background-image: url("../assets/circlebg_header.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -831,7 +841,7 @@ ol.horizontal li {
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 29vh auto;
+  grid-template-rows: 30vh auto;
 }
 .MinihexBg {
   display: flex;
@@ -848,7 +858,7 @@ ol.horizontal li {
 }
 .MinihexBg .title {
   font-family: ITCAvantGradePro_DEMI;
-  font-size: calc(3px + 2vmin);
+  font-size: calc(1.2vh + 2vmin);
   color: #fff;
 }
 .MinihexBg .value {
@@ -857,9 +867,18 @@ ol.horizontal li {
   color: #fff;
 }
 /* MOBILE ViEW */
-@media only screen and (max-width: 1024px) and (min-width: 769px) {
+@media only screen and (max-width: 1024px) {
+  .titleContainer {
+    margin-left: 20vw;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 820px) {
   .logoMj {
-    height: 9vh;
+    height: 7vh;
+    top: 1vh;
+  }
+  .titlebg {
+    height: 40vh;
   }
   .page1titles {
     width: auto;
@@ -868,15 +887,18 @@ ol.horizontal li {
     line-height: 1.2em;
   }
   .page1Box {
-    top: 30%;
-    left: 5%;
+    top: 25vh;
   }
   .titleBig {
     font-size: calc(80px + 1vmin);
   }
+
   .logoLgg {
     height: 87px;
     width: 16vw;
+  }
+  .titleContainer {
+    margin-left: 25%;
   }
   .titlePage2 {
     width: auto;
@@ -887,7 +909,7 @@ ol.horizontal li {
   .titlePage3 {
     width: 90vw;
     height: auto;
-    padding: 0px 25px;
+    padding: 0px 5px;
     font-size: calc(1.1vw + 2vmin);
   }
   .titlePage4 {
@@ -1028,7 +1050,7 @@ ol.horizontal li {
   }
   .quizref {
     padding: 30px 10px;
-    font-size: 8px;
+    font-size: 0.9vw;
   }
   .bgBox {
     padding: 10px;
@@ -1066,7 +1088,7 @@ ol.horizontal li {
     width: 50vw;
   }
   .grid-container {
-    grid-template-rows: 29vh auto;
+    grid-template-rows: 30vh auto;
   }
   .page41titles {
     width: 520px;
@@ -1077,12 +1099,13 @@ ol.horizontal li {
     line-height: 5vh;
   }
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 819px) {
   .content2Container {
     padding-top: 3%;
   }
   .page1titles {
-    width: 426px;
+    width: 55vw;
     height: auto;
     font-size: calc(2.7vw + 1vmin);
   }
@@ -1097,8 +1120,11 @@ ol.horizontal li {
     padding: 0px 10px;
     font-size: calc(50px + 2vmin);
   }
+  .titlebg {
+    height: 30vh;
+  }
   .page1Box {
-    top: 90px;
+    top: 35vh;
     left: 10px;
     justify-content: normal;
   }
@@ -1152,9 +1178,10 @@ ol.horizontal li {
     grid-template-rows: 33vh auto;
   }
 }
+
 @media only screen and (max-width: 1024px) and (max-height: 620px) {
   .bgScore {
-    height: 53vh;
+    height: 62vh;
   }
   .content4ContainerResult {
     height: 100vh;
@@ -1174,8 +1201,48 @@ ol.horizontal li {
   }
 }
 @media only screen and (max-width: 1024px) and (max-height: 520px) {
+  .imageHexScore {
+    margin: 2vh 0px;
+  }
   .containerResult {
     width: auto;
-    margin: 0vw 24vw;
+    margin: 0vw 20vw;
+  }
+  .quizResultTitleCaraContextPadding {
+    padding: 0 0;
+  }
+  .quizref {
+    padding: 5px 0;
+  }
+  .bgScore {
+    height: 60vh;
+    padding: 3% 0px 0px 0px;
+  }
+  .quizResultTitleCaraContextBorderLine {
+    height: 5px;
+  }
+}
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .containerResult {
+    width: auto;
+    margin: 0vw 20vw;
+  }
+  .ciclebenefit {
+    left: 45%;
+  }
+}
+@media only screen and (max-width: 819px) and (min-width: 720px) and (max-height: 380px) {
+  .page1Box {
+    top: 25vh;
+  }
+  .content3text {
+    padding: 3% 10vw;
+    font-size: calc(1.2vw + 2vmin);
+  }
+  .bgScore {
+    padding: 4% 0px 0px 0px;
+  }
+  .ciclebenefit {
+    left: 40%;
   }
 }
