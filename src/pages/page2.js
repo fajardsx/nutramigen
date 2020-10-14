@@ -9,6 +9,7 @@ import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/acti
 import Constant from "../config/Constant";
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 import { navi } from "./../component/index";
+import { reactLocalStorage } from "reactjs-localstorage";
 
 const propsAnim = {
   delay: 1000,
@@ -83,6 +84,10 @@ class Page2 extends Component {
         slideAnim: { width: ["0px", "50vw"] },
       });
     }
+    this.resetDefault();
+  }
+  async resetDefault() {
+    // await reactLocalStorage.set("PAGE", 1);
   }
   onNext() {
     console.log("page2 props", this.props);
@@ -128,7 +133,7 @@ class Page2 extends Component {
                 </div>
               </Tweenful.div>
             </div>
-            <div className="row-container content2Container">
+            <div className="rowtocol-container content2Container">
               <div id="page2Col1">
                 <Tweenful.div
                   {...propsAnim}

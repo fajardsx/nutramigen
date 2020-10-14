@@ -132,15 +132,29 @@ li span {
 }
 .btn-nextscreen {
   position: absolute;
-  bottom: 2%;
+  bottom: 3%;
   right: 2%;
   background-color: #f05a29;
+  height: 4vw;
+  width: 4vw;
+  position: fixed;
+  background-image: url("./assets/aset-03.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .btn-backscreen {
   position: absolute;
-  bottom: 2%;
-  left: 2%;
+  bottom: 3%;
+  right: 7%;
   background-color: #f05a29;
+  height: 4vw;
+  width: 4vw;
+  position: fixed;
+  background-image: url("./assets/aset-02.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .App-BG {
   min-height: 100%;

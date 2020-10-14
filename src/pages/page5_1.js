@@ -102,7 +102,7 @@ class Page5_1 extends Component {
                 delay={Constant.NORMAL_DURATION * 1.3}
                 duration={Constant.NORMAL_DURATION}
                 style={{ opacity: 0 }}>
-                <div className="titlestyle2 titlePage5">
+                <div className="titlestyle2 titlePage6">
                   {"Mengurangi risiko"} <a id="customtext">{"Allergic March"}</a>
                   {" ketika\nusia 3 tahun "}
                   <sup>*</sup>
@@ -167,9 +167,7 @@ class Page5_1 extends Component {
             </div>
           </div>
         </Observer>
-        {
-          navi(this.onBack.bind(this),this.onNext.bind(this))
-        }
+        {navi(this.onBack.bind(this), this.onNext.bind(this))}
       </ContainerSwipe>
     );
   }

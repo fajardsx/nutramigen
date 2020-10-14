@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { navi } from "../component";
+import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnimLogo = {
   delay: 1000,
   render: true,
@@ -51,6 +52,7 @@ const Page41 = (props) => {
   const [shouldRender, setShouldRender] = useState(true);
 
   useEffect(() => {
+    //resetDefault();
     setTimeout(() => setShouldRender(true), 3000);
   }, []);
   function onNext() {
@@ -64,6 +66,9 @@ const Page41 = (props) => {
     props.updateDirection("right");
     NaviGoback(props);
     //this.props.history.goBack();
+  }
+  async function resetDefault() {
+    //await reactLocalStorage.set("PAGE", 3);
   }
   // render() {
   return (
@@ -88,17 +93,17 @@ const Page41 = (props) => {
               </div>
             </div>
             <Tweenful.div
-              className="titlebg"
-              {...propsAnim2}
+              className="titlebg2"
+              {...propsAnim}
               delay={Constant.NORMAL_DURATION * 1.5}
               duration={Constant.NORMAL_DURATION}
               style={{ opacity: 0 }}>
-              <div className="titleContainer">
+              {/* <div className="titleContainer">
                 <div className="titlestyle titleBig">{"5"}</div>
                 <div className="titlestyle page41titles">
                   {"Langkah Mudah Mengenali Gejala\nAlergi Susu Sapi"}
                 </div>
-              </div>
+              </div> */}
             </Tweenful.div>
           </Tweenful.div>
         </div>

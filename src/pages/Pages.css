@@ -37,7 +37,7 @@
 .titlestyle2 {
   font-family: ITCAvantGradePro_DEMI;
   text-align: left;
-  line-height: 6vh;
+  line-height: 4.5vh;
 }
 .content1style {
   font-family: ITCAvantGradePro_DEMI;
@@ -62,6 +62,11 @@ ol.horizontal li {
   background-position: center;
 }
 .row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rowtocol-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -138,9 +143,25 @@ ol.horizontal li {
   display: flex;
   width: 85vw;
   position: absolute;
-  left: 11vw;
-  height: 17vw;
-  background-image: url("../assets/bgtitlepage1.png");
+  left: 18vw;
+  height: 15vw;
+  background-image: url("../assets/bgtitlepage1_text.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  line-height: 23px;
+}
+.titlebg2 {
+  display: flex;
+  width: 85vw;
+  position: absolute;
+  left: 18vw;
+  height: 15vw;
+  background-image: url("../assets/bgtitlepage3_text.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
@@ -199,9 +220,7 @@ ol.horizontal li {
   font-size: calc(6px + 2vmin);
 } */
 .content2Container {
-  padding-top: 5%;
-  align-items: unset;
-  padding-left: 5px;
+  padding: 5% 2vw;
 }
 .bgDiagram {
   height: 50vh;
@@ -289,15 +308,13 @@ ol.horizontal li {
   font-size: calc(6px + 2vmin);
 } */
 .content1Container {
-  padding-top: 20px;
-  align-items: unset;
-  padding-left: 10px;
+  padding: 0vw 3vw;
 }
 .bgArrow {
   display: flex;
-  height: 30vh;
-  width: auto;
-  background-image: url("../assets/bgtitlepage1a.png");
+  height: 36vh;
+  width: 90vw;
+  background-image: url("../assets/bgtitlepage2_text.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
@@ -305,7 +322,7 @@ ol.horizontal li {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 5vw;
+  margin: 4vw 0;
 }
 /* PAGE 4 */
 .titlePage4 {
@@ -372,11 +389,7 @@ ol.horizontal li {
   height: 100;
   font-size: calc(6px + 2vmin);
 } */
-.content1Container {
-  padding-top: 10px;
-  align-items: unset;
-  padding-left: 10px;
-}
+
 .content1ContainerResult {
   padding-top: 0px;
   align-items: unset;
@@ -420,6 +433,15 @@ ol.horizontal li {
   justify-content: center;
   min-height: 20px;
   width: auto;
+}
+.addPadding4 #check {
+  height: 2vw;
+  width: 2vw;
+  position: fixed;
+  background-image: url("../assets/aset-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .numberAnswerContainer {
   height: 2vw;
@@ -651,6 +673,8 @@ ol.horizontal li {
   -o-border-radius: 5px;
 }
 .resultDesc {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 5%;
 }
@@ -697,6 +721,12 @@ ol.horizontal li {
   padding: 0px 25px;
   font-size: calc(1vw + 2vmin);
 }
+.titlePage6 {
+  width: 55vw;
+  height: auto;
+  padding: 0px 25px;
+  font-size: calc(1vw + 2vmin);
+}
 .content5text {
   width: auto;
   height: auto;
@@ -712,7 +742,7 @@ ol.horizontal li {
   justify-content: center;
 }
 .content5Container {
-  padding-top: 5vw;
+  padding-top: 2vw;
   align-items: unset;
 }
 .bgBox {
@@ -882,17 +912,26 @@ ol.horizontal li {
   padding-left: 20px;
 }
 /* MOBILE ViEW */
+
 @media only screen and (max-width: 1024px) {
   .titleContainer {
     margin-left: 20vw;
   }
 }
-@media only screen and (max-width: 1024px) and (min-width: 820px) {
+
+@media only screen and (max-width: 1024px) and (min-width: 820px) and (max-height: 620px) {
+  .page1Box {
+    top: 1vh;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 820px) and (min-height: 620px) {
   .logoMj {
     height: 7vh;
   }
   .titlebg {
     height: 40vh;
+    width: 70vw;
+    left: 24vw;
   }
   .page1titles {
     width: auto;
@@ -935,6 +974,9 @@ ol.horizontal li {
   .content3_2text {
     font-size: calc(1.1vw + 2vmin);
   }
+  .content1Container {
+    padding: 0 0;
+  }
   .titlePage5 {
     width: auto;
     height: auto;
@@ -947,7 +989,7 @@ ol.horizontal li {
     line-height: 4.5vh;
   }
   .content2Container {
-    padding-top: 10%;
+    padding-top: 0;
   }
   .bgDiagram {
     height: 40vh;
@@ -971,7 +1013,7 @@ ol.horizontal li {
     font-size: calc(1.5vw + 2vmin);
   }
   .bgArrow {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .SubtitlePage {
     width: auto;
@@ -1160,9 +1202,9 @@ ol.horizontal li {
     font-size: calc(6px + 2vmin);
   }
   .titlePage3 {
-    width: 90vw;
+    width: 80vw;
     height: auto;
-    padding: 0px 25px;
+
     font-size: calc(1.3vw + 2vmin);
   }
   .titlePage4 {
@@ -1258,5 +1300,71 @@ ol.horizontal li {
   }
   .ciclebenefit {
     left: 40%;
+  }
+}
+/* Portad */
+@media only screen and (max-width: 414px) and (max-height: 828px) {
+  .content2Container {
+    align-items: center;
+  }
+  .rowtocol-container {
+    padding: 2vw;
+    height: 80vh;
+  }
+  .titleContainer {
+    margin-left: 20vw;
+  }
+  .page1titles {
+    width: 70vw;
+    font-size: calc(2.2vw + 1vmin);
+  }
+  .observer-demo {
+    padding: 10px 1px;
+  }
+  .page1Box {
+    left: 2%;
+  }
+  .logoMj {
+    left: 10%;
+    height: 7vw;
+  }
+  .titlePage2 {
+    width: 80vw;
+    padding: 0;
+    font-size: calc(1vw + 2vmin);
+  }
+  .titlePage3 {
+    width: 80vw;
+    padding: 0;
+    font-size: calc(1vw + 2vmin);
+  }
+  .titlestyle2 {
+    line-height: 5vw;
+  }
+  ol.horizontal li {
+    width: 40vw;
+  }
+  .content2text {
+    font-size: calc(1.1vw + 2vmin);
+  }
+
+  .bgDiagram {
+    height: 20vh;
+  }
+  .bgDiagramEnd {
+    height: 20vh;
+  }
+  .diagramMask {
+    height: 20vh;
+  }
+  .diagramMask .bgDiagramLine {
+    height: 20vh;
+  }
+  ul {
+    padding-inline-start: 5vw;
+  }
+  .titlebg {
+    width: 75vw;
+    left: 22vw;
   }
 }

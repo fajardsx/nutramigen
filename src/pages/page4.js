@@ -9,6 +9,7 @@ import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/acti
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { Table } from "react-bootstrap";
 import { navi } from "../component";
+import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -74,23 +75,24 @@ class Page4 extends Component {
     this.setState({
       currentQuiz: 1,
     });
+    this.resetDefault();
+  }
+  async resetDefault() {
+    //  await reactLocalStorage.set("PAGE", 4);
   }
   onNext() {
     console.log("page2 props", this.props);
     //this.props.history.push("/");
-    if (this.state.currentQuiz == 6) {
-      this.props.updateDirection("left");
-      NaviNext(this.props);
-    }
+
+    this.props.updateDirection("left");
+    NaviNext(this.props);
   }
   onBack() {
     console.log("page2 props", this.props);
     //this.props.updateDirection("right");
-    //NaviGoback(this.props);
-    if (this.state.currentQuiz == 6) {
-      this.props.updateDirection("right");
-      NaviGoback(this.props);
-    }
+
+    this.props.updateDirection("right");
+    NaviGoback(this.props);
   }
   onClickHandle = (e) => {
     //console.log("click ", e);
@@ -108,11 +110,17 @@ class Page4 extends Component {
     let page4skor = [...this.state.page4skor];
     page4skor[part] = e;
     this.setState({ page4skor }, () => {
-      if (this.state.page4skor[0] > -1 && this.state.page4skor[1] > -1) {
+      if (
+        this.state.page4skor[0] > -1 &&
+        this.state.page4skor[1] > -1 &&
+        this.state.page4skor[2] > -1
+      ) {
         let scorePage = [...this.state.scorePage];
         let score = this.state.score;
-        scorePage[this.state.currentQuiz - 1] = { score: page4skor[0] + page4skor[1] };
-        score += page4skor[0] + page4skor[1];
+        scorePage[this.state.currentQuiz - 1] = {
+          score: page4skor[0] + page4skor[1] + page4skor[2],
+        };
+        score += page4skor[0] + page4skor[1] + page4skor[2];
         this.setState({ currentQuiz: this.state.currentQuiz + 1, scorePage, score });
       }
     });
@@ -223,6 +231,7 @@ class Page4 extends Component {
           onClick={() => this.onClickHandle1(index, part)}>
           {}
         </a>
+        {this.state.page4skor[part] == index && <div id="check" />}
       </div>
     );
   };
@@ -354,10 +363,10 @@ class Page4 extends Component {
             </tr>
             <tr>
               <td>Lengan, Tangan, Kaki</td>
-              <td>{this.cellQuestion4(0, 0)}</td>
-              <td>{this.cellQuestion4(1, 0)}</td>
-              <td>{this.cellQuestion4(2, 0)}</td>
-              <td>{this.cellQuestion4(3, 0)}</td>
+              <td>{this.cellQuestion4(0, 1)}</td>
+              <td>{this.cellQuestion4(1, 1)}</td>
+              <td>{this.cellQuestion4(2, 1)}</td>
+              <td>{this.cellQuestion4(3, 1)}</td>
             </tr>
             <tr>
               <td></td>
@@ -368,8 +377,8 @@ class Page4 extends Component {
             </tr>
             <tr>
               <td>Biduran</td>
-              <td>{this.cellQuestion4(0, 1)}</td>
-              <td>{this.cellQuestion4(6, 1)}</td>
+              <td>{this.cellQuestion4(0, 2)}</td>
+              <td>{this.cellQuestion4(6, 2)}</td>
               <td></td>
               <td></td>
             </tr>

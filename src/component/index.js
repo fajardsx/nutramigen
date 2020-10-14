@@ -6,16 +6,12 @@ export function navi(onBack, onNext) {
     <div>
       <Button
         variant="nextscreen"
-        style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
-        onClick={onNext}>
-        Next
-      </Button>
+        style={{ color: "#fff", fontSize: 12 }}
+        onClick={onNext}></Button>
       <Button
         variant="backscreen"
-        style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
-        onClick={onBack}>
-        Back
-      </Button>
+        style={{ color: "#fff", fontSize: 12 }}
+        onClick={onBack}></Button>
     </div>
   );
 }

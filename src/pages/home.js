@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { Button } from "react-bootstrap";
+import { navi } from "../component";
 const propsAnimLogo = {
   delay: 1200,
   render: true,
@@ -90,32 +91,20 @@ const Home = (props) => {
           </div>
           <Tweenful.div
             className="titlebg"
-            {...propsAnim2}
+            {...propsAnim}
             delay={Constant.NORMAL_DURATION * 2}
             duration={Constant.NORMAL_DURATION}
             style={{ opacity: 0 }}>
-            <div className="titleContainer">
-              {/* <div className="titlestyle titleBig">{"5"}</div> */}
+            {/* <div className="titleContainer">
+            
               <div className="titlestyle page1titles">
                 {"Tes Alergi Protein Susu Sapi: Proses\ndan Solusinya"}
               </div>
-            </div>
+            </div> */}
           </Tweenful.div>
         </Tweenful.div>
-      
       </div>
-      <Button
-              variant="nextscreen"
-              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
-              onClick={onNext}>
-              Next
-            </Button>
-        <Button
-              variant="backscreen"
-              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
-              onClick={onBack}>
-              Back
-            </Button>
+      {navi(onBack, onNext)}
     </ContainerSwipe>
   );
   //}

@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { navi } from "../component";
+import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -52,7 +53,9 @@ class Page3 extends Component {
       shouldRender: true,
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    this.resetDefault();
+  }
   onNext() {
     console.log("page2 props", this.props);
     //this.props.history.push("/");
@@ -63,6 +66,9 @@ class Page3 extends Component {
     console.log("page2 props", this.props);
     this.props.updateDirection("right");
     NaviGoback(this.props);
+  }
+  async resetDefault() {
+    //await reactLocalStorage.set("PAGE", 2);
   }
   render() {
     const { shouldRender } = this.state;
@@ -101,11 +107,11 @@ class Page3 extends Component {
               <div>
                 <Tweenful.div
                   className="bgArrow"
-                  {...propsAnim2}
+                  {...propsAnim}
                   delay={Constant.NORMAL_DURATION * 2}
                   duration={Constant.NORMAL_DURATION}
                   style={{ opacity: 0 }}>
-                  <div className="content1style content3text">
+                  {/* <div className="content1style content3text">
                     {
                       "Proses ini dapat diinfervensi dengan tata laksana alergi susu\nsapi yang tepat. Inflamasi sistemik dapat dicegah dengan"
                     }
@@ -113,7 +119,7 @@ class Page3 extends Component {
                       {" diet probiotik."}
                       <sup id="custom">*</sup>
                     </a>
-                  </div>
+                  </div> */}
                 </Tweenful.div>
               </div>
               <div>
@@ -145,9 +151,7 @@ class Page3 extends Component {
             </Tweenful.div>
           </div>
         </Observer>
-        {
-          navi(this.onBack.bind(this),this.onNext.bind(this))
-        }
+        {navi(this.onBack.bind(this), this.onNext.bind(this))}
       </ContainerSwipe>
     );
   }
