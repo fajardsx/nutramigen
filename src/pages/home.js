@@ -104,7 +104,7 @@ const Home = (props) => {
           </Tweenful.div>
         </Tweenful.div>
       </div>
-      {navi(onBack, onNext)}
+      {navi(null, onNext)}
     </ContainerSwipe>
   );
   //}

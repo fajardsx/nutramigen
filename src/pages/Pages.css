@@ -37,7 +37,7 @@
 .titlestyle2 {
   font-family: ITCAvantGradePro_DEMI;
   text-align: left;
-  line-height: 4.5vh;
+  line-height: 6.5vh;
 }
 .content1style {
   font-family: ITCAvantGradePro_DEMI;
@@ -360,7 +360,7 @@ ol.horizontal li {
   background-position: center;
   width: 25vw;
   height: auto;
-  padding: 3%;
+  padding: 1.2vw 6vw;
   position: fixed;
   top: -0.5em;
   color: #fff;
@@ -435,8 +435,8 @@ ol.horizontal li {
   width: auto;
 }
 .addPadding4 #check {
-  height: 2vw;
-  width: 2vw;
+  height: 1vw;
+  width: 1vw;
   position: fixed;
   background-image: url("../assets/aset-01.png");
   background-repeat: no-repeat;
@@ -614,6 +614,7 @@ ol.horizontal li {
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
+  padding: 1vw;
 }
 .QuizTable tbody tr {
   background-color: #fffcf8;
@@ -622,6 +623,7 @@ ol.horizontal li {
   font-size: calc(3px + 2vmin);
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
+  padding: 1vw;
 }
 .QuizTable tbody tr td#skortitle {
   font-size: calc(1px + 1.5vmin);
@@ -676,7 +678,6 @@ ol.horizontal li {
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: 5%;
 }
 .quizResultTitleCaraContextPadding {
   align-items: flex-start;
@@ -986,7 +987,7 @@ ol.horizontal li {
   .titlestyle2 {
     font-family: ITCAvantGradePro_DEMI;
     text-align: left;
-    line-height: 4.5vh;
+    line-height: 5.5vh;
   }
   .content2Container {
     padding-top: 0;
@@ -1019,7 +1020,7 @@ ol.horizontal li {
     width: auto;
     padding: 20px 0px 0px 0px;
     text-align: center;
-    font-size: calc(6px + 2vmin);
+    font-size: calc(1vw + 2vmin);
   }
   .content4Container {
     padding-top: 40px;
@@ -1246,7 +1247,7 @@ ol.horizontal li {
     padding: 0 0;
   }
   .resultDesc {
-    bottom: 1%;
+    padding: 5vh 0;
   }
   .containerResult {
     width: auto;
@@ -1334,7 +1335,7 @@ ol.horizontal li {
     font-size: calc(1vw + 2vmin);
   }
   .titlePage3 {
-    width: 80vw;
+    width: 90vw;
     padding: 0;
     font-size: calc(1vw + 2vmin);
   }
@@ -1366,5 +1367,34 @@ ol.horizontal li {
   .titlebg {
     width: 75vw;
     left: 22vw;
+  }
+  .numberContainer {
+    height: 5vw;
+    width: 5vw;
+  }
+  .numberAnswerContainer {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 5vw;
+    -webkit-border-radius: 5vw;
+    -moz-border-radius: 5vw;
+    -ms-border-radius: 5vw;
+    -o-border-radius: 5vw;
+  }
+  .content4Container {
+  }
+  .titleScore {
+    width: 26vw;
+    padding: 3vw 5vw;
+    left: 35vw;
+  }
+  .bgScore {
+    height: 25vh;
+  }
+  .imageHexScore {
+    height: auto;
+  }
+  .quizResultDescHex {
+    font-size: 2vw;
   }
 }

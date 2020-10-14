@@ -4,14 +4,19 @@ import { Button } from "react-bootstrap";
 export function navi(onBack, onNext) {
   return (
     <div>
-      <Button
-        variant="nextscreen"
-        style={{ color: "#fff", fontSize: 12 }}
-        onClick={onNext}></Button>
-      <Button
-        variant="backscreen"
-        style={{ color: "#fff", fontSize: 12 }}
-        onClick={onBack}></Button>
+      {onNext && (
+        <Button
+          variant="nextscreen"
+          style={{ color: "#fff", fontSize: 12 }}
+          onClick={onNext}></Button>
+      )}
+
+      {onBack && (
+        <Button
+          variant="backscreen"
+          style={{ color: "#fff", fontSize: 12 }}
+          onClick={onBack}></Button>
+      )}
     </div>
   );
 }

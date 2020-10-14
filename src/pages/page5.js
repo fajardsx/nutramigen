@@ -184,12 +184,13 @@ class Page5 extends Component {
             </Tweenful.div>
           </div>
         </Observer>
-        <Button
+        {/* <Button
           variant="backscreen"
           style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
           onClick={this.onBack.bind(this)}>
           Back
-        </Button>
+        </Button> */}
+        {navi(this.onBack.bind(this), null)}
       </ContainerSwipe>
     );
   }

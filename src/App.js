@@ -75,10 +75,8 @@ const App = (props) => {
           {fullScreenMode == false && (
             <Button
               variant="tooglefullscreen"
-              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
-              onClick={fullScreen}>
-              Enter FullScreen
-            </Button>
+              style={{ color: "#fff" }}
+              onClick={fullScreen}></Button>
           )}
         </Container>
       </div>

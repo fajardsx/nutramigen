@@ -21,7 +21,7 @@ const RouteApp = (props) => {
     return {
       opacity: styles.opacity,
       height: "100vh",
-      width:"100vw",
+      width: "100vw",
       transform: `scale(${styles.scale}) translateX(${styles.translateX}px)  translateY(${styles.translateY}px)`,
     };
   }
