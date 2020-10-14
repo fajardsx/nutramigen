@@ -103,9 +103,7 @@ const Page41 = (props) => {
           </Tweenful.div>
         </div>
       </Observer>
-      {
-          navi(this.onBack.bind(this),this.onNext.bind(this))
-        }
+      {navi(onBack, onNext)}
     </ContainerSwipe>
   );
   //}

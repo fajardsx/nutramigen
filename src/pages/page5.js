@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { navi } from "../component";
+import { Button } from "react-bootstrap";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -183,9 +184,12 @@ class Page5 extends Component {
             </Tweenful.div>
           </div>
         </Observer>
-        {
-          navi(this.onBack.bind(this),this.onNext.bind(this))
-        }
+        <Button
+          variant="backscreen"
+          style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
+          onClick={this.onBack.bind(this)}>
+          Back
+        </Button>
       </ContainerSwipe>
     );
   }

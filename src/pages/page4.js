@@ -151,7 +151,7 @@ class Page4 extends Component {
           unmount={[{ opacity: 0 }]}
           easing="linear">
           <div className="observer-demo">
-            <div className="row-container">
+            <div className="row-container ">
               {/* <Tweenful.div {...propsAnim}>
                 <div className="logoLgg" />
               </Tweenful.div>
@@ -177,9 +177,7 @@ class Page4 extends Component {
             {this.getQuiz()}
           </div>
         </Observer>
-        {
-          navi(this.onBack.bind(this),this.onNext.bind(this))
-        }
+        {navi(this.onBack.bind(this), this.onNext.bind(this))}
       </ContainerSwipe>
     );
   }
@@ -230,7 +228,7 @@ class Page4 extends Component {
   };
   // QUESTION LIST
   quest1 = () => (
-    <div className="row-container content4Container ">
+    <div className="row-container content4Container">
       <div {...propsAnim}>
         <div className="content1style numberContainer">1</div>
       </div>

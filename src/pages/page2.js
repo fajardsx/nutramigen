@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
-import { navi } from './../component/index';
+import { navi } from "./../component/index";
 
 const propsAnim = {
   delay: 1000,
@@ -145,7 +145,7 @@ class Page2 extends Component {
                   {...propsAnim}
                   delay={Constant.NORMAL_DURATION * 2.1}
                   duration={Constant.NORMAL_DURATION}
-                  style={{ opacity: 0 }}>
+                  style={{ opacity: 0, paddingLeft: "1vw" }}>
                   <ul>
                     <li key={"1"} className="content1style ">
                       <span>{"40% asma"}</span>
@@ -211,9 +211,7 @@ class Page2 extends Component {
             </Tweenful.div>
           </div>
         </Observer>
-        {
-          navi(this.onBack.bind(this),this.onNext.bind(this))
-        }
+        {navi(this.onBack.bind(this), this.onNext.bind(this))}
       </ContainerSwipe>
     );
   }

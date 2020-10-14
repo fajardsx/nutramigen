@@ -58,31 +58,29 @@ const App = (props) => {
     handle.enter();
   }
   return (
-    <FullScreen handle={handle} onChange={reportChange}>
-      <div className="App-BG">
-        <Container
-          style={{
-            paddingLeft: 0,
-            paddingRight: 0,
-            marginLeft: 0,
-            marginRight: "auto",
-            height: "100vh",
-            width:'100vw'
-          }}>
-          <BrowserRouter>
-            <RouteApp />
-          </BrowserRouter>
-          {fullScreenMode == false && (
-            <Button
-              variant="tooglefullscreen"
-              style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
-              onClick={fullScreen}>
-              Enter FullScreen
-            </Button>
-          )}
-        </Container>
-      </div>
-    </FullScreen>
+    <div className="App-BG">
+      <Container
+        style={{
+          paddingLeft: 0,
+          paddingRight: 0,
+          marginLeft: 0,
+          marginRight: "auto",
+          height: "100vh",
+          width: "100vw",
+        }}>
+        <BrowserRouter>
+          <RouteApp />
+        </BrowserRouter>
+        {fullScreenMode == false && (
+          <Button
+            variant="tooglefullscreen"
+            style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
+            onClick={fullScreen}>
+            Enter FullScreen
+          </Button>
+        )}
+      </Container>
+    </div>
   );
 };
 

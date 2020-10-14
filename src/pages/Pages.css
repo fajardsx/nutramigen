@@ -32,7 +32,7 @@
 }
 .titlestyle {
   font-family: ITCAvantGradePro_BOLD;
-  text-align: center;
+  text-align: left;
 }
 .titlestyle2 {
   font-family: ITCAvantGradePro_DEMI;
@@ -53,7 +53,7 @@ ol.horizontal li {
   padding: 2px 0px;
 }
 .logoLgg {
-  height: 70px;
+  height: 7vw;
   width: 16vw;
   background-image: url("../assets/lgglogo.png");
   background-repeat: no-repeat;
@@ -84,10 +84,9 @@ ol.horizontal li {
 /*PAGE 1*/
 .page1titles {
   width: 100%;
-  height: 100px;
-  margin-left: 5%;
+  height: auto;
   text-align: left;
-  font-size:  calc(2.8vw + 1vmin);
+  font-size: calc(2.8vw + 1vmin);
   font-family: ITCAvantGradePro_DEMI;
 }
 .page1Box {
@@ -131,7 +130,7 @@ ol.horizontal li {
   width: auto;
   height: auto;
   position: relative;
-  padding:1vw;
+  padding: 1vw;
   opacity: 1;
   text-align: center;
 }
@@ -156,15 +155,15 @@ ol.horizontal li {
   flex-direction: row;
   position: relative;
   align-items: center;
-  margin-left: 18%;
+  margin-left: 20vw;
   height: 100%;
-  width: 80vw;
-  line-height: 8vh;
+  width: 100%;
+  line-height: 4vw;
 }
 .titleBig {
-  padding: 10px;
   font-family: ITCAvantGradePro_DEMI;
-  font-size: calc(80px + 2vmin);
+  font-size: calc(6vw + 2vmin);
+  padding: 0 1vw;
 }
 .logoMj {
   position: fixed;
@@ -181,13 +180,12 @@ ol.horizontal li {
 .titlePage2 {
   width: 80vw;
   height: auto;
-  padding: 0px 25px;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1.7vw + 2vmin);
 }
 .content2text {
   width: auto;
   height: auto;
-  font-size: calc(5px + 2vmin);
+  font-size: calc(1.2vw + 2vmin);
   text-align: left;
   font-family: ITCAvantGradePro_DEMI;
   padding: 10px 0px 0px 0px;
@@ -249,13 +247,12 @@ ol.horizontal li {
 }
 /* PAGE 3 */
 .titlePage3 {
-  width: 550px;
+  width: 80vw;
   height: auto;
-  padding: 0px 25px;
   font-size: calc(1.3vw + 2vmin);
 }
 .content3text {
-  width: auto;
+  width: 80vw;
   height: auto;
   font-size: calc(11px + 2vmin);
   padding: 3% 25px;
@@ -297,6 +294,7 @@ ol.horizontal li {
   padding-left: 10px;
 }
 .bgArrow {
+  display: flex;
   height: 30vh;
   width: auto;
   background-image: url("../assets/bgtitlepage1a.png");
@@ -305,8 +303,9 @@ ol.horizontal li {
   background-size: contain;
   background-position: center;
   align-items: center;
-  margin: 20px 0px;
+  justify-content: center;
   position: relative;
+  margin: 5vw;
 }
 /* PAGE 4 */
 .titlePage4 {
@@ -320,10 +319,12 @@ ol.horizontal li {
   height: auto;
   text-align: center;
   padding: 10px 0px;
-  font-size: calc(4px + 2vmin);
+  font-size: calc(1vw + 2vmin);
   font-family: ITCAvantGradePro_DEMI_OBL;
 }
 .bgScore {
+  display: flex;
+  flex-direction: column;
   background-image: url("../assets/boxResult.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -332,6 +333,7 @@ ol.horizontal li {
   width: 95vw;
   height: 60vh;
   padding: 6% 0px 0px 0px;
+  align-items: center;
 }
 .titleScore {
   background-image: url("../assets/boxResulttitle.png");
@@ -346,6 +348,7 @@ ol.horizontal li {
   top: -0.5em;
   color: #fff;
   left: 37vw;
+  font-size: calc(1vw + 2vmin);
 }
 .content1text {
   width: auto;
@@ -380,8 +383,9 @@ ol.horizontal li {
   padding-left: 0px;
 }
 .numberContainer {
-  height: 20px;
-  width: 20px;
+  display: flex;
+  height: 2vw;
+  width: 2vw;
   background-color: #f59933;
   justify-content: center;
   align-items: center;
@@ -400,13 +404,13 @@ ol.horizontal li {
   -o-border-radius: 5px;
 }
 .addPaddingQuiz {
-  padding: 5px 5px 0px 0px;
+  padding: 1vw;
   align-items: flex-start;
   min-height: 29px;
   width: 29vw;
 }
 .addPadding3 {
-  padding: 5px 5px 0px 0px;
+  padding: 1vw;
   align-items: flex-start;
   min-height: 35px;
   width: 29vw;
@@ -418,8 +422,8 @@ ol.horizontal li {
   width: auto;
 }
 .numberAnswerContainer {
-  height: 20px;
-  width: 20px;
+  height: 2vw;
+  width: 2vw;
 
   background-color: #f59933;
   justify-content: center;
@@ -483,11 +487,13 @@ ol.horizontal li {
 }
 .imageHexScore {
   height: 20vh;
+  width: 15vw;
   background-image: url("../assets/hexascore.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
   background-position: center;
+  margin: 1vw;
 }
 .subTextHex {
   color: #f05a29;
@@ -502,7 +508,7 @@ ol.horizontal li {
   font-size: calc(3px + 2vmin);
   font-family: ITCAvantGradePro_DEMI;
   padding: 0px;
-  min-height: 17px;
+  min-height: 4vh;
 }
 .answerText {
   text-align: left;
@@ -526,8 +532,8 @@ ol.horizontal li {
 }
 .eek0 {
   margin: 0px 10px 0px 5px;
-  height: 20px;
-  width: 20px;
+  height: 2vw;
+  width: 2vw;
   background-image: url("../assets/eek0.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -536,8 +542,8 @@ ol.horizontal li {
 }
 .eek2 {
   margin: 0px 10px 0px 5px;
-  height: 20px;
-  width: 20px;
+  height: 2vw;
+  width: 2vw;
   background-image: url("../assets/eek2.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -546,8 +552,8 @@ ol.horizontal li {
 }
 .eek4 {
   margin: 0px 10px 0px 5px;
-  height: 20px;
-  width: 20px;
+  height: 2vw;
+  width: 2vw;
   background-image: url("../assets/eek4.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -556,8 +562,8 @@ ol.horizontal li {
 }
 .eek4_2 {
   margin: 0px 10px 0px 5px;
-  height: 20px;
-  width: 20px;
+  height: 2vw;
+  width: 2vw;
   background-image: url("../assets/eek42.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -566,8 +572,8 @@ ol.horizontal li {
 }
 .eek6 {
   margin: 0px 10px 0px 5px;
-  height: 20px;
-  width: 20px;
+  height: 2vw;
+  width: 2vw;
   background-image: url("../assets/eek6.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -576,13 +582,13 @@ ol.horizontal li {
 }
 
 .QuizTable .table {
-  width: 120%;
+  width: 50vw;
 }
 .QuizTable thead tr {
   background-color: rgba(247, 148, 32, 0.2);
 }
 .QuizTable thead tr th {
-  font-size: calc(2px + 2vmin);
+  font-size: calc(1vw + 2vmin);
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
@@ -594,7 +600,6 @@ ol.horizontal li {
   font-size: calc(3px + 2vmin);
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
-  padding: 5px 15px;
 }
 .QuizTable tbody tr td#skortitle {
   font-size: calc(1px + 1.5vmin);
@@ -607,7 +612,7 @@ ol.horizontal li {
   text-align: center;
 }
 .quizResultTitle {
-  font-size: calc(5px + 2vmin);
+  font-size: calc(1vw + 2vmin);
   font-family: ITCAvantGradePro_BOLD;
   text-align: center;
   padding: 5px 0px;
@@ -620,7 +625,7 @@ ol.horizontal li {
   padding: 15px 0px;
 }
 .quizResultHex {
-  font-size: calc(43px + 2vmin);
+  font-size: calc(5.5vw + 2vmin);
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
   color: #f7e6cd;
@@ -635,9 +640,7 @@ ol.horizontal li {
   height: 90vh;
 }
 .containerResult {
-  width: 65vw;
-  margin-left: 14vw;
-  padding: 7px 10px;
+  padding: 1vw 2vw;
   margin-top: 10px;
   background-color: rgba(247, 230, 205, 0.4);
   border: 0px solid #f2d5ad;
@@ -689,10 +692,10 @@ ol.horizontal li {
 }
 /* PAGE5 */
 .titlePage5 {
-  width: auto;
+  width: 80vw;
   height: auto;
   padding: 0px 25px;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1vw + 2vmin);
 }
 .content5text {
   width: auto;
@@ -709,13 +712,13 @@ ol.horizontal li {
   justify-content: center;
 }
 .content5Container {
-  padding-top: 5px;
+  padding-top: 5vw;
   align-items: unset;
 }
 .bgBox {
   height: auto;
   width: auto;
-  padding: 6px;
+  padding: 1vw;
   background-image: url("../assets/backbox.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -730,7 +733,7 @@ ol.horizontal li {
   text-align: center;
   background-size: contain;
   background-position: center;
-  margin: 15px 0px 10px 0px;
+  margin: 15px 0px 15px 0px;
   position: relative;
 }
 .bgKalengPuramino {
@@ -751,7 +754,7 @@ ol.horizontal li {
 .titletext {
   width: auto;
   height: auto;
-  font-size: calc(6px + 2vmin);
+  font-size: calc(1vw + 1vmin);
   color: #58595b;
   font-family: ITCAvantGradePro_DEMI;
 }
@@ -767,10 +770,10 @@ ol.horizontal li {
 }
 .ciclebenefit {
   position: absolute;
-  top: 39%;
-  left: 48%;
-  height: 125px;
-  width: 125px;
+  top: 40%;
+  left: 37%;
+  height: 15vw;
+  width: 15vw;
   background-image: url("../assets/circlebg.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -782,8 +785,8 @@ ol.horizontal li {
 }
 /* PAGE 6 */
 .ciclebenefitheader {
-  height: 10vw;
-  width: 10vw;
+  height: 7vw;
+  width: 7vw;
   background-image: url("../assets/circlebg_header.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -807,7 +810,7 @@ ol.horizontal li {
 .titletextPage6 {
   width: auto;
   height: auto;
-  font-size: calc(6px + 2vmin);
+  font-size: calc(1vw + 1vmin);
   color: #f59933;
   font-family: ITCAvantGradePro_DEMI;
 }
@@ -842,7 +845,7 @@ ol.horizontal li {
 .grid-container {
   display: inline-grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 30vh auto;
+  grid-template-rows: auto auto;
 }
 .MinihexBg {
   display: flex;
@@ -867,6 +870,17 @@ ol.horizontal li {
   font-size: calc(25px + 1vmin);
   color: #fff;
 }
+.page41titles {
+  height: auto;
+  text-align: left;
+  font-size: calc(1.7vw + 2vmin);
+  font-family: ITCAvantGradePro_DEMI;
+}
+.content4Container {
+  padding-top: 40px;
+  align-items: unset;
+  padding-left: 20px;
+}
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) {
   .titleContainer {
@@ -876,7 +890,6 @@ ol.horizontal li {
 @media only screen and (max-width: 1024px) and (min-width: 820px) {
   .logoMj {
     height: 7vh;
-    top: 1vh;
   }
   .titlebg {
     height: 40vh;
@@ -895,7 +908,7 @@ ol.horizontal li {
   }
 
   .logoLgg {
-    height: 87px;
+    height: 16vw;
     width: 16vw;
   }
   .titleContainer {
@@ -1130,9 +1143,8 @@ ol.horizontal li {
     justify-content: normal;
   }
   .logoMj {
-    top: -7px;
     left: 50px;
-    height: 45px;
+    height: 7vw;
     width: 100vw;
   }
   .Titlebayi {
@@ -1169,6 +1181,7 @@ ol.horizontal li {
     padding-top: 10px;
     align-items: unset;
     padding-left: 10px;
+    align-items: flex-start;
   }
   ul {
     margin-bottom: 0px;
