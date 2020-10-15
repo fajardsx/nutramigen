@@ -35,7 +35,7 @@ const App = (props) => {
       },
       false
     );
-    resetDefault();
+    //resetDefault();
 
     //fullScreen();
   }, []);

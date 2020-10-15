@@ -10,6 +10,7 @@ import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/acti
 import Constant from "../config/Constant";
 import { Button } from "react-bootstrap";
 import { navi } from "../component";
+import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnimLogo = {
   delay: 1200,
   render: true,
@@ -52,8 +53,12 @@ const Home = (props) => {
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setShouldRender(true), 3000);
+    resetDefault()
+    resetDefault(() => setShouldRender(true), 3000);
   }, []);
+  async function resetDefault() {
+    await reactLocalStorage.set("PAGE", 0);
+  }
   function onNext() {
     console.log("home props", props);
     props.updateDirection("left");

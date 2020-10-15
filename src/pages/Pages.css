@@ -417,6 +417,9 @@ ol.horizontal li {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+.numberContainer #number{
+  height: 60%;
+}
 .addPaddingQuiz {
   display: flex;
   flex-direction: row;
@@ -483,49 +486,49 @@ ol.horizontal li {
 }
 
 .imageHex1 {
-  height: 30vh;
-  width: 30vw;
+  height: 15vw;
+  width: 35vw;
   background-image: url("../assets/quizhex1.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
-  background-position: center;
+  background-position: top;
 }
 .imageHex2 {
-  height: 30vh;
+  height: 15vw;
   width: 32vw;
   background-image: url("../assets/quizhex2.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
-  background-position: center;
+  background-position: top;
 }
 .imageHex3 {
-  height: 30vh;
+  height: 15vw;
   width: 32vw;
   background-image: url("../assets/quizhex3.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
-  background-position: center;
+  background-position: top;
 }
 .imageHex4 {
-  height: 30vh;
+  height: 15vw;
   width: 32vw;
   background-image: url("../assets/quizhex4.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
-  background-position: center;
+  background-position: top;
 }
 .imageHex5 {
-  height: 30vh;
+  height: 15vw;
   width: 32vw;
   background-image: url("../assets/quizhex5.png");
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
-  background-position: center;
+  background-position: top;
 }
 .imageHexScore {
   display: flex;
@@ -1010,6 +1013,9 @@ ol.horizontal li {
   .page1Box {
     top: 20vh;
   }
+  .numberAnswerContainer{
+
+  }
 }
 @media only screen and (max-width: 1024px) and (min-width: 820px) and (min-height: 620px) {
   .logoMj {
@@ -1150,24 +1156,24 @@ ol.horizontal li {
     align-items: center;
   }
   .eek0 {
-    width: 45px;
-    height: 45px;
+    width: 3vw;
+    height: 3vw;
   }
   .eek2 {
-    width: 45px;
-    height: 45px;
+    width: 3vw;
+    height: 3vw;
   }
   .eek4 {
-    width: 45px;
-    height: 45px;
+    width: 3vw;
+    height: 3vw;
   }
   .eek4_2 {
-    width: 45px;
-    height: 45px;
+    width: 3vw;
+    height: 3vw;
   }
   .eek6 {
-    width: 45px;
-    height: 45px;
+    width: 3vw;
+    height: 3vw;
   }
   .QuizTable tbody tr {
     height: 60px;
@@ -1346,63 +1352,6 @@ ol.horizontal li {
   }
 }
 
-@media only screen and (max-width: 1024px) and (max-height: 620px) {
-  .bgScore {
-    height: 62vh;
-  }
-  .content4ContainerResult {
-    height: 100vh;
-  }
-  .content4Container {
-    padding: 0px;
-  }
-  .ResultTitleCara {
-    padding: 0 0;
-  }
-  .resultDesc {
-    padding: 5vh 0;
-  }
-  .containerResult {
-    width: auto;
-    margin: 0vw 20vw;
-  }
-  .quizResultHex {
-    font-size: 14vh;
-  }
-  .quizResultTitleCara {
-    padding: 0px;
-  }
-  .addPaddingQuiz {
-    padding: 0.5vw 0px;
-  }
-  .numberAnswerContainer {
-    height: 4vw;
-    width: 4vw;
-  }
-  .addPaddingQuiz #check {
-    height: 4vw;
-    width: 4vw;
-  }
-  .addPadding3 #check {
-    height: 4vw;
-    width: 4vw;
-  }
-  .center #check {
-    height: 4vw;
-    width: 4vw;
-  }
-  .btn-prevQuiz {
-    height: 5vw;
-    width: 5vw;
-  }
-  .btn-nextQuiz {
-    height: 5vw;
-    width: 5vw;
-  }
-  .quiznavi {
-    width: 11vw;
-  }
-}
 @media only screen and (max-width: 1024px) and (max-height: 520px) {
   .imageHexScore {
     margin: 2vh 0px;
@@ -1467,6 +1416,127 @@ ol.horizontal li {
   }
 }
 
+@media only screen and (max-width: 1024px) and (max-height: 620px) {
+  .page1Box{
+    top: 20vh;
+  }
+  .bgScore {
+    height: 62vh;
+  }
+  .content4ContainerResult {
+    height: 100vh;
+  }
+  .content4Container {
+    padding: 0px;
+  }
+  .ResultTitleCara {
+    padding: 0 0;
+  }
+  .resultDesc {
+    padding: 5vh 0;
+  }
+  .containerResult {
+    width: auto;
+    margin: 0vw 20vw;
+  }
+  .titlePage2{
+    padding: 0 1vw;
+    width: auto;
+  }
+  .quizResultHex {
+    font-size: 7vw;
+    height: 8vw;
+  }
+  .quizResultTitleCara {
+    padding: 0px;
+  }
+  .addPaddingQuiz {
+    padding: 0.5vw 0px;
+  }
+  .vcenter{
+    align-items: center;
+  }
+  .numberAnswerContainer {
+    height: 4vw;
+    width: 4vw;
+    margin:0;
+  }
+  .answerText{
+    margin: 0 0 0 1vw;
+  }
+  .center .numberAnswerContainer {
+    height: 3.5vw;
+    width: 3.5vw;
+  }
+  .addPaddingQuiz #check {
+    height: 4vw;
+    width: 4vw;
+  }
+  .addPadding3 #check {
+    height: 4vw;
+    width: 4vw;
+  }
+  .center #check {
+    height: 4vw;
+    width: 4vw;
+  }
+  .btn-prevQuiz {
+    height: 5vw;
+    width: 5vw;
+  }
+  .btn-nextQuiz {
+    height: 5vw;
+    width: 5vw;
+  }
+  .quiznavi {
+    width: 11vw;
+  }
+  .titlePage6{
+    padding: 0;
+    font-size: calc(1.5vw + 2vmin);
+  } 
+  .ciclebenefitheader{
+    height: 8vw;
+    width: 8vw;
+  }
+  .addPadding3{
+    padding: 0;
+  }
+  .addPadding3_2{
+    padding: 0;
+  }
+  .eek0 {
+    height: 6vw;
+    width: 6vw;
+    margin: 0 1vw 0 1vw;
+  }
+  .eek2 {
+    height: 6vw;
+    width: 6vw;
+    margin: 0 1vw 0 1vw;
+  }
+  .eek4 {
+    height: 6vw;
+    width: 6vw;
+    margin: 0 1vw 0 1vw;
+  }
+  .eek4_2 {
+    height:6vw;
+    width: 6vw;
+    margin: 0 1vw 0 1vw;
+  }
+  .eek6 {
+    height: 6vw;
+    width: 6vw;
+    margin: 0 1vw 0 1vw;
+  }
+  .bgArrow{
+    margin:2.5vw;
+  }
+  .SubtitlePage{
+    font-size: calc(2vw+1vmin);
+  }
+}
 /* Portad */
 @media only screen and (max-width: 414px) and (max-height: 828px) {
   .content2Container {
@@ -1499,7 +1569,7 @@ ol.horizontal li {
     font-size: calc(1vw + 2vmin);
   }
   .titlePage3 {
-    width: 90vw;
+    width: 80vw;
     padding: 0;
     font-size: calc(1vw + 2vmin);
   }
@@ -1645,6 +1715,14 @@ ol.horizontal li {
   }
   .quizContainer {
     padding: 5vw;
+  }
+  .quizContainer .row {
+    margin: 0 0;
+    width: 100vw;
+    align-items: center;
+  }
+  .titlebg2{
+
   }
 }
 @media only screen and  (max-height: 400) {

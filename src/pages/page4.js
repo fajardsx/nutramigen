@@ -260,7 +260,22 @@ class Page4 extends Component {
   //
   cellQuestion = (quizIndex, index, title, custom) => {
     return (
-      <div className={`row-container addPaddingQuiz `} {...propsAnim}>
+      <div className={`row-container addPaddingQuiz vcenter`} {...propsAnim}>
+        <a
+          href="#"
+          className="content1style numberAnswerContainer"
+          onClick={() => this.onClickHandle(index, quizIndex)}>
+          {}
+        </a>
+        <div className={`content1style answerText ${custom}`}>{title}</div>
+        {this.state.scorePage[quizIndex] !== undefined &&
+          this.state.scorePage[quizIndex].id === index && <div id="check" />}
+      </div>
+    );
+  };
+  cellQuestion2 = (quizIndex, index, title, custom) => {
+    return (
+      <div className={`row-container addPaddingQuiz`} {...propsAnim}>
         <a
           href="#"
           className="content1style numberAnswerContainer"
@@ -310,7 +325,8 @@ class Page4 extends Component {
   quest1 = () => (
     <Row className="quizContainer">
       <Row>
-        <div className="content1style numberContainer">1</div>
+        <div className="content1style numberContainer">
+        <div id="number">1</div></div>
 
         <Col>
           <div className="content1style imageHex1" />
@@ -346,10 +362,10 @@ class Page4 extends Component {
 
       <Col>
         <div className="content1style content4text titleQuiz">SKOR</div>
-        {this.cellQuestion(1, 0, "2 kali/hari", "customquiz2")}
-        {this.cellQuestion(1, 1, "≥  3 - ≤5 jam/hari,\nsedikit", "customquiz2")}
-        {this.cellQuestion(1, 2, "1> 5 kali/hari, kira-kira\n1 sendok teh", "customquiz2")}
-        {this.cellQuestion(
+        {this.cellQuestion2(1, 0, "2 kali/hari", "customquiz2")}
+        {this.cellQuestion2(1, 1, "≥  3 - ≤5 jam/hari,\nsedikit", "customquiz2")}
+        {this.cellQuestion2(1, 2, "1> 5 kali/hari, kira-kira\n1 sendok teh", "customquiz2")}
+        {this.cellQuestion2(
           1,
           3,
           "> 5 kali/hari, kira-kira\nsetengah porsi di tengah\nwaktu makan",
@@ -358,19 +374,19 @@ class Page4 extends Component {
       </Col>
       <Col>
         <div className="content1style content4text titleQuiz"></div>
-        {this.cellQuestion(
+        {this.cellQuestion2(
           1,
           4,
           "Muntah berkelanjutan,\nsedikit demi sedikit 30 menit\nsetelah selesai makan",
           "customquiz2"
         )}
-        {this.cellQuestion(
+        {this.cellQuestion2(
           1,
           5,
           "Muntah sebanyak\nsetengah porsi di akhir\nwaktu makan",
           "customquiz2"
         )}
-        {this.cellQuestion(
+        {this.cellQuestion2(
           1,
           6,
           "Muntah sebanyak yang \ndi makan setiap selesai\nmakan",
@@ -524,18 +540,17 @@ class Page4 extends Component {
             {" curiga anak alergi susu sapi"}
           </div>
           <div className="quizResultTitleCaraContextBorder" />
-          {this.state.beratCondition === false && (
+          {/* {this.state.beratCondition === false && (
             <div className="quizResultTitleCaraContext ">
               <a id="customtext">{"Skor < 12,"}</a>
               {" gejala tidak terkait dengan alergi susu sapi"}
             </div>
-          )}
-          {this.state.beratCondition === true && (
+          )} */}
             <div className="quizResultTitleCaraContext">
               <a id="customtext">{"skor < 12"}</a>
               {` kemungkinan pasien dokter mengalami masala\npencernaan fungsional jika tanpa disertai gejala kulit dan pernafasan`}
             </div>
-          )}
+         
         </div>
         <div className="quizResultTitleCaraContextBorderLine" />
         <div className="quizref">
