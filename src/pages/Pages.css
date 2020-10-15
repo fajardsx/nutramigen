@@ -1138,8 +1138,8 @@ ol.horizontal li {
     min-height: 50px;
   }
   .numberAnswerContainer {
-    height: 35px;
-    width: 35px;
+    height: 5vw;
+    width: 5vw;
     margin-right: 20px;
   }
   .titleQuiz {
@@ -1238,21 +1238,26 @@ ol.horizontal li {
     line-height: 5vh;
   }
   .addPaddingQuiz #check {
-    height: 3.5vw;
-    width: 2.5vw;
+    height: 5vw;
+    width: 5vw;
     margin-left: 0.5vw;
   }
   .addPadding3 #check {
-    height: 4vw;
-    width: 2.5vw;
+    height: 5vw;
+    width: 5vw;
     margin-left: 0.5vw;
   }
   .center #check {
-    height: 2.3vw;
-    width: 3vw;
+    height: 5vw;
+    width: 5vw;
   }
   .QuizTable thead tr th {
     padding: 1vw;
+    font-size: calc(0.5vw + 1vmin);
+  }
+  .QuizTable tbody tr td#skortitle2 {
+    font-size: calc(0.5vw + 1vmin);
+    font-family: ITCAvantGradePro_BOOK;
   }
 }
 
@@ -1367,6 +1372,36 @@ ol.horizontal li {
   .quizResultTitleCara {
     padding: 0px;
   }
+  .addPaddingQuiz {
+    padding: 0.5vw 0px;
+  }
+  .numberAnswerContainer {
+    height: 4vw;
+    width: 4vw;
+  }
+  .addPaddingQuiz #check {
+    height: 4vw;
+    width: 4vw;
+  }
+  .addPadding3 #check {
+    height: 4vw;
+    width: 4vw;
+  }
+  .center #check {
+    height: 4vw;
+    width: 4vw;
+  }
+  .btn-prevQuiz {
+    height: 5vw;
+    width: 5vw;
+  }
+  .btn-nextQuiz {
+    height: 5vw;
+    width: 5vw;
+  }
+  .quiznavi {
+    width: 11vw;
+  }
 }
 @media only screen and (max-width: 1024px) and (max-height: 520px) {
   .imageHexScore {
@@ -1398,7 +1433,7 @@ ol.horizontal li {
     padding: 5vw;
   }
   .customquiz2 {
-    font-size: calc(1vw + 1vmin);
+    font-size: calc(0.7vw + 1vmin);
   }
 }
 @media only screen and (max-width: 640px) and (max-height: 360px) {

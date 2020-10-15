@@ -123,6 +123,12 @@ li span {
   background-size: contain;
   background-position: center;
 }
+.closeType {
+  background-image: url("./assets/aset-07.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 .btn-nextscreen {
   position: absolute;
   bottom: 5vh;
@@ -172,7 +178,6 @@ li span {
   .App-header {
     width: 100%;
     height: auto;
-    position: fixed;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -205,5 +210,25 @@ li span {
   .App-header {
     width: 100%;
     height: auto;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-height: 768px) {
+  .btn-tooglefullscreen {
+    top: 4%;
+    right: 4%;
+    height: 5vw;
+    width: 5vw;
+  }
+  .btn-backscreen {
+    bottom: 4%;
+    right: 12%;
+    height: 6vw;
+    width: 6vw;
+  }
+  .btn-nextscreen {
+    bottom: 4%;
+    right: 5%;
+    height: 6vw;
+    width: 6vw;
   }
 }

@@ -57,6 +57,10 @@ const App = (props) => {
   async function fullScreen() {
     handle.enter();
   }
+  async function exitfullScreen() {
+    handle.exit();
+    setFullScreenMode(false);
+  }
   return (
     <FullScreen handle={handle} onChange={reportChange}>
       <div className="App-BG">
@@ -77,6 +81,12 @@ const App = (props) => {
               variant="tooglefullscreen"
               style={{ color: "#fff" }}
               onClick={fullScreen}></Button>
+          )}
+          {fullScreenMode == true && (
+            <Button
+              variant="tooglefullscreen closeType"
+              style={{ color: "#fff" }}
+              onClick={exitfullScreen}></Button>
           )}
         </Container>
       </div>
