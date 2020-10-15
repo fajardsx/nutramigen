@@ -1534,7 +1534,8 @@ ol.horizontal li {
     margin:2.5vw;
   }
   .SubtitlePage{
-    font-size: calc(2vw+1vmin);
+    font-size: calc(1.2vw + 2vmin);
+    width: 90vw;
   }
 }
 /* Portad */

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { BrowserRouter, browserHistory } from "react-router-dom";
+import { BrowserRouter as Router, browserHistory } from "react-router-dom";
 import { reactLocalStorage } from "reactjs-localstorage";
 import "./App.css";
 import RouteApp from "./Route";
@@ -73,9 +73,9 @@ const App = (props) => {
             height: "100vh",
             width: "100vw",
           }}>
-          <BrowserRouter>
+          <Router>
             <RouteApp />
-          </BrowserRouter>
+          </Router>
           {fullScreenMode == false && (
             <Button
               variant="tooglefullscreen"
