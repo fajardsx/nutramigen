@@ -84,7 +84,7 @@ class Page5_1 extends Component {
         <Observer
           render={shouldRender}
           duration={1200}
-          style={{ opacity: 0 }}
+          style={{ opacity: 0,margin:'2vw' }}
           mount={{ opacity: 1 }}
           unmount={[{ opacity: 0 }]}
           easing="linear">

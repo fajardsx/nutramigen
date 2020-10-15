@@ -444,10 +444,13 @@ ol.horizontal li {
   background-position: center;
 }
 .numberAnswerContainer {
+  display: flex;
   height: 2vw;
   width: 2vw;
-
-  background-color: #f59933;
+  background: url("../assets/tablelingkaran.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -547,7 +550,14 @@ ol.horizontal li {
   background-position: center;
   position: fixed;
   left: -10px;
-  bottom: 6px;
+  bottom: 1vh;
+  z-index: -1;
+}
+.quiznavi{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;;
 }
 .customquiz2 {
   font-size: calc(3px + 2vmin);
@@ -1232,7 +1242,7 @@ ol.horizontal li {
     margin-block-end: 0px;
   }
   .grid-container {
-    grid-template-rows: 33vh auto;
+    grid-template-rows: auto auto;
   }
 }
 
@@ -1396,5 +1406,29 @@ ol.horizontal li {
   }
   .quizResultDescHex {
     font-size: 2vw;
+  }
+  .addPadding4 #check{
+    height: 4vw;
+    width: 4vw;
+  }
+  .titlePage6{
+    padding: 0;
+    width:65vw
+  }
+  .ciclebenefitheader{
+    height: 13vw;
+    width: 13vw;
+  }
+  .MinihexBg{
+    height: 12vh;
+  }
+  .MinihexBg .title{
+    font-size: calc(0.4vh + 1vmin);
+  }
+  .MinihexBg .value {
+    font-size: calc(2vh + 1vmin);
+  }
+  .row-container {
+    padding: 10px;
   }
 }

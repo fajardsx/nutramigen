@@ -7,7 +7,7 @@ import "./Pages.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { navi } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnim = {
@@ -183,6 +183,14 @@ class Page4 extends Component {
               <div className="imagePita" />
             </Tweenful.div>
             {this.getQuiz()}
+            <div className="quiznavi">
+            <Button>
+              kembali
+            </Button>
+            </div>
+            <Button>
+              selanjutnya
+            </Button>
           </div>
         </Observer>
         {navi(this.onBack.bind(this), this.onNext.bind(this))}
