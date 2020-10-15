@@ -113,7 +113,7 @@ li span {
 .btn-tooglefullscreen {
   position: absolute;
   top: 2%;
-  right: 5vw;
+  right: 2%;
   background-color: transparent;
   height: 4vw;
   width: 4vw;
@@ -184,27 +184,26 @@ li span {
 }
 @media only screen and (max-width: 414px) and (max-height: 828px) {
   .btn-tooglefullscreen {
-    top:4%;
+    top: 4%;
     right: 8%;
     height: 10vw;
     width: 10vw;
   }
 
   .btn-nextscreen {
-    bottom: 6%;
-    right: 4%;
+    bottom: 8%;
+    right: 5%;
     height: 10vw;
     width: 10vw;
   }
   .btn-backscreen {
-    bottom: 6%;
-    right: 15%;
+    bottom: 8%;
+    right: 16%;
     height: 10vw;
     width: 10vw;
   }
   .App-header {
     width: 100%;
     height: auto;
-    position: relative;
   }
 }

@@ -72,18 +72,17 @@ const Home = (props) => {
       <div className="observer-demo">
         <Tweenful.div
           className="page1Box"
-          {...propsAnimLogo}
-          delay={Constant.NORMAL_DURATION}
-          duration={Constant.NORMAL_DURATION}
-          style={{ opacity: 0 }}>
-          <div className="logoMj" />
-        </Tweenful.div>
-        <Tweenful.div
-          className="page1Box"
           {...propsAnim}
           delay={Constant.NORMAL_DURATION * 1.5}
           duration={Constant.NORMAL_DURATION}
           style={{ opacity: 0 }}>
+          {" "}
+          <Tweenful.div
+            className="logoMj"
+            {...propsAnimLogo}
+            delay={Constant.NORMAL_DURATION}
+            duration={Constant.NORMAL_DURATION}
+            style={{ opacity: 0 }}></Tweenful.div>
           <div className="bayihex">
             <div className="Titlebayi">
               <img src={loadingicon} alt="bayi" style={{ width: "100%" }} />

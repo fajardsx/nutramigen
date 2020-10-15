@@ -89,7 +89,7 @@ class Page5 extends Component {
           unmount={[{ opacity: 0 }]}
           easing="linear">
           <div className="observer-demo">
-            <div className="row-container">
+            <div className="row-container titleContainerPage">
               <Tweenful.div
                 {...propsAnim}
                 delay={Constant.NORMAL_DURATION}

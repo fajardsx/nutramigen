@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, browserHistory } from "react-router-dom";
 import { reactLocalStorage } from "reactjs-localstorage";
 import "./App.css";
 import RouteApp from "./Route";

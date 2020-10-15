@@ -7,7 +7,7 @@ import "./Pages.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
-import { Button, Table } from "react-bootstrap";
+import { Button, Col, Row, Table } from "react-bootstrap";
 import { navi } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnim = {
@@ -67,8 +67,9 @@ class Page4 extends Component {
       shouldRender: true,
       currentQuiz: 1,
       score: 0,
-      scorePage: [0],
+      scorePage: [],
       page4skor: [-1, -1],
+      beratCondition: false,
     };
   }
   componentDidMount() {
@@ -78,6 +79,7 @@ class Page4 extends Component {
     this.resetDefault();
   }
   async resetDefault() {
+    console.log(this.state.scorePage);
     //  await reactLocalStorage.set("PAGE", 4);
   }
   onNext() {
@@ -94,17 +96,33 @@ class Page4 extends Component {
     this.props.updateDirection("right");
     NaviGoback(this.props);
   }
-  onClickHandle = (e) => {
+  onClickHandle = (e, quizIndex) => {
     //console.log("click ", e);
     if (this.state.currentQuiz !== 4) {
       let scorePage = [...this.state.scorePage];
       let score = this.state.score;
-      scorePage[this.state.currentQuiz - 1] = { score: e };
+      scorePage[quizIndex] = { score: e, id: e };
+      console.log("click ", scorePage);
       score += e;
-      this.setState({ currentQuiz: this.state.currentQuiz + 1, scorePage, score });
+      let beratCondition = false;
+      if (this.state.currentQuiz == 5 && e == 3) {
+        beratCondition = true;
+      }
+      this.setState({ scorePage, score, beratCondition });
     }
   };
-  onClickHandle1 = (e, part) => {
+  onClickHandle3 = (id, e, quizIndex) => {
+    //console.log("click ", e);
+    if (this.state.currentQuiz !== 4) {
+      let scorePage = [...this.state.scorePage];
+      let score = this.state.score;
+      scorePage[quizIndex] = { score: e, id: id };
+      console.log("click ", scorePage);
+      score += e;
+      this.setState({ scorePage, score });
+    }
+  };
+  onClickHandle1 = (e, part, quizIndex) => {
     // console.log("click ", e);
     //console.log("part ", part);
     let page4skor = [...this.state.page4skor];
@@ -120,10 +138,41 @@ class Page4 extends Component {
         scorePage[this.state.currentQuiz - 1] = {
           score: page4skor[0] + page4skor[1] + page4skor[2],
         };
+        let beratCondition = false;
+        if (page4skor[0] == 3 || page4skor[1] == 3 || page4skor[2] == 6) {
+          beratCondition = true;
+        }
         score += page4skor[0] + page4skor[1] + page4skor[2];
-        this.setState({ currentQuiz: this.state.currentQuiz + 1, scorePage, score });
+        this.setState({ scorePage, score, beratCondition });
       }
     });
+  };
+  onNaviQuestion = (type) => {
+    console.log(this.state.scorePage);
+    console.log(this.state.page4skor);
+    let beratCondition = false;
+    if (this.state.currentQuiz == 5) {
+      if (this.state.scorePage[5] && this.state.scorePage[5].score == 3) {
+        beratCondition = true;
+      } else if (
+        this.state.page4skor.find((res) => {
+          return res == 3;
+        }) !== null
+      ) {
+        beratCondition = true;
+      }
+    }
+
+    switch (type) {
+      case 0:
+        if (this.state.currentQuiz == 1) {
+          return this.onBack();
+        } else {
+          return this.setState({ currentQuiz: this.state.currentQuiz - 1 });
+        }
+      case 1:
+        return this.setState({ currentQuiz: this.state.currentQuiz + 1, beratCondition });
+    }
   };
   getScore = () => {
     return this.state.score;
@@ -174,7 +223,7 @@ class Page4 extends Component {
               <Tweenful.div {...propsAnim3} render={this.state.currentQuiz < 6 ? true : false}>
                 <div className="content1style SubtitlePage">
                   {
-                    "Isi skor (klik bulatan) di setiap gejala yang dialami pasien dokter dan temukan hasil skor\ndi akhir questioner"
+                    "Isi skor (klik bulatan) di setiap gejala yang dialami pasien dokter dan temukan\nhasil skor di akhir questioner"
                   }
                 </div>
               </Tweenful.div>
@@ -183,60 +232,74 @@ class Page4 extends Component {
               <div className="imagePita" />
             </Tweenful.div>
             {this.getQuiz()}
-            <div className="quiznavi">
-            <Button>
-              kembali
-            </Button>
-            </div>
-            <Button>
-              selanjutnya
-            </Button>
+
+            {this.state.currentQuiz < 6 && (
+              <div className="quiznavi">
+                <Button variant="prevQuiz" onClick={() => this.onNaviQuestion(0)}></Button>
+
+                <Button
+                  variant="nextQuiz"
+                  onClick={() =>
+                    this.state.scorePage[this.state.currentQuiz - 1] !== undefined
+                      ? this.onNaviQuestion(1)
+                      : null
+                  }
+                  style={{
+                    opacity:
+                      this.state.scorePage[this.state.currentQuiz - 1] !== undefined ? 1 : 0.5,
+                  }}></Button>
+              </div>
+            )}
           </div>
         </Observer>
-        {navi(this.onBack.bind(this), this.onNext.bind(this))}
+
+        {this.state.currentQuiz === 6 && navi(this.onBack.bind(this), this.onNext.bind(this))}
       </ContainerSwipe>
     );
   }
   //
-  cellQuestion = (index, title, custom) => {
+  cellQuestion = (quizIndex, index, title, custom) => {
     return (
       <div className={`row-container addPaddingQuiz `} {...propsAnim}>
         <a
           href="#"
           className="content1style numberAnswerContainer"
-          onClick={() => this.onClickHandle(index)}>
+          onClick={() => this.onClickHandle(index, quizIndex)}>
           {}
         </a>
         <div className={`content1style answerText ${custom}`}>{title}</div>
+        {this.state.scorePage[quizIndex] !== undefined &&
+          this.state.scorePage[quizIndex].id === index && <div id="check" />}
       </div>
     );
   };
   //
-  cellQuestion3 = (index, title, custom, imgStyle) => {
+  cellQuestion3 = (quizIndex, id, index, title, custom, imgStyle) => {
     return (
       <div className={`row-container addPadding3 `} {...propsAnim}>
         <a
           href="#"
           className="content1style numberAnswerContainer"
-          onClick={() => this.onClickHandle(index)}>
+          onClick={() => this.onClickHandle3(id, index, quizIndex)}>
           {}
         </a>
         <div className={`${imgStyle}`} />
         <div className={`content1style answerText ${custom}`}>{title}</div>
+        {this.state.scorePage[quizIndex] !== undefined &&
+          this.state.scorePage[quizIndex].id === id && <div id="check" />}
       </div>
     );
   };
-  cellQuestion4 = (index, part) => {
+  cellQuestion4 = (quizIndex, index, part) => {
     return (
-      <div className={`row-container addPadding4 `} {...propsAnim}>
+      <div className="center">
         <a
           href="#"
           className={`content1style numberAnswerContainer`}
           style={{
             marginRight: 0,
-            backgroundColor: this.state.page4skor[part] > -1 ? "#bd6300" : "#f59933",
           }}
-          onClick={() => this.onClickHandle1(index, part)}>
+          onClick={() => this.onClickHandle1(index, part, quizIndex)}>
           {}
         </a>
         {this.state.page4skor[part] == index && <div id="check" />}
@@ -245,106 +308,119 @@ class Page4 extends Component {
   };
   // QUESTION LIST
   quest1 = () => (
-    <div className="row-container content4Container">
-      <div {...propsAnim}>
+    <Row className="quizContainer">
+      <Row>
         <div className="content1style numberContainer">1</div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style imageHex1" />
-        <div className="subTextHex">Gejala menangis*</div>
-      </div>
 
-      <div {...propsAnim}>
+        <Col>
+          <div className="content1style imageHex1" />
+          <div className="subTextHex">Gejala menangis*</div>
+        </Col>
+      </Row>
+
+      <Col {...propsAnim}>
         <div className="content1style content4text titleQuiz">SKOR</div>
-        {this.cellQuestion(0, "≤ 1 jam/hari")}
-        {this.cellQuestion(1, "1-1,5 jam/hari")}
-        {this.cellQuestion(2, "1,5 - 2 jam/hari")}
-        {this.cellQuestion(3, "2 - 3 jam/hari")}
-        {this.cellQuestion(4, "3 - 4 jam/hari")}
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style content4text titleQuiz"></div>
-        {this.cellQuestion(5, "4 - 5 jam/hari")}
-        {this.cellQuestion(6, "≥ 5 jam/hari")}
-      </div>
-    </div>
+        {this.cellQuestion(0, 0, "≤ 1 jam/hari")}
+        {this.cellQuestion(0, 1, "1-1,5 jam/hari")}
+        {this.cellQuestion(0, 2, "1,5 - 2 jam/hari")}
+        {this.cellQuestion(0, 3, "2 - 3 jam/hari")}
+        {this.cellQuestion(0, 4, "3 - 4 jam/hari")}
+      </Col>
+      <Col {...propsAnim}>
+        <div className="content1style content4text titleQuiz">SKOR</div>
+        {this.cellQuestion(0, 5, "4 - 5 jam/hari")}
+        {this.cellQuestion(0, 6, "≥ 5 jam/hari")}
+      </Col>
+    </Row>
   );
   quest2 = () => (
-    <div className="row-container content4Container ">
-      <div {...propsAnim}>
+    <Row className="quizContainer">
+      <Row>
         <div className="content1style numberContainer">2</div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style imageHex2" />
-        <div className="subTextHex">{"Gejala muntah\n(Gumoh)"}</div>
-      </div>
 
-      <div {...propsAnim}>
+        <Col>
+          <div className="content1style imageHex2" />
+          <div className="subTextHex">{"Gejala muntah\n(Gumoh)"}</div>
+        </Col>
+      </Row>
+
+      <Col>
         <div className="content1style content4text titleQuiz">SKOR</div>
-        {this.cellQuestion(0, "2 kali/hari", "customquiz2")}
-        {this.cellQuestion(1, "≥  3 - ≤5 jam/hari,\nsedikit", "customquiz2")}
-        {this.cellQuestion(2, "1> 5 kali/hari, kira-kira\n1 sendok teh", "customquiz2")}
+        {this.cellQuestion(1, 0, "2 kali/hari", "customquiz2")}
+        {this.cellQuestion(1, 1, "≥  3 - ≤5 jam/hari,\nsedikit", "customquiz2")}
+        {this.cellQuestion(1, 2, "1> 5 kali/hari, kira-kira\n1 sendok teh", "customquiz2")}
         {this.cellQuestion(
+          1,
           3,
           "> 5 kali/hari, kira-kira\nsetengah porsi di tengah\nwaktu makan",
           "customquiz2"
         )}
-      </div>
-      <div {...propsAnim}>
+      </Col>
+      <Col>
         <div className="content1style content4text titleQuiz"></div>
         {this.cellQuestion(
+          1,
           4,
           "Muntah berkelanjutan,\nsedikit demi sedikit 30 menit\nsetelah selesai makan",
           "customquiz2"
         )}
         {this.cellQuestion(
+          1,
           5,
           "Muntah sebanyak\nsetengah porsi di akhir\nwaktu makan",
           "customquiz2"
         )}
         {this.cellQuestion(
+          1,
           6,
           "Muntah sebanyak yang \ndi makan setiap selesai\nmakan",
           "customquiz2"
         )}
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
   quest3 = () => (
-    <div className="row-container content4Container ">
-      <div {...propsAnim}>
+    <Row className="quizContainer">
+      <Row>
         <div className="content1style numberContainer">3</div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style imageHex3" />
-        <div className="subTextHex">{"Gejala Buang Air\nBesar (Skala Bristol)"}</div>
-      </div>
 
-      <div {...propsAnim}>
+        <Col>
+          <div className="content1style imageHex3" />
+          <div className="subTextHex">{"Gejala Buang Air\nBesar (Skala Bristol)"}</div>
+        </Col>
+      </Row>
+      <Col>
         <div className="content1style content4text titleQuiz">SKOR</div>
-        {this.cellQuestion3(4, "BAB keras", "customquiz2", "eek4")}
-        {this.cellQuestion3(0, "BAB normal", "customquiz2", "eek0")}
-        {this.cellQuestion3(2, "BAB lembek", "customquiz2", "eek2")}
-      </div>
-      <div {...propsAnim}>
+        {this.cellQuestion3(2, 0, 4, "BAB keras", "customquiz2", "eek4")}
+        {this.cellQuestion3(2, 1, 0, "BAB normal", "customquiz2", "eek0")}
+        {this.cellQuestion3(2, 2, 2, "BAB lembek", "customquiz2", "eek2")}
+      </Col>
+      <Col>
         <div className="content1style content4text titleQuiz"></div>
-        {this.cellQuestion3(4, "BAB agak cair,\nbukan karena infeksi", "customquiz2", "eek4_2")}
-        {this.cellQuestion3(6, "BAB cair dan\nencer", "customquiz2", "eek6")}
-      </div>
-    </div>
+        {this.cellQuestion3(
+          2,
+          3,
+          4,
+          "BAB agak cair,\nbukan karena infeksi",
+          "customquiz2",
+          "eek4_2"
+        )}
+        {this.cellQuestion3(2, 4, 6, "BAB cair dan\nencer", "customquiz2", "eek6")}
+      </Col>
+    </Row>
   );
   quest4 = () => (
-    <div className="row-container content4Container ">
-      <div {...propsAnim}>
+    <Row className="quizContainer">
+      <Row {...propsAnim}>
         <div className="content1style numberContainer">4</div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style imageHex4" />
-        <div className="subTextHex">{"Gejala\nRuam Merah"}</div>
-      </div>
+        <Col {...propsAnim}>
+          <div className="content1style imageHex4" />
+          <div className="subTextHex">{"Gejala\nRuam Merah"}</div>
+        </Col>
+      </Row>
 
-      <div {...propsAnim}>
-        <Table className="QuizTable" borderless>
+      <Col {...propsAnim}>
+        <Table className="QuizTable" bordered>
           <thead>
             <tr>
               <th></th>
@@ -356,66 +432,64 @@ class Page4 extends Component {
           </thead>
           <tbody>
             <tr>
-              <td></td>
+              <td id="hide"></td>
               <td id="skortitle">SKOR</td>
               <td id="skortitle">SKOR</td>
               <td id="skortitle">SKOR</td>
               <td id="skortitle"> SKOR</td>
             </tr>
             <tr>
-              <td>Kepala, Leher</td>
-              <td>{this.cellQuestion4(0, 0)}</td>
-              <td>{this.cellQuestion4(1, 0)}</td>
-              <td>{this.cellQuestion4(2, 0)}</td>
-              <td>{this.cellQuestion4(3, 0)}</td>
+              <td id="hide">Kepala, Leher</td>
+              <td id="hide">{this.cellQuestion4(3, 0, 0)}</td>
+              <td id="hide">{this.cellQuestion4(3, 1, 0)}</td>
+              <td id="hide">{this.cellQuestion4(3, 2, 0)}</td>
+              <td id="hide">{this.cellQuestion4(3, 3, 0)}</td>
             </tr>
             <tr>
               <td>Lengan, Tangan, Kaki</td>
-              <td>{this.cellQuestion4(0, 1)}</td>
-              <td>{this.cellQuestion4(1, 1)}</td>
-              <td>{this.cellQuestion4(2, 1)}</td>
-              <td>{this.cellQuestion4(3, 1)}</td>
+              <td>{this.cellQuestion4(3, 0, 1)}</td>
+              <td>{this.cellQuestion4(3, 1, 1)}</td>
+              <td>{this.cellQuestion4(3, 2, 1)}</td>
+              <td>{this.cellQuestion4(3, 3, 1)}</td>
             </tr>
             <tr>
-              <td></td>
+              <td id="hide"></td>
               <td id="skortitle2">Tidak Ada</td>
               <td id="skortitle2">Ada</td>
-              <td></td>
-              <td></td>
+              <td id="hide" colSpan="2" />
             </tr>
             <tr>
               <td>Biduran</td>
-              <td>{this.cellQuestion4(0, 2)}</td>
-              <td>{this.cellQuestion4(6, 2)}</td>
-              <td></td>
-              <td></td>
+              <td>{this.cellQuestion4(3, 0, 2)}</td>
+              <td>{this.cellQuestion4(3, 6, 2)}</td>
+              <td colSpan="2" />
             </tr>
           </tbody>
         </Table>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
   quest5 = () => (
-    <div className="row-container content4Container ">
-      <div {...propsAnim}>
+    <Row className="quizContainer">
+      <Row {...propsAnim}>
         <div className="content1style numberContainer">5</div>
-      </div>
-      <div {...propsAnim}>
-        <div className="content1style imageHex5" />
-        <div className="subTextHex">{"Gejala pada\nSaluran Pernapasan"}</div>
-      </div>
+        <Col {...propsAnim}>
+          <div className="content1style imageHex5" />
+          <div className="subTextHex">{"Gejala pada\nSaluran Pernapasan"}</div>
+        </Col>
+      </Row>
 
-      <div {...propsAnim}>
+      <Col {...propsAnim}>
         <div className="content1style content4text titleQuiz">SKOR</div>
-        {this.cellQuestion(0, "Tidak ada gejala")}
-        {this.cellQuestion(1, "Ringan")}
-      </div>
-      <div {...propsAnim}>
+        {this.cellQuestion(4, 0, "Tidak ada gejala")}
+        {this.cellQuestion(4, 1, "Ringan")}
+      </Col>
+      <Col {...propsAnim}>
         <div className="content1style content4text titleQuiz"></div>
-        {this.cellQuestion(2, "Sedang")}
-        {this.cellQuestion(3, "Berat")}
-      </div>
-    </div>
+        {this.cellQuestion(4, 2, "Sedang")}
+        {this.cellQuestion(4, 3, "Berat")}
+      </Col>
+    </Row>
   );
   questResult = () => (
     <div className="content4ContainerResult ">
@@ -450,15 +524,18 @@ class Page4 extends Component {
             {" curiga anak alergi susu sapi"}
           </div>
           <div className="quizResultTitleCaraContextBorder" />
-          <div className="quizResultTitleCaraContext ">
-            <a id="customtext">{"Skor < 12,"}</a>
-            {" gejala tidak terkait dengan alergi susu sapi"}
-          </div>
-          <div className="quizResultTitleCaraContextBorder" />
-          <div className="quizResultTitleCaraContext">
-            <a id="customtext">{"Bila skor <12"}</a>
-            {` tanpa disertai gejala pada kulit dan pernafasan maka anak Anda\nmungkin mengalami masalah pencernaan fungsional (buka halaman 6)`}
-          </div>
+          {this.state.beratCondition === false && (
+            <div className="quizResultTitleCaraContext ">
+              <a id="customtext">{"Skor < 12,"}</a>
+              {" gejala tidak terkait dengan alergi susu sapi"}
+            </div>
+          )}
+          {this.state.beratCondition === true && (
+            <div className="quizResultTitleCaraContext">
+              <a id="customtext">{"skor < 12"}</a>
+              {` kemungkinan pasien dokter mengalami masala\npencernaan fungsional jika tanpa disertai gejala kulit dan pernafasan`}
+            </div>
+          )}
         </div>
         <div className="quizResultTitleCaraContextBorderLine" />
         <div className="quizref">
