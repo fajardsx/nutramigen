@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { BrowserRouter as Routers, browserHistory } from "react-router-dom";
+import { HashRouter as Routers, browserHistory } from "react-router-dom";
 import { reactLocalStorage } from "reactjs-localstorage";
 import "./App.css";
 import RouteApp from "./Route";
@@ -12,6 +12,7 @@ import {
   updateCurrentPage,
 } from "./redux/actions/actions";
 import history from "./component/history";
+import Constant from "./config/Constant";
 let that = null;
 
 const App = (props) => {
@@ -73,7 +74,7 @@ const App = (props) => {
             height: "100vh",
             width: "100vw",
           }}>
-          <Routers>
+          <Routers basename={"/"} history={history}>
             <RouteApp />
           </Routers>
           {fullScreenMode == false && (

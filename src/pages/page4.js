@@ -269,7 +269,6 @@ class Page4 extends Component {
     return (
       <div className={`row-container addPaddingQuiz vcenter`} {...propsAnim}>
         <a
-          href="#"
           className="content1style numberAnswerContainer"
           onClick={() => this.onClickHandle(index, quizIndex)}>
           {}
@@ -284,7 +283,6 @@ class Page4 extends Component {
     return (
       <div className={`row-container addPaddingQuiz`} {...propsAnim}>
         <a
-          href="#"
           className="content1style numberAnswerContainer"
           onClick={() => this.onClickHandle(index, quizIndex)}>
           {}
@@ -300,7 +298,6 @@ class Page4 extends Component {
     return (
       <div className={`row-container addPadding3 `} {...propsAnim}>
         <a
-          href="#"
           className="content1style numberAnswerContainer"
           onClick={() => this.onClickHandle3(id, index, quizIndex)}>
           {}
@@ -316,7 +313,6 @@ class Page4 extends Component {
     return (
       <div className="center">
         <a
-          href="#"
           className={`content1style numberAnswerContainer`}
           style={{
             marginRight: 0,
@@ -535,7 +531,7 @@ class Page4 extends Component {
       <div className="titleScore">Hasil Akhir</div>
       <div className="bgScore">
         <div {...propsAnim}>
-          <div className="content1style quizResultTitle">TOTAL SCORE</div>
+          <div className="content1style quizResultTitle">TOTAL SKOR</div>
         </div>
         <div {...propsAnim}>
           <div className="content1style imageHexScore">

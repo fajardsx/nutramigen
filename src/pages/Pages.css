@@ -173,7 +173,7 @@ ol.horizontal li {
   background-repeat: no-repeat;
   text-align: center;
   background-size: contain;
-  background-position: center;
+  background-position: left;
   align-items: center;
   padding: 10px;
   color: #fff;
@@ -375,11 +375,12 @@ ol.horizontal li {
   background-image: url("../assets/boxResult.png");
   background-repeat: no-repeat;
   text-align: center;
-  background-size: contain;
+  background-size: 65% 100%;
   background-position: center;
   width: 95vw;
-  height: 60vh;
-  padding: 6% 0px 0px 0px;
+  height: 57vh;
+  margin: 2vh 0 0 0;
+  padding: 7vh 0px 0px 0px;
   align-items: center;
 }
 .titleScore {
@@ -388,13 +389,13 @@ ol.horizontal li {
   text-align: center;
   background-size: contain;
   background-position: center;
-  width: 25vw;
+  width: 22 vw;
   height: auto;
-  padding: 1.2vw 6vw;
+  padding: 2vw 6vw;
   position: fixed;
-  top: -0.5em;
+  top: -1.5vh;
   color: #fff;
-  left: 37vw;
+  left: 39vw;
   font-size: calc(1vw + 2vmin);
 }
 .content1text {
@@ -451,7 +452,7 @@ ol.horizontal li {
 .addPaddingQuiz {
   display: flex;
   flex-direction: row;
-  padding: 10px 0px;
+  padding: 0.7vw 0px;
   align-items: end;
   width: auto;
 }
@@ -590,6 +591,7 @@ ol.horizontal li {
   text-align: left;
   font-size: calc(1vw + 1vmin);
   font-family: ITCAvantGradePro_BOOK;
+  margin: 0 0 0 2vw;
 }
 .imagePita {
   height: 20vh;
@@ -755,7 +757,7 @@ ol.horizontal li {
   font-family: ITCAvantGradePro_BOLD;
   text-align: center;
   color: #f05a29;
-  padding: 15px 0px;
+  padding: 3vh 0px;
 }
 .quizResultHex {
   font-size: calc(5.5vw + 2vmin);
@@ -780,7 +782,7 @@ ol.horizontal li {
 }
 .containerResult {
   width: 55vw;
-  min-height: 10vh;
+  min-height: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -824,7 +826,7 @@ ol.horizontal li {
 .quizResultTitleCaraContextBorderLine {
   display: flex;
   width: 95vw;
-  height: 10px;
+  margin: 1vh 0px;
   border: 1px solid #f2d5ad;
   border-top-width: 0px;
   border-left-width: 0px;
@@ -1258,7 +1260,7 @@ ol.horizontal li {
     height: 60px;
   }
   .quizResultHex {
-    font-size: calc(90px + 1vmin);
+    font-size: calc(6vw + 2vmin);
   }
   .quizResultDescHex {
     font-size: calc(2px + 2vmin);
@@ -1470,10 +1472,11 @@ ol.horizontal li {
   }
   .bgScore {
     height: 60vh;
-    padding: 3% 0px 0px 0px;
+    padding: 4% 0px 0px 0px;
   }
   .quizResultTitleCaraContextBorderLine {
     height: 5px;
+    margin: 1.5vh 0px;
   }
   .quizContainer {
     padding: 5vw;
@@ -1533,7 +1536,8 @@ ol.horizontal li {
     width: 28vw;
   }
   .bgScore {
-    height: 62vh;
+    height: 60vh;
+    background-size: 65% 95%;
   }
   .content4ContainerResult {
     height: 100vh;
@@ -1545,7 +1549,7 @@ ol.horizontal li {
     padding: 0 0;
   }
   .resultDesc {
-    padding: 5vh 0;
+    padding: 3vh 0 5vh 0;
   }
   .containerResult {
     margin: 0vw 20vw;
@@ -1555,14 +1559,15 @@ ol.horizontal li {
     width: auto;
   }
   .quizResultHex {
-    font-size: 7vw;
-    height: 8vw;
+    margin-top: calc(2vw);
+    font-size: calc(5vw + 2vmin);
+    height: auto;
   }
   .quizResultTitleCara {
-    padding: 0px;
+    padding: 1vh 0px;
   }
   .addPaddingQuiz {
-    padding: 0.5vw 0px;
+    padding: 0.8vw 0px;
   }
   .vcenter {
     align-items: center;
@@ -1572,8 +1577,11 @@ ol.horizontal li {
     width: 4vw;
     margin: 0;
   }
+  .quizResultTitleCaraContext {
+    padding: 5px 0;
+  }
   .answerText {
-    margin: 0 0 0 1vw;
+    margin: 0 0 0 3vw;
   }
   .center .numberAnswerContainer {
     height: 3.5vw;
@@ -1657,6 +1665,9 @@ ol.horizontal li {
   }
   .textRotateright {
     left: -5%;
+  }
+  .quizResultTitle {
+    padding: 2vh 0 0 0;
   }
 }
 /* Portad */
