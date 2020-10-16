@@ -84,11 +84,11 @@ class Page5_1 extends Component {
         <Observer
           render={shouldRender}
           duration={1200}
-          style={{ opacity: 0,margin:'2vw' }}
+          style={{ opacity: 0, margin: "2vw" }}
           mount={{ opacity: 1 }}
           unmount={[{ opacity: 0 }]}
           easing="linear">
-          <div className="observer-demo">
+          <div>
             <div className="row-container">
               <Tweenful.div
                 {...propsAnim}
@@ -167,6 +167,20 @@ class Page5_1 extends Component {
             </div>
           </div>
         </Observer>
+        <Tweenful.div
+          {...propsAnim}
+          delay={Constant.NORMAL_DURATION * 3.5}
+          duration={Constant.NORMAL_DURATION}
+          style={{ opacity: 0 }}>
+          <div>
+            <div className="contentRefstyleLast textRotateright">
+              {"Hanya untuk kalangan medis"}
+            </div>
+            <div className="contentRefstyleLast textRotateleft">
+              {"ASI adalah makanan yang terbaik bagi bayi"}
+            </div>
+          </div>
+        </Tweenful.div>
         {navi(this.onBack.bind(this), this.onNext.bind(this))}
       </ContainerSwipe>
     );

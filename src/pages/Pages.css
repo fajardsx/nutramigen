@@ -47,6 +47,31 @@
   font-size: calc(0.5px + 1.5vmin);
   color: #58595b;
 }
+.contentRefstyleLast {
+  height: auto;
+  position: fixed;
+  top: 56vh;
+  width: auto;
+  font-family: ITCAvantGradePro_BOOK;
+  font-size: calc(0.1vw + 1.5vmin);
+  color: #2b357d;
+}
+.textRotateleft {
+  right: 0;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.textRotateright {
+  left: 0;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
 ol.horizontal li {
   float: left;
   width: 23vw;
@@ -77,10 +102,10 @@ ol.horizontal li {
   padding-left: 1vw;
 }
 #footerLast {
-  position: fixed;
-  bottom: 2%;
-  padding-left: 1vw;
-  width: 95vw;
+  position: absolute;
+  top: 45vh;
+  /* padding-left: 1vw; */
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -291,6 +316,9 @@ ol.horizontal li {
 .titlePage5 a#customtext {
   font-family: ITCAvantGradePro_DEMI_OBL;
 }
+.titlePage6 a#customtext {
+  font-family: ITCAvantGradePro_DEMI_OBL;
+}
 .quizResultTitleCaraContext a#customtext {
   font-family: ITCAvantGradePro_BOLD;
 }
@@ -417,7 +445,7 @@ ol.horizontal li {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.numberContainer #number{
+.numberContainer #number {
   height: 60%;
 }
 .addPaddingQuiz {
@@ -751,7 +779,11 @@ ol.horizontal li {
   padding: 5vh 10vw;
 }
 .containerResult {
-  padding: 1vw 2vw;
+  width: 55vw;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
   background-color: rgba(247, 230, 205, 0.4);
   border: 0px solid #f2d5ad;
@@ -765,6 +797,7 @@ ol.horizontal li {
   display: flex;
   flex-direction: column;
   position: fixed;
+  align-items: center;
 }
 .quizResultTitleCaraContextPadding {
   justify-content: center;
@@ -798,7 +831,7 @@ ol.horizontal li {
   border-right-width: 0px;
 }
 .quizref {
-  width: 95vw;
+  width: 55vw;
   padding: 10px 10px;
   font-size: calc(1px + 1.1vmin);
   font-family: ITCAvantGradePro_BOOK;
@@ -834,6 +867,8 @@ ol.horizontal li {
 .content5Container {
   padding-top: 2vw;
   align-items: unset;
+  display: flex;
+  justify-content: center;
 }
 .bgBox {
   height: auto;
@@ -870,6 +905,9 @@ ol.horizontal li {
 .colmContainer {
   text-align: center;
   width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .titletext {
   width: auto;
@@ -902,6 +940,30 @@ ol.horizontal li {
 }
 .QuizTable thead tr th {
   font-family: ITCAvantGradePro_BOOK;
+}
+.QuizTable thead tr th.tophide {
+  border-top-color: transparent;
+}
+.QuizTable thead tr th.lefthide {
+  border-left-color: transparent;
+}
+.QuizTable thead tr th.righthide {
+  border-right-color: transparent;
+}
+.QuizTable thead tr th.bottomhide {
+  border-bottom-color: transparent;
+}
+.QuizTable tbody tr td.tophide {
+  border-top-color: transparent;
+}
+.QuizTable tbody tr td.lefthide {
+  border-left-color: transparent;
+}
+.QuizTable tbody tr td.righthide {
+  border-right-color: transparent;
+}
+.QuizTable tbody tr td.bottomhide {
+  border-bottom-color: transparent;
 }
 /* PAGE 6 */
 .ciclebenefitheader {
@@ -970,8 +1032,8 @@ ol.horizontal li {
 .MinihexBg {
   display: flex;
   flex-direction: column;
-  width: 20vw;
-  height: 35vh;
+  width: 15vw;
+  height: 30vh;
   background-image: url("../assets/hexapage5.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -982,12 +1044,12 @@ ol.horizontal li {
 }
 .MinihexBg .title {
   font-family: ITCAvantGradePro_DEMI;
-  font-size: calc(1.2vh + 2vmin);
+  font-size: calc(0.3vw + 2vmin);
   color: #fff;
 }
 .MinihexBg .value {
   font-family: ITCAvantGradePro_BOLD;
-  font-size: calc(25px + 1vmin);
+  font-size: calc(3vw + 1vmin);
   color: #fff;
 }
 .page41titles {
@@ -1013,10 +1075,10 @@ ol.horizontal li {
   .page1Box {
     top: 20vh;
   }
-  .numberAnswerContainer{
-
+  .numberAnswerContainer {
   }
 }
+/* TAB */
 @media only screen and (max-width: 1024px) and (min-width: 820px) and (min-height: 620px) {
   .logoMj {
     height: 7vh;
@@ -1109,10 +1171,10 @@ ol.horizontal li {
     margin-top: 5%;
   }
   .SubtitlePage {
-    width: auto;
-    padding: 20px 0px 0px 0px;
+    width: 90vw;
+    padding: 2vh 0px 2vh 0px;
     text-align: center;
-    font-size: calc(1vw + 2vmin);
+    font-size: calc(0.8vw + 2vmin);
   }
   .content4Container {
     padding-top: 40px;
@@ -1151,29 +1213,46 @@ ol.horizontal li {
   .titleQuiz {
     min-height: 25px;
   }
+  .subTextHex {
+    font-size: calc(0.8vw + 2vmin);
+  }
   .addPadding3 {
-    min-height: 70px;
     align-items: center;
+    padding: 0;
   }
   .eek0 {
-    width: 3vw;
-    height: 3vw;
+    width: 8vw;
+    height: 8vw;
   }
   .eek2 {
-    width: 3vw;
-    height: 3vw;
+    width: 8vw;
+    height: 8vw;
   }
   .eek4 {
-    width: 3vw;
-    height: 3vw;
+    width: 8vw;
+    height: 8vw;
   }
   .eek4_2 {
-    width: 3vw;
-    height: 3vw;
+    width: 6vw;
+    height: 6vw;
   }
   .eek6 {
-    width: 3vw;
-    height: 3vw;
+    width: 8vw;
+    height: 8vw;
+  }
+  .numberContainer #number {
+    height: auto;
+  }
+  .btn-prevQuiz {
+    height: 6vw;
+    width: 6vw;
+  }
+  .btn-nextQuiz {
+    height: 6vw;
+    width: 6vw;
+  }
+  .quiznavi {
+    width: 14vw;
   }
   .QuizTable tbody tr {
     height: 60px;
@@ -1204,24 +1283,23 @@ ol.horizontal li {
     padding: 30px 0px 10px 0px;
   }
   .ciclebenefit {
-    top: 30%;
-    left: 42%;
+    top: 38vh;
+    left: 39vw;
     height: 25vh;
     width: 23vh;
   }
   .bgKalengLgg {
-    height: 35vh;
+    height: 27vw;
     margin: 15px 0px 15px 0px;
   }
   .bgKalengPuramino {
-    height: 35vh;
+    height: 27vw;
     margin: 15px 0px 15px 0px;
   }
   .bgScore {
     height: 55vh;
   }
   .containerResult {
-    width: 66vw;
     padding: 12px 10px;
   }
   ul {
@@ -1230,10 +1308,17 @@ ol.horizontal li {
     margin-block-end: 0px;
   }
   .colmContainerPage6 {
-    width: 50vw;
+    width: 45vw;
   }
   .grid-container {
-    grid-template-rows: 30vh auto;
+    grid-template-rows: auto auto;
+  }
+  .MinihexBg {
+    width: 18vw;
+    height: 26vh;
+  }
+  .content5Container {
+    padding: 0;
   }
   .page41titles {
     width: 520px;
@@ -1243,6 +1328,15 @@ ol.horizontal li {
     font-family: ITCAvantGradePro_DEMI;
     line-height: 5vh;
   }
+  .contentRow {
+    justify-content: flex-start;
+    position: fixed;
+    top: 20vh;
+  }
+  .ciclebenefitheader {
+    height: 14vw;
+    width: 14vw;
+  }
   .addPaddingQuiz #check {
     height: 5vw;
     width: 5vw;
@@ -1250,7 +1344,7 @@ ol.horizontal li {
   }
   .addPadding3 #check {
     height: 5vw;
-    width: 5vw;
+    width: 4.7vw;
     margin-left: 0.5vw;
   }
   .center #check {
@@ -1264,6 +1358,12 @@ ol.horizontal li {
   .QuizTable tbody tr td#skortitle2 {
     font-size: calc(0.5vw + 1vmin);
     font-family: ITCAvantGradePro_BOOK;
+  }
+  .textRotateleft {
+    right: -10%;
+  }
+  .textRotateright {
+    left: -5%;
   }
 }
 
@@ -1350,6 +1450,9 @@ ol.horizontal li {
   .quiznavi {
     bottom: 10vh;
   }
+  .numberContainer #number {
+    height: 74%;
+  }
 }
 
 @media only screen and (max-width: 1024px) and (max-height: 520px) {
@@ -1357,7 +1460,6 @@ ol.horizontal li {
     margin: 2vh 0px;
   }
   .containerResult {
-    width: auto;
     margin: 0vw 20vw;
   }
   .quizResultTitleCaraContextPadding {
@@ -1384,17 +1486,23 @@ ol.horizontal li {
   .customquiz2 {
     font-size: calc(0.7vw + 1vmin);
   }
-  .titlebg{
-
+  .titlebg {
+    height: 27vh;
+    width: 75vw;
+  }
+  .titlebg2 {
+    height: 28vh;
+    width: 73vw;
+    left: 24vw;
+    background-position: left;
   }
 }
 @media only screen and (max-width: 640px) and (max-height: 360px) {
   .containerResult {
-    width: auto;
     margin: 0vw 20vw;
   }
   .ciclebenefit {
-    left: 45%;
+    left: 39vw;
   }
 }
 @media only screen and (max-width: 819px) and (min-width: 720px) and (max-height: 380px) {
@@ -1417,8 +1525,12 @@ ol.horizontal li {
 }
 
 @media only screen and (max-width: 1024px) and (max-height: 620px) {
-  .page1Box{
+  .page1Box {
     top: 20vh;
+    left: 1vw;
+  }
+  .bayihex {
+    width: 28vw;
   }
   .bgScore {
     height: 62vh;
@@ -1436,10 +1548,9 @@ ol.horizontal li {
     padding: 5vh 0;
   }
   .containerResult {
-    width: auto;
     margin: 0vw 20vw;
   }
-  .titlePage2{
+  .titlePage2 {
     padding: 0 1vw;
     width: auto;
   }
@@ -1453,15 +1564,15 @@ ol.horizontal li {
   .addPaddingQuiz {
     padding: 0.5vw 0px;
   }
-  .vcenter{
+  .vcenter {
     align-items: center;
   }
   .numberAnswerContainer {
     height: 4vw;
     width: 4vw;
-    margin:0;
+    margin: 0;
   }
-  .answerText{
+  .answerText {
     margin: 0 0 0 1vw;
   }
   .center .numberAnswerContainer {
@@ -1490,19 +1601,20 @@ ol.horizontal li {
   }
   .quiznavi {
     width: 11vw;
+    bottom: 5vh;
   }
-  .titlePage6{
+  .titlePage6 {
     padding: 0;
     font-size: calc(1.5vw + 2vmin);
-  } 
-  .ciclebenefitheader{
+  }
+  .ciclebenefitheader {
     height: 8vw;
     width: 8vw;
   }
-  .addPadding3{
+  .addPadding3 {
     padding: 0;
   }
-  .addPadding3_2{
+  .addPadding3_2 {
     padding: 0;
   }
   .eek0 {
@@ -1521,8 +1633,8 @@ ol.horizontal li {
     margin: 0 1vw 0 1vw;
   }
   .eek4_2 {
-    height:6vw;
-    width: 6vw;
+    height: 5vw;
+    width: 5vw;
     margin: 0 1vw 0 1vw;
   }
   .eek6 {
@@ -1530,12 +1642,21 @@ ol.horizontal li {
     width: 6vw;
     margin: 0 1vw 0 1vw;
   }
-  .bgArrow{
-    margin:2.5vw;
+  .bgArrow {
+    margin: 2.5vw;
   }
-  .SubtitlePage{
-    font-size: calc(1.2vw + 2vmin);
+  .SubtitlePage {
+    font-size: calc(1.1vw + 2vmin);
     width: 90vw;
+  }
+  .contentRefstyle {
+    top: 46vh;
+  }
+  .textRotateleft {
+    right: -8%;
+  }
+  .textRotateright {
+    left: -5%;
   }
 }
 /* Portad */
@@ -1722,15 +1843,23 @@ ol.horizontal li {
     width: 100vw;
     align-items: center;
   }
-  .titlebg2{
-
+  .titlebg2 {
+  }
+  .contentRefstyle {
+    top: 43vh;
+  }
+  .textRotateleft {
+    right: -10%;
+  }
+  .textRotateright {
+    left: -5%;
   }
 }
-@media only screen and  (max-height: 400) {
-  .quizResultHex{
+@media only screen and (max-height: 400) {
+  .quizResultHex {
     font-size: calc(3.5vw + 2vmin);
   }
-  .bgScore{
+  .bgScore {
     padding: 0 0;
   }
 }

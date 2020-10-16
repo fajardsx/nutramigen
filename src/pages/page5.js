@@ -172,18 +172,22 @@ class Page5 extends Component {
               duration={Constant.NORMAL_DURATION}
               style={{ opacity: 0 }}
             />
-            <Tweenful.div
-              {...propsAnim}
-              delay={Constant.NORMAL_DURATION * 3.5}
-              duration={Constant.NORMAL_DURATION}
-              style={{ opacity: 0 }}>
-              <div id="footerLast" style={{ paddingLeft: "2%" }}>
-                <div className="contentRefstyle">{"ASI adalah yang terbaik"}</div>
-                <div className="contentRefstyle">{"Hanya untuk kalangan medis"}</div>
-              </div>
-            </Tweenful.div>
           </div>
         </Observer>
+        <Tweenful.div
+          {...propsAnim}
+          delay={Constant.NORMAL_DURATION * 3.5}
+          duration={Constant.NORMAL_DURATION}
+          style={{ opacity: 0 }}>
+          <div>
+            <div className="contentRefstyleLast textRotateright">
+              {"Hanya untuk kalangan medis"}
+            </div>
+            <div className="contentRefstyleLast textRotateleft">
+              {"ASI adalah makanan yang terbaik bagi bayi"}
+            </div>
+          </div>
+        </Tweenful.div>
         {/* <Button
           variant="backscreen"
           style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}

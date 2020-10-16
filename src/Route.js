@@ -9,6 +9,7 @@ import "./App.css";
 import { ROUTE_KEY } from "./config/ROUTE_KEY";
 import Home from "./pages/home";
 import Constant from "./config/Constant";
+import history from "./component/history";
 
 import page3 from "./pages/page3";
 import page4 from "./pages/page4";
@@ -37,13 +38,13 @@ const RouteApp = (props) => {
       }}
       atActive={{ opacity: 1, scale: 1, translateX: 0, translateY: 0 }}
       mapStyles={mapStyles}>
-      <Route exact path={"/nutramigen/"} component={Home} />
-      <Route path={"/nutramigen/page2"} component={Page2} />
-      <Route path={"/nutramigen/page3"} component={page3} />
-      <Route path={"/nutramigen/page4"} component={page4_1} />
-      <Route path={"/nutramigen/page5"} component={page4} />
-      <Route path={"/nutramigen/page6"} component={page5_1} />
-      <Route path={"/nutramigen/page7"} component={page5} />
+      <Route exact path={ROUTE_KEY[Constant.PAGE_HOME].PATH} component={Home} />
+      <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} />
+      <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={page3} />
+      <Route path={ROUTE_KEY[Constant.PAGE_4].PATH} component={page4_1} />
+      <Route path={ROUTE_KEY[Constant.PAGE_5].PATH} component={page4} />
+      <Route path={ROUTE_KEY[Constant.PAGE_6].PATH} component={page5_1} />
+      <Route path={ROUTE_KEY[Constant.PAGE_7].PATH} component={page5} />
     </AnimatedSwitch>
   );
 };

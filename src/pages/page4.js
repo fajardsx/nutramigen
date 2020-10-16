@@ -196,6 +196,13 @@ class Page4 extends Component {
         return <div></div>;
     }
   };
+  getDisc() {
+    if (this.getScore() < 12) {
+      return "gejala tidak terkait dengan alergi susu sapi";
+    } else {
+      return "Curiga anak alergi susu sapi";
+    }
+  }
   render() {
     const { shouldRender } = this.state;
     return (
@@ -326,7 +333,8 @@ class Page4 extends Component {
     <Row className="quizContainer">
       <Row>
         <div className="content1style numberContainer">
-        <div id="number">1</div></div>
+          <div id="number">1</div>
+        </div>
 
         <Col>
           <div className="content1style imageHex1" />
@@ -352,7 +360,9 @@ class Page4 extends Component {
   quest2 = () => (
     <Row className="quizContainer">
       <Row>
-        <div className="content1style numberContainer">2</div>
+        <div className="content1style numberContainer">
+          <div id="number">2</div>
+        </div>
 
         <Col>
           <div className="content1style imageHex2" />
@@ -398,7 +408,9 @@ class Page4 extends Component {
   quest3 = () => (
     <Row className="quizContainer">
       <Row>
-        <div className="content1style numberContainer">3</div>
+        <div className="content1style numberContainer">
+          <div id="number">3</div>
+        </div>
 
         <Col>
           <div className="content1style imageHex3" />
@@ -428,7 +440,9 @@ class Page4 extends Component {
   quest4 = () => (
     <Row className="quizContainer">
       <Row {...propsAnim}>
-        <div className="content1style numberContainer">4</div>
+        <div className="content1style numberContainer">
+          <div id="number">4</div>
+        </div>
         <Col {...propsAnim}>
           <div className="content1style imageHex4" />
           <div className="subTextHex">{"Gejala\nRuam Merah"}</div>
@@ -439,46 +453,53 @@ class Page4 extends Component {
         <Table className="QuizTable" bordered>
           <thead>
             <tr>
-              <th></th>
-              <th>Tidak Ada</th>
-              <th>Ringan</th>
-              <th>Sedang</th>
-              <th>Berat</th>
+              <th className="tophide lefthide"></th>
+              <th className="tophide ">Tidak Ada</th>
+              <th className="tophide ">Ringan</th>
+              <th className="tophide ">Sedang</th>
+              <th className="tophide righthide">Berat</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td id="hide"></td>
+              <td className="lefthide" id="hide"></td>
               <td id="skortitle">SKOR</td>
               <td id="skortitle">SKOR</td>
               <td id="skortitle">SKOR</td>
-              <td id="skortitle"> SKOR</td>
+              <td className="righthide" id="skortitle">
+                {" "}
+                SKOR
+              </td>
             </tr>
             <tr>
-              <td id="hide">Kepala, Leher</td>
+              <td className="lefthide" id="hide">
+                Kepala, Leher
+              </td>
               <td id="hide">{this.cellQuestion4(3, 0, 0)}</td>
               <td id="hide">{this.cellQuestion4(3, 1, 0)}</td>
               <td id="hide">{this.cellQuestion4(3, 2, 0)}</td>
-              <td id="hide">{this.cellQuestion4(3, 3, 0)}</td>
+              <td className="righthide" id="hide">
+                {this.cellQuestion4(3, 3, 0)}
+              </td>
             </tr>
             <tr>
-              <td>Lengan, Tangan, Kaki</td>
+              <td className="lefthide">Lengan, Tangan, Kaki</td>
               <td>{this.cellQuestion4(3, 0, 1)}</td>
               <td>{this.cellQuestion4(3, 1, 1)}</td>
               <td>{this.cellQuestion4(3, 2, 1)}</td>
-              <td>{this.cellQuestion4(3, 3, 1)}</td>
+              <td className="righthide">{this.cellQuestion4(3, 3, 1)}</td>
             </tr>
             <tr>
-              <td id="hide"></td>
+              <td className="lefthide" id="hide"></td>
               <td id="skortitle2">Tidak Ada</td>
               <td id="skortitle2">Ada</td>
-              <td id="hide" colSpan="2" />
+              <td className="righthide" id="hide" colSpan="2" />
             </tr>
             <tr>
-              <td>Biduran</td>
-              <td>{this.cellQuestion4(3, 0, 2)}</td>
-              <td>{this.cellQuestion4(3, 6, 2)}</td>
-              <td colSpan="2" />
+              <td className="lefthide bottomhide">Biduran</td>
+              <td className="bottomhide">{this.cellQuestion4(3, 0, 2)}</td>
+              <td className="bottomhide">{this.cellQuestion4(3, 6, 2)}</td>
+              <td className="righthide bottomhide" colSpan="2" />
             </tr>
           </tbody>
         </Table>
@@ -488,7 +509,9 @@ class Page4 extends Component {
   quest5 = () => (
     <Row className="quizContainer">
       <Row {...propsAnim}>
-        <div className="content1style numberContainer">5</div>
+        <div className="content1style numberContainer">
+          <div id="number">5</div>
+        </div>
         <Col {...propsAnim}>
           <div className="content1style imageHex5" />
           <div className="subTextHex">{"Gejala pada\nSaluran Pernapasan"}</div>
@@ -521,11 +544,7 @@ class Page4 extends Component {
         </div>
         <div {...propsAnim}>
           <div className="content1style containerResult">
-            <div className="quizResultDescHex">
-              {
-                "Kemungkinan pasien Dokter mengalami masalah pencernaan fungsional jika\ntanpa disertai gejala pada kulit dan pernafasan."
-              }
-            </div>
+            <div className="quizResultDescHex">{this.getDisc()}</div>
           </div>
         </div>
       </div>
@@ -546,16 +565,17 @@ class Page4 extends Component {
               {" gejala tidak terkait dengan alergi susu sapi"}
             </div>
           )} */}
-            <div className="quizResultTitleCaraContext">
-              <a id="customtext">{"skor < 12"}</a>
-              {` kemungkinan pasien dokter mengalami masala\npencernaan fungsional jika tanpa disertai gejala kulit dan pernafasan`}
-            </div>
-         
+          <div className="quizResultTitleCaraContext">
+            <a id="customtext">{"< 12 gejala"}</a>
+            {` tidak terkait dengan alergi susu sapi,`}
+            <a id="customtext">{" bila skor <12 "}</a>
+            {`tanpa disertai gejala pada kulit\ndan pernafasan maka pasien Anda mungkin mengalami masalah pencernaan functional`}
+          </div>
         </div>
         <div className="quizResultTitleCaraContextBorderLine" />
         <div className="quizref">
           {
-            "Reference : Diadaptasi dari: Vandenplas, Y., Duport, C., Eigenmann, P., Host, A, Kuitunen, M., Ribes-Koninck, C., Shah, N., Shamir, R., Staiano, a, Szajewska, H. and Von Berg, A. (2015). A workshop report on the divelopment of the\ncow,s Milk-related Symptom Score awareness tool for young children, Acta Paediatrica. doi; 101111/apa.12902"
+            "Reference : Diadaptasi dari: Vandenplas, Y., Duport, C., Eigenmann, P., Host, A, Kuitunen, M., Ribes-Koninck, C., Shah, N., Shamir, R., Staiano, a, Szajewska, H. and Von Berg, A. (2015). A workshop report on the divelopment of the cow,s Milk-related Symptom Score awareness tool for young children, Acta Paediatrica. doi; 101111/apa.12902"
           }
         </div>
       </div>
