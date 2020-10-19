@@ -1500,6 +1500,7 @@ ol.horizontal li {
   .titlebg {
     height: 27vh;
     width: 75vw;
+    left: 24vw;
   }
   .titlebg2 {
     height: 28vh;
@@ -1574,7 +1575,7 @@ ol.horizontal li {
     padding: 1vh 0px;
   }
   .addPaddingQuiz {
-    padding: 1.5vw 0px;
+    padding: 1vw 0px;
   }
   .vcenter {
     align-items: center;
@@ -1683,6 +1684,18 @@ ol.horizontal li {
   }
   .MinihexBg .value {
     font-size: calc(2.1vw + 1vmin);
+  }
+  .content5Container {
+    padding-top: 1vw;
+  }
+  .bgDiagramPage6 {
+    height: 55vh;
+  }
+  .bgDiagramEndPage6 {
+    height: 55vh;
+  }
+  .MinihexBg {
+    height: 27vh;
   }
 }
 /* TAB SMALL */
