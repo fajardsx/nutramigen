@@ -39,7 +39,7 @@ const RouteApp = (props) => {
       atActive={{ opacity: 1, scale: 1, translateX: 0, translateY: 0 }}
       mapStyles={mapStyles}>
       <Route exact path={ROUTE_KEY[Constant.PAGE_HOME].PATH} component={Home} />
-      <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} />
+      {/* <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} /> */}
       <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={page3} />
       <Route path={ROUTE_KEY[Constant.PAGE_4].PATH} component={page4_1} />
       <Route path={ROUTE_KEY[Constant.PAGE_5].PATH} component={page4} />

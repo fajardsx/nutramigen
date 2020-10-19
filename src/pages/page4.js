@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { Button, Col, Row, Table } from "react-bootstrap";
-import { navi } from "../component";
+import { navi, refHanyakalangan } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnim = {
   delay: 1000,
@@ -261,6 +261,7 @@ class Page4 extends Component {
         </Observer>
 
         {this.state.currentQuiz === 6 && navi(this.onBack.bind(this), this.onNext.bind(this))}
+        {refHanyakalangan()}
       </ContainerSwipe>
     );
   }

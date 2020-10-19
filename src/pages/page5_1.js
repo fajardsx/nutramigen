@@ -7,7 +7,7 @@ import "./Pages.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
-import { navi } from "../component";
+import { navi, refHanyakalangan } from "../component";
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -167,21 +167,9 @@ class Page5_1 extends Component {
             </div>
           </div>
         </Observer>
-        <Tweenful.div
-          {...propsAnim}
-          delay={Constant.NORMAL_DURATION * 3.5}
-          duration={Constant.NORMAL_DURATION}
-          style={{ opacity: 0 }}>
-          <div>
-            <div className="contentRefstyleLast textRotateright">
-              {"Hanya untuk kalangan medis"}
-            </div>
-            <div className="contentRefstyleLast textRotateleft">
-              {"ASI adalah makanan yang terbaik bagi bayi"}
-            </div>
-          </div>
-        </Tweenful.div>
+
         {navi(this.onBack.bind(this), this.onNext.bind(this))}
+        {refHanyakalangan()}
       </ContainerSwipe>
     );
   }

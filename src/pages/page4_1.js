@@ -8,7 +8,7 @@ import loadingicon from "../assets/bayi2.gif";
 import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 import Constant from "../config/Constant";
-import { navi } from "../component";
+import { navi, refHanyakalangan } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnimLogo = {
   delay: 1000,
@@ -109,6 +109,7 @@ const Page41 = (props) => {
         </div>
       </Observer>
       {navi(onBack, onNext)}
+      {refHanyakalangan()}
     </ContainerSwipe>
   );
   //}

@@ -7,7 +7,7 @@ import "./Pages.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
-import { navi } from "../component";
+import { navi, refHanyakalangan } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnim = {
   delay: 1000,
@@ -152,6 +152,7 @@ class Page3 extends Component {
           </div>
         </Observer>
         {navi(this.onBack.bind(this), this.onNext.bind(this))}
+        {refHanyakalangan()}
       </ContainerSwipe>
     );
   }

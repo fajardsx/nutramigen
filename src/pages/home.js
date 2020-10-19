@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 import { updateCurrentPage, updateCurrentDirection } from "../redux/actions/actions";
 import Constant from "../config/Constant";
 import { Button } from "react-bootstrap";
-import { navi } from "../component";
+import { navi, refHanyakalangan } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
 const propsAnimLogo = {
   delay: 1200,
@@ -53,7 +53,7 @@ const Home = (props) => {
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
-    resetDefault()
+    resetDefault();
     resetDefault(() => setShouldRender(true), 3000);
   }, []);
   async function resetDefault() {
@@ -109,6 +109,7 @@ const Home = (props) => {
         </Tweenful.div>
       </div>
       {navi(null, onNext)}
+      {refHanyakalangan()}
     </ContainerSwipe>
   );
   //}

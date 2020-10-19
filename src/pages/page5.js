@@ -7,7 +7,7 @@ import "./Pages.css";
 import { connect } from "react-redux";
 import { updateCurrentDirection, updateCurrentPage } from "../redux/actions/actions";
 import Constant from "../config/Constant";
-import { navi } from "../component";
+import { navi, refHanyakalangan } from "../component";
 import { Button } from "react-bootstrap";
 const propsAnim = {
   delay: 1000,
@@ -138,7 +138,8 @@ class Page5 extends Component {
                     </div>
                   </Tweenful.div>
                 </div>
-                <div className="colmContainer addPadding">
+                <div className="addPadding" />
+                <div className="colmContainer ">
                   <Tweenful.div
                     className="titletext"
                     {...propsAnim}
@@ -160,7 +161,9 @@ class Page5 extends Component {
                     delay={Constant.NORMAL_DURATION * 3.7}
                     duration={Constant.NORMAL_DURATION}
                     style={{ opacity: 0 }}>
-                    <div className="boxtext">{"Formula asam amino dengan\nMCT Oil 33%"}</div>
+                    <div className="boxtext">
+                      {"Formula asam amino 22kkal/30ml\ndengan MCT Oil 33%"}
+                    </div>
                   </Tweenful.div>
                 </div>
               </div>
@@ -174,7 +177,7 @@ class Page5 extends Component {
             />
           </div>
         </Observer>
-        <Tweenful.div
+        {/* <Tweenful.div
           {...propsAnim}
           delay={Constant.NORMAL_DURATION * 3.5}
           duration={Constant.NORMAL_DURATION}
@@ -187,7 +190,7 @@ class Page5 extends Component {
               {"ASI adalah makanan yang terbaik bagi bayi"}
             </div>
           </div>
-        </Tweenful.div>
+        </Tweenful.div> */}
         {/* <Button
           variant="backscreen"
           style={{ color: "#fff", backgroundColor: "#f05a29", fontSize: 12 }}
@@ -195,6 +198,7 @@ class Page5 extends Component {
           Back
         </Button> */}
         {navi(this.onBack.bind(this), null)}
+        {refHanyakalangan()}
       </ContainerSwipe>
     );
   }

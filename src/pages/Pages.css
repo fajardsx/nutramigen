@@ -47,10 +47,17 @@
   font-size: calc(0.5px + 1.5vmin);
   color: #58595b;
 }
+.contentRefstyleContainer {
+  width: 100vw;
+  padding: 0 4vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 1vh;
+}
 .contentRefstyleLast {
   height: auto;
-  position: fixed;
-  top: 56vh;
   width: auto;
   font-family: ITCAvantGradePro_BOOK;
   font-size: calc(0.1vw + 1.5vmin);
@@ -98,7 +105,7 @@ ol.horizontal li {
 }
 #footer {
   position: fixed;
-  bottom: 2%;
+  bottom: 4%;
   padding-left: 1vw;
 }
 #footerLast {
@@ -167,7 +174,7 @@ ol.horizontal li {
   display: flex;
   width: 80vw;
   position: absolute;
-  left: 18vw;
+  left: 22vw;
   height: 15vw;
   background-image: url("../assets/bgtitlepage1_text.png");
   background-repeat: no-repeat;
@@ -183,7 +190,7 @@ ol.horizontal li {
   display: flex;
   width: 85vw;
   position: absolute;
-  left: 18vw;
+  left: 15vw;
   height: 15vw;
   background-image: url("../assets/bgtitlepage3_text.png");
   background-repeat: no-repeat;
@@ -330,7 +337,7 @@ ol.horizontal li {
   text-align: left;
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
-  font-size: calc(1.3vw + 2vmin);
+  font-size: calc(1.8vw + 1vmin);
 }
 /* li.content1style.content1textbullet {
   width: 830;
@@ -447,7 +454,7 @@ ol.horizontal li {
   -o-border-radius: 5px;
 }
 .numberContainer #number {
-  height: 60%;
+  height: auto;
 }
 .addPaddingQuiz {
   display: flex;
@@ -648,7 +655,7 @@ ol.horizontal li {
   margin: 0px 4vw;
 }
 .customquiz2 {
-  font-size: calc(3px + 2vmin);
+  font-size: calc(0.8vw + 1vmin);
 }
 .eek0 {
   margin: 0px 10px 0px 5px;
@@ -778,7 +785,7 @@ ol.horizontal li {
   padding: 0px;
 }
 .quizContainer {
-  padding: 5vh 10vw;
+  padding: 10vh 0 10vw 10vh;
 }
 .containerResult {
   width: 55vw;
@@ -809,8 +816,8 @@ ol.horizontal li {
 }
 .quizResultTitleCaraContext {
   /* display: flex; */
-  font-size: calc(1px + 1.2vmin);
-  font-family: ITCAvantGradePro_EL;
+  font-size: calc(0.4vw + 1vmin);
+  font-family: ITCAvantGradePro_BOOK;
   text-align: left;
   letter-spacing: 0.5px;
   padding: 10px 5px;
@@ -1051,7 +1058,7 @@ ol.horizontal li {
 }
 .MinihexBg .value {
   font-family: ITCAvantGradePro_BOLD;
-  font-size: calc(3vw + 1vmin);
+  font-size: calc(2.3vw + 1vmin);
   color: #fff;
 }
 .page41titles {
@@ -1080,6 +1087,7 @@ ol.horizontal li {
   .numberAnswerContainer {
   }
 }
+
 /* TAB */
 @media only screen and (max-width: 1024px) and (min-width: 820px) and (min-height: 620px) {
   .logoMj {
@@ -1427,10 +1435,11 @@ ol.horizontal li {
     font-size: calc(8px + 2vmin);
   }
   .titlePage5 {
-    width: auto;
+    width: 75vw;
     height: auto;
     padding: 0px 18px;
     font-size: calc(1.4vw + 2vmin);
+    line-height: inherit;
   }
   .content4Container {
     padding-top: 10px;
@@ -1453,7 +1462,6 @@ ol.horizontal li {
     bottom: 10vh;
   }
   .numberContainer #number {
-    height: 74%;
   }
 }
 
@@ -1527,13 +1535,12 @@ ol.horizontal li {
   }
 }
 
-@media only screen and (max-width: 1024px) and (max-height: 620px) {
+@media only screen and (max-width: 1024px) and (max-width: 820px) and (max-height: 620px) {
   .page1Box {
     top: 20vh;
     left: 1vw;
   }
   .bayihex {
-    width: 28vw;
   }
   .bgScore {
     height: 60vh;
@@ -1567,7 +1574,7 @@ ol.horizontal li {
     padding: 1vh 0px;
   }
   .addPaddingQuiz {
-    padding: 0.8vw 0px;
+    padding: 1.5vw 0px;
   }
   .vcenter {
     align-items: center;
@@ -1614,10 +1621,11 @@ ol.horizontal li {
   .titlePage6 {
     padding: 0;
     font-size: calc(1.5vw + 2vmin);
+    line-height: inherit;
   }
   .ciclebenefitheader {
-    height: 8vw;
-    width: 8vw;
+    height: 12vw;
+    width: 12vw;
   }
   .addPadding3 {
     padding: 0;
@@ -1663,15 +1671,29 @@ ol.horizontal li {
   .textRotateleft {
     right: -8%;
   }
+
   .textRotateright {
     left: -5%;
   }
   .quizResultTitle {
     padding: 2vh 0 0 0;
   }
+  .MinihexBg .title {
+    font-size: calc(0.5vw + 1vmin);
+  }
+  .MinihexBg .value {
+    font-size: calc(2.1vw + 1vmin);
+  }
+}
+/* TAB SMALL */
+
+@media only screen and (max-width: 820px) and (min-width: 520px) {
+  .page1Box {
+    top: 30vh;
+  }
 }
 /* Portad */
-@media only screen and (max-width: 414px) and (max-height: 828px) {
+@media only screen and (max-width: 520px) and (max-height: 828px) {
   .content2Container {
     align-items: center;
   }
@@ -1691,10 +1713,12 @@ ol.horizontal li {
   }
   .page1Box {
     left: 2%;
+    top: 45vh;
   }
   .logoMj {
     left: 10%;
     height: 7vw;
+    top: 45vh;
   }
   .titlePage2 {
     width: 80vw;
@@ -1747,14 +1771,16 @@ ol.horizontal li {
   .content4Container {
   }
   .titleScore {
-    width: 26vw;
-    padding: 3vw 5vw;
-    left: 35vw;
+    width: 35vw;
+    padding: 4vw 0vw;
+    /* margin: -1vw; */
+    left: 32vw;
   }
   .bgScore {
     height: auto;
     padding: 6%;
     width: 100vw;
+    margin: 0;
   }
   .imageHexScore {
     height: auto;
@@ -1852,7 +1878,22 @@ ol.horizontal li {
   .quizContainer .row {
     margin: 0 0;
     width: 100vw;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .imageHex1 {
+    width: auto;
+  }
+  .imageHex2 {
+    width: auto;
+  }
+  .imageHex3 {
+    width: auto;
+  }
+  .imageHex4 {
+    width: auto;
+  }
+  .imageHex5 {
+    width: auto;
   }
   .titlebg2 {
   }

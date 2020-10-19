@@ -13,6 +13,7 @@ import {
 } from "./redux/actions/actions";
 import history from "./component/history";
 import Constant from "./config/Constant";
+import { refHanyakalangan } from "./component";
 let that = null;
 
 const App = (props) => {
@@ -77,6 +78,7 @@ const App = (props) => {
           <Routers basename={"/"} history={history}>
             <RouteApp />
           </Routers>
+
           {fullScreenMode == false && (
             <Button
               variant="tooglefullscreen"
