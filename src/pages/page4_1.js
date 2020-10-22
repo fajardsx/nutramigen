@@ -53,6 +53,7 @@ const Page41 = (props) => {
 
   useEffect(() => {
     //resetDefault();
+    props.updatePage(3);
     setTimeout(() => setShouldRender(true), 3000);
   }, []);
   function onNext() {

@@ -26,7 +26,9 @@
   position: relative;
   opacity: 1;
 }
-
+.fakeWidth {
+  width: 100vw;
+}
 #TitleText {
   text-align: "center";
 }
@@ -174,7 +176,7 @@ ol.horizontal li {
   display: flex;
   width: 80vw;
   position: absolute;
-  left: 22vw;
+  left: 23vw;
   height: 15vw;
   background-image: url("../assets/bgtitlepage1_text.png");
   background-repeat: no-repeat;
@@ -219,9 +221,10 @@ ol.horizontal li {
 }
 .logoMj {
   position: fixed;
-  height: 10vh;
-  width: 100vw;
-  top: 23vh;
+  left: 40vw;
+  height: 7vw;
+  width: 38vw;
+  top: 20vh;
   background-image: url("../assets/logomj.png");
   background-repeat: no-repeat;
   text-align: center;
@@ -459,7 +462,7 @@ ol.horizontal li {
 .addPaddingQuiz {
   display: flex;
   flex-direction: row;
-  padding: 0.7vw 0px;
+  padding: 0.7vw 0px 0px 0px;
   align-items: end;
   width: auto;
 }
@@ -596,8 +599,8 @@ ol.horizontal li {
 }
 .answerText {
   text-align: left;
-  font-size: calc(1vw + 1vmin);
-  font-family: ITCAvantGradePro_BOOK;
+  font-size: calc(1.3vw + 1vmin);
+  font-family: ITCAvantGradePro_BOLD;
   margin: 0 0 0 2vw;
 }
 .imagePita {
@@ -656,6 +659,10 @@ ol.horizontal li {
 }
 .customquiz2 {
   font-size: calc(0.8vw + 1vmin);
+  width: 80%;
+}
+.customquiz3 {
+  font-size: calc(1vw + 1vmin);
 }
 .eek0 {
   margin: 0px 10px 0px 5px;
@@ -716,7 +723,7 @@ ol.horizontal li {
   border-color: rgba(247, 148, 32, 0.2);
 }
 .QuizTable thead tr th {
-  font-size: calc(0.5vw + 1vmin);
+  font-size: calc(0.8vw + 1vmin);
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
@@ -728,7 +735,7 @@ ol.horizontal li {
   border-top-width: 0px;
 }
 .QuizTable tbody tr td {
-  font-size: calc(3px + 2vmin);
+  font-size: calc(1.5vw + 1vmin);
   color: #532c13;
   font-family: ITCAvantGradePro_DEMI;
   padding: 1vw;
@@ -743,13 +750,13 @@ ol.horizontal li {
 }
 
 .QuizTable tbody tr td#skortitle {
-  font-size: calc(1px + 1.5vmin);
+  font-size: calc(0.8vw + 1vmin);
   color: #f05a29;
   text-align: center;
   border-bottom-color: transparent;
 }
 .QuizTable tbody tr td#skortitle2 {
-  font-size: calc(1px + 2vmin);
+  font-size: calc(1vw + 1vmin);
   border-bottom-color: transparent;
   text-align: center;
 }
@@ -774,7 +781,7 @@ ol.horizontal li {
   text-shadow: 3px 3px #f05a29;
 }
 .quizResultDescHex {
-  font-size: 2.4vh;
+  font-size: calc(1vw + 1vmin);
   font-family: ITCAvantGradePro_DEMI;
   text-align: center;
 }
@@ -811,12 +818,12 @@ ol.horizontal li {
 .quizResultTitleCaraContextPadding {
   justify-content: center;
   align-items: flex-start;
-  width: 100vw;
+  width: 90vw;
   display: flex;
 }
 .quizResultTitleCaraContext {
   /* display: flex; */
-  font-size: calc(0.4vw + 1vmin);
+  font-size: calc(0.5vw + 1vmin);
   font-family: ITCAvantGradePro_BOOK;
   text-align: left;
   letter-spacing: 0.5px;
@@ -832,7 +839,7 @@ ol.horizontal li {
 }
 .quizResultTitleCaraContextBorderLine {
   display: flex;
-  width: 95vw;
+  width: 93vw;
   margin: 1vh 0px;
   border: 1px solid #f2d5ad;
   border-top-width: 0px;
@@ -842,7 +849,7 @@ ol.horizontal li {
 .quizref {
   width: 55vw;
   padding: 10px 10px;
-  font-size: calc(1px + 1.1vmin);
+  font-size: calc(0.3vw + 1vmin);
   font-family: ITCAvantGradePro_BOOK;
   text-align: center;
 }
@@ -928,7 +935,7 @@ ol.horizontal li {
 .boxtext {
   width: auto;
   height: auto;
-  font-size: calc(2px + 2vmin);
+  font-size: calc(1.1vw + 1vmin);
   color: #fff;
   font-family: ITCAvantGradePro_DEMI;
 }
@@ -1273,8 +1280,9 @@ ol.horizontal li {
   .quizResultDescHex {
     font-size: calc(2px + 2vmin);
   }
+
   .quizResultTitleCara {
-    padding: 35px 0px;
+    padding: 3vw 0 0 0;
   }
   .quizResultTitleCaraContextBorder {
     height: 35px;
@@ -1308,6 +1316,7 @@ ol.horizontal li {
   }
   .bgScore {
     height: 55vh;
+    margin: 0;
   }
   .containerResult {
     padding: 12px 10px;
@@ -1406,9 +1415,6 @@ ol.horizontal li {
     justify-content: normal;
   }
   .logoMj {
-    left: 50px;
-    height: 7vw;
-    width: 100vw;
   }
   .Titlebayi {
     padding: 10px;
@@ -1492,14 +1498,18 @@ ol.horizontal li {
 }
 @media only screen and (max-width: 1024px) and (max-height: 768px) {
   .quizContainer {
-    padding: 2vh 5vw;
+    padding: 2vh 2vw 2vh 5vw;
   }
   .customquiz2 {
+    font-size: calc(0.7vw + 1vmin);
+    width: 80%;
+  }
+  .customquiz3 {
     font-size: calc(0.7vw + 1vmin);
   }
   .titlebg {
     height: 27vh;
-    width: 75vw;
+    width: 72vw;
     left: 24vw;
   }
   .titlebg2 {
@@ -1507,6 +1517,9 @@ ol.horizontal li {
     width: 73vw;
     left: 24vw;
     background-position: left;
+  }
+  .titleScore {
+    left: 41vw;
   }
 }
 @media only screen and (max-width: 640px) and (max-height: 360px) {
@@ -1532,7 +1545,7 @@ ol.horizontal li {
     left: 40%;
   }
   .quizContainer {
-    padding: 3vh 5vw;
+    padding: 3vh 2vw 3vh 5vw;
   }
 }
 
@@ -1575,7 +1588,7 @@ ol.horizontal li {
     padding: 1vh 0px;
   }
   .addPaddingQuiz {
-    padding: 1vw 0px;
+    padding: 1vw 0px 0px 0px;
   }
   .vcenter {
     align-items: center;
@@ -1589,6 +1602,7 @@ ol.horizontal li {
     padding: 5px 0;
   }
   .answerText {
+    font-size: calc(1.4vw + 1vmin);
     margin: 0 0 0 3vw;
   }
   .center .numberAnswerContainer {
@@ -1650,8 +1664,8 @@ ol.horizontal li {
     margin: 0 1vw 0 1vw;
   }
   .eek4_2 {
-    height: 5vw;
-    width: 5vw;
+    height: 6vw;
+    width: 6vw;
     margin: 0 1vw 0 1vw;
   }
   .eek6 {
@@ -1660,7 +1674,7 @@ ol.horizontal li {
     margin: 0 1vw 0 1vw;
   }
   .bgArrow {
-    margin: 2.5vw;
+    margin: 2.5vw 0;
   }
   .SubtitlePage {
     font-size: calc(1.1vw + 2vmin);
@@ -1680,7 +1694,7 @@ ol.horizontal li {
     padding: 2vh 0 0 0;
   }
   .MinihexBg .title {
-    font-size: calc(0.5vw + 1vmin);
+    font-size: calc(0.7vw + 1vmin);
   }
   .MinihexBg .value {
     font-size: calc(2.1vw + 1vmin);
@@ -1697,12 +1711,21 @@ ol.horizontal li {
   .MinihexBg {
     height: 27vh;
   }
+  .customquiz2 {
+    font-size: calc(1vw + 1vmin);
+    width: 80%;
+  }
+  .customquiz3 {
+    font-size: calc(1vw + 1vmin);
+    margin: 0 0 0 1vw;
+    width: 50%;
+  }
 }
 /* TAB SMALL */
 
 @media only screen and (max-width: 820px) and (min-width: 520px) {
   .page1Box {
-    top: 30vh;
+    top: 24vh;
   }
 }
 /* Portad */
@@ -1769,8 +1792,8 @@ ol.horizontal li {
     padding-inline-start: 5vw;
   }
   .titlebg {
-    width: 75vw;
-    left: 22vw;
+    width: 72vw;
+    left: 23vw;
   }
   .numberContainer {
     height: 5vw;
@@ -1839,6 +1862,10 @@ ol.horizontal li {
     width: 4vw;
   }
   .customquiz2 {
+    width: 100%;
+    font-size: calc(1.2vw + 1vmin);
+  }
+  .customquiz3 {
     width: 100%;
     font-size: calc(1.2vw + 1vmin);
   }

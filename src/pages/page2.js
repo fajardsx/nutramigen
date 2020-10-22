@@ -85,6 +85,7 @@ class Page2 extends Component {
       });
     }
     this.resetDefault();
+    this.props.updatePage(1);
   }
   async resetDefault() {
     // await reactLocalStorage.set("PAGE", 1);

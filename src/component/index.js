@@ -3,14 +3,13 @@ import { Button } from "react-bootstrap";
 import Tweenful, { elastic } from "react-tweenful";
 import Constant from "../config/Constant";
 
-export function navi(onBack, onNext) {
+export function navi(onBack, onNext, showTitle = false) {
   return (
     <div>
       {onNext && (
-        <Button
-          variant="nextscreen"
-          style={{ color: "#fff", fontSize: 12 }}
-          onClick={onNext}></Button>
+        <Button variant="nextscreen" style={{ color: "#fff", fontSize: 12 }} onClick={onNext}>
+          {showTitle && <div id="title">NEXT</div>}
+        </Button>
       )}
 
       {onBack && (

@@ -65,7 +65,9 @@ class Page5 extends Component {
       shouldRender: true,
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.updatePage(6);
+  }
   onNext() {
     console.log("page2 props", this.props);
     //this.props.history.push("/");
@@ -161,9 +163,7 @@ class Page5 extends Component {
                     delay={Constant.NORMAL_DURATION * 3.7}
                     duration={Constant.NORMAL_DURATION}
                     style={{ opacity: 0 }}>
-                    <div className="boxtext">
-                      {"Formula asam amino 22kkal/30ml\ndengan MCT Oil 33%"}
-                    </div>
+                    <div className="boxtext">{"Formula asam amino \ndengan MCT Oil 33%"}</div>
                   </Tweenful.div>
                 </div>
               </div>

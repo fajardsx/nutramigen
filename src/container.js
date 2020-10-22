@@ -13,11 +13,7 @@ const ContainerSwipe = (props) => {
     props.callPrev();
   };
 
-  return (
-    <Row>
-      <Col>{props.children}</Col>
-    </Row>
-  );
+  return <Col>{props.children}</Col>;
 };
 export default ContainerSwipe;
 {

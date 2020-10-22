@@ -19,6 +19,7 @@ let that = null;
 const App = (props) => {
   const handle = useFullScreenHandle();
   const [fullScreenMode, setFullScreenMode] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth > window.innerHeight) {
@@ -26,6 +27,7 @@ const App = (props) => {
     } else {
       getOrientation("landscape");
     }
+    getPage();
     window.addEventListener(
       "orientationchange",
       function () {
@@ -52,6 +54,13 @@ const App = (props) => {
   );
   async function resetDefault() {
     await reactLocalStorage.set("PAGE", 0);
+  }
+  function getPage() {
+    const curPage = reactLocalStorage.get("PAGE");
+    console.log("curPage ", curPage);
+    if (curPage == 0) {
+      setShowTitle(true);
+    }
   }
   async function getOrientation(type) {
     console.log("Device Orientation ", type);
@@ -80,16 +89,18 @@ const App = (props) => {
           </Routers>
 
           {fullScreenMode == false && (
-            <Button
-              variant="tooglefullscreen"
-              style={{ color: "#fff" }}
-              onClick={fullScreen}></Button>
+            <Button variant="tooglefullscreen" style={{ color: "#fff" }} onClick={fullScreen}>
+              {props.page === 0 && <div id="title">FULL SCREEN</div>}
+            </Button>
           )}
           {fullScreenMode == true && (
             <Button
               variant="tooglefullscreen closeType"
               style={{ color: "#fff" }}
-              onClick={exitfullScreen}></Button>
+              onClick={exitfullScreen}>
+              {" "}
+              {props.page === 0 && <div id="title">FULL SCREEN</div>}
+            </Button>
           )}
         </Container>
       </div>

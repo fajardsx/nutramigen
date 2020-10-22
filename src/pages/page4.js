@@ -77,6 +77,7 @@ class Page4 extends Component {
       currentQuiz: 1,
     });
     this.resetDefault();
+    this.props.updatePage(4);
   }
   async resetDefault() {
     console.log(this.state.scorePage);
@@ -370,12 +371,12 @@ class Page4 extends Component {
       <Col>
         <div className="content1style content4text titleQuiz">SKOR</div>
         {this.cellQuestion2(1, 0, "2 kali/hari", "customquiz2")}
-        {this.cellQuestion2(1, 1, "≥  3 - ≤5 jam/hari,\nsedikit", "customquiz2")}
-        {this.cellQuestion2(1, 2, "1> 5 kali/hari, kira-kira\n1 sendok teh", "customquiz2")}
+        {this.cellQuestion2(1, 1, "≥  3 - ≤5 jam/hari, sedikit", "customquiz2")}
+        {this.cellQuestion2(1, 2, "1> 5 kali/hari, kira-kira 1 sendok teh", "customquiz2")}
         {this.cellQuestion2(
           1,
           3,
-          "> 5 kali/hari, kira-kira\nsetengah porsi di tengah\nwaktu makan",
+          "> 5 kali/hari, kira-kira setengah porsi di tengah waktu makan",
           "customquiz2"
         )}
       </Col>
@@ -384,19 +385,19 @@ class Page4 extends Component {
         {this.cellQuestion2(
           1,
           4,
-          "Muntah berkelanjutan,\nsedikit demi sedikit 30 menit\nsetelah selesai makan",
+          "Muntah berkelanjutan, sedikit demi sedikit 30 menit setelah selesai makan",
           "customquiz2"
         )}
         {this.cellQuestion2(
           1,
           5,
-          "Muntah sebanyak\nsetengah porsi di akhir\nwaktu makan",
+          "Muntah sebanyak setengah porsi di akhir waktu makan",
           "customquiz2"
         )}
         {this.cellQuestion2(
           1,
           6,
-          "Muntah sebanyak yang \ndi makan setiap selesai\nmakan",
+          "Muntah sebanyak yang di makan setiap selesai makan",
           "customquiz2"
         )}
       </Col>
@@ -416,9 +417,9 @@ class Page4 extends Component {
       </Row>
       <Col>
         <div className="content1style content4text titleQuiz">SKOR</div>
-        {this.cellQuestion3(2, 0, 4, "BAB keras", "customquiz2", "eek4")}
-        {this.cellQuestion3(2, 1, 0, "BAB normal", "customquiz2", "eek0")}
-        {this.cellQuestion3(2, 2, 2, "BAB lembek", "customquiz2", "eek2")}
+        {this.cellQuestion3(2, 0, 4, "BAB keras", "customquiz3", "eek4")}
+        {this.cellQuestion3(2, 1, 0, "BAB normal", "customquiz3", "eek0")}
+        {this.cellQuestion3(2, 2, 2, "BAB lembek", "customquiz3", "eek2")}
       </Col>
       <Col>
         <div className="content1style content4text titleQuiz"></div>
@@ -427,10 +428,10 @@ class Page4 extends Component {
           3,
           4,
           "BAB agak cair,\nbukan karena infeksi",
-          "customquiz2",
+          "customquiz3",
           "eek4_2"
         )}
-        {this.cellQuestion3(2, 4, 6, "BAB cair dan\nencer", "customquiz2", "eek6")}
+        {this.cellQuestion3(2, 4, 6, "BAB cair dan\nencer", "customquiz3", "eek6")}
       </Col>
     </Row>
   );

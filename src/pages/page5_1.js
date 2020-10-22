@@ -65,7 +65,9 @@ class Page5_1 extends Component {
       shouldRender: true,
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.updatePage(5);
+  }
   onNext() {
     console.log("page2 props", this.props);
     //this.props.history.push("/");

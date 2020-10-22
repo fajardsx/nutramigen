@@ -55,6 +55,7 @@ class Page3 extends Component {
   }
   componentDidMount() {
     this.resetDefault();
+    this.props.updatePage(2);
   }
   onNext() {
     console.log("page2 props", this.props);

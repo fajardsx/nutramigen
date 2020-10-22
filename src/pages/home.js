@@ -53,6 +53,7 @@ const Home = (props) => {
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
+    props.updatePage(0);
     resetDefault();
     resetDefault(() => setShouldRender(true), 3000);
   }, []);
@@ -74,6 +75,7 @@ const Home = (props) => {
   // render() {
   return (
     <ContainerSwipe callNext={onNext.bind(this)} callPrev={onBack.bind(this)}>
+      <div className="fakeWidth" />
       <div className="observer-demo">
         <Tweenful.div
           className="page1Box"
@@ -107,8 +109,9 @@ const Home = (props) => {
             </div> */}
           </Tweenful.div>
         </Tweenful.div>
+        {navi(null, onNext, true)}
       </div>
-      {navi(null, onNext)}
+
       {refHanyakalangan()}
     </ContainerSwipe>
   );

@@ -173,6 +173,23 @@ li span {
   width: 100vw;
   height: auto;
 }
+.btn-nextscreen #title {
+  color: #f59933;
+  font-family: ITCAvantGradePro_BOLD;
+  position: absolute;
+  left: -5vw;
+  top: 1vh;
+  font-size: calc(1vw + 1vmin);
+}
+.btn-tooglefullscreen #title {
+  color: #f59933;
+  font-family: ITCAvantGradePro_BOLD;
+  position: absolute;
+  left: calc(-1vw - 13vw);
+  top: 1vh;
+  width: 13vw;
+  font-size: calc(1vw + 1vmin);
+}
 /* MOBILE ViEW */
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   .App-header {
@@ -229,5 +246,28 @@ li span {
     right: 2%;
     height: 6vw;
     width: 6vw;
+  }
+  .btn-nextscreen #title {
+    top: 1.5vh;
+    left: -7vw;
+    font-size: calc(1.3vw + 1vmin);
+  }
+  .btn-tooglefullscreen #title {
+    top: 1.5vh;
+    width: 14vw;
+    left: calc(-1vw - 14vw);
+    font-size: calc(1.3vw + 1vmin);
+  }
+}
+@media only screen and (max-width: 1024px) and (max-height: 620px) {
+  .btn-nextscreen #title {
+    left: -6vw;
+    top: 3vh;
+    font-size: calc(1.3vw + 1vmin);
+  }
+  .btn-tooglefullscreen #title {
+    top: 3vh;
+
+    font-size: calc(1.3vw + 1vmin);
   }
 }
