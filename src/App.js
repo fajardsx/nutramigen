@@ -14,6 +14,8 @@ import {
 import history from "./component/history";
 import Constant from "./config/Constant";
 import { refHanyakalangan } from "./component";
+import ReactGA from "react-ga";
+
 let that = null;
 
 const App = (props) => {
@@ -56,6 +58,7 @@ const App = (props) => {
     await reactLocalStorage.set("PAGE", 0);
   }
   function getPage() {
+    ReactGA.initialize(Constant.GA_ID);
     const curPage = reactLocalStorage.get("PAGE");
     console.log("curPage ", curPage);
     if (curPage == 0) {

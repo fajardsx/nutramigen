@@ -106,7 +106,7 @@ class Page5 extends Component {
                 style={{ opacity: 0 }}>
                 <div className="titlestyle2 titlePage5">
                   {
-                    "Percayakan tatalaksana nutrisi alergi susu sapi (ASS) pada\nrangkaian produk Mead Johnson"
+                    "Percayakan tatalaksana nutrisi alergi susu sapi (ASS) pada rangkaian produk Mead Johnson"
                   }
                 </div>
               </Tweenful.div>

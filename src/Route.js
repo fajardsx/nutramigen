@@ -17,6 +17,7 @@ import page5 from "./pages/page5";
 import page4_1 from "./pages/page4_1";
 import page5_1 from "./pages/page5_1";
 import Page2 from "./pages/page2";
+import withPageView from "./pages/withPagesView";
 const RouteApp = (props) => {
   function mapStyles(styles) {
     return {
@@ -38,13 +39,13 @@ const RouteApp = (props) => {
       }}
       atActive={{ opacity: 1, scale: 1, translateX: 0, translateY: 0 }}
       mapStyles={mapStyles}>
-      <Route exact path={ROUTE_KEY[Constant.PAGE_HOME].PATH} component={Home} />
+      <Route exact path={ROUTE_KEY[Constant.PAGE_HOME].PATH} component={withPageView(Home)} />
       {/* <Route path={ROUTE_KEY[Constant.PAGE_2].PATH} component={Page2} /> */}
-      <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={page3} />
-      <Route path={ROUTE_KEY[Constant.PAGE_4].PATH} component={page4_1} />
-      <Route path={ROUTE_KEY[Constant.PAGE_5].PATH} component={page4} />
-      <Route path={ROUTE_KEY[Constant.PAGE_6].PATH} component={page5_1} />
-      <Route path={ROUTE_KEY[Constant.PAGE_7].PATH} component={page5} />
+      <Route path={ROUTE_KEY[Constant.PAGE_3].PATH} component={withPageView(page3)} />
+      <Route path={ROUTE_KEY[Constant.PAGE_4].PATH} component={withPageView(page4_1)} />
+      <Route path={ROUTE_KEY[Constant.PAGE_5].PATH} component={withPageView(page4)} />
+      <Route path={ROUTE_KEY[Constant.PAGE_6].PATH} component={withPageView(page5_1)} />
+      <Route path={ROUTE_KEY[Constant.PAGE_7].PATH} component={withPageView(page5)} />
     </AnimatedSwitch>
   );
 };

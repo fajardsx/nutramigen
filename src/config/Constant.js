@@ -1,6 +1,7 @@
 class Constant {
   static ROOT_URL = "";
   static NORMAL_DURATION = 1300;
+  static GA_ID = "UA-181017785-1";
   static MAX_PAGE = 6;
   //
   static PAGE_HOME = 0;

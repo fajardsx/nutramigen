@@ -372,7 +372,7 @@ ol.horizontal li {
   font-size: calc(10px + 2vmin);
 }
 .SubtitlePage {
-  width: 95vw;
+  width: 90vw;
   height: auto;
   text-align: center;
   padding: 10px 0px;
@@ -599,9 +599,9 @@ ol.horizontal li {
 }
 .answerText {
   text-align: left;
-  font-size: calc(1.3vw + 1vmin);
+  font-size: calc(2vw + 1vmin);
   font-family: ITCAvantGradePro_BOLD;
-  margin: 0 0 0 2vw;
+  margin: 0 0 0 1vw;
 }
 .imagePita {
   height: 20vh;
@@ -662,7 +662,7 @@ ol.horizontal li {
   width: 80%;
 }
 .customquiz3 {
-  font-size: calc(1vw + 1vmin);
+  font-size: calc(2vw + 1vmin);
 }
 .eek0 {
   margin: 0px 10px 0px 5px;
@@ -855,16 +855,16 @@ ol.horizontal li {
 }
 /* PAGE5 */
 .titlePage5 {
-  width: 80vw;
+  width: 78vw;
   height: auto;
   padding: 0px 25px;
-  font-size: calc(1vw + 2vmin);
+  font-size: calc(1.5vw + 2vmin);
 }
 .titlePage6 {
   width: 55vw;
   height: auto;
   padding: 0px 25px;
-  font-size: calc(1vw + 2vmin);
+  font-size: calc(1.6vw + 2vmin);
 }
 .content5text {
   width: auto;
@@ -1081,6 +1081,25 @@ ol.horizontal li {
 }
 /* MOBILE ViEW */
 
+@media only screen and (min-width: 1356px) and (max-width: 1790px) {
+  .answerText {
+    font-size: calc(1.6vw + 1vmin);
+  }
+  .customquiz2 {
+    font-size: calc(1.2vw + 1vmin);
+  }
+  .customquiz3 {
+    font-size: calc(1.8vw + 1vmin);
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1356px) {
+  .answerText {
+    font-size: calc(1.5vw + 1vmin);
+  }
+  .customquiz2 {
+    font-size: calc(1vw + 1vmin);
+  }
+}
 @media only screen and (max-width: 1024px) {
   .titleContainer {
     margin-left: 20vw;
@@ -1496,7 +1515,7 @@ ol.horizontal li {
     padding: 5vw;
   }
 }
-@media only screen and (max-width: 1024px) and (max-height: 768px) {
+@media only screen and (max-width: 1023px) and (max-height: 767px) {
   .quizContainer {
     padding: 2vh 2vw 2vh 5vw;
   }
@@ -1520,6 +1539,9 @@ ol.horizontal li {
   }
   .titleScore {
     left: 41vw;
+  }
+  .answerText {
+    font-size: calc(1vw + 1vmin);
   }
 }
 @media only screen and (max-width: 640px) and (max-height: 360px) {
@@ -1602,8 +1624,9 @@ ol.horizontal li {
     padding: 5px 0;
   }
   .answerText {
-    font-size: calc(1.4vw + 1vmin);
-    margin: 0 0 0 3vw;
+    font-size: calc(1.7vw + 1vmin);
+    margin: 0 0 0 1vw;
+    width: 90%;
   }
   .center .numberAnswerContainer {
     height: 3.5vw;
@@ -1712,11 +1735,11 @@ ol.horizontal li {
     height: 27vh;
   }
   .customquiz2 {
-    font-size: calc(1vw + 1vmin);
+    font-size: calc(1.2vw + 1vmin);
     width: 80%;
   }
   .customquiz3 {
-    font-size: calc(1vw + 1vmin);
+    font-size: calc(1.3vw + 1vmin);
     margin: 0 0 0 1vw;
     width: 50%;
   }
@@ -1867,7 +1890,7 @@ ol.horizontal li {
   }
   .customquiz3 {
     width: 100%;
-    font-size: calc(1.2vw + 1vmin);
+    font-size: calc(2vw + 1vmin);
   }
   .eek0 {
     height: 5vw;

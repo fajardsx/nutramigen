@@ -10,6 +10,8 @@ import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { Button, Col, Row, Table } from "react-bootstrap";
 import { navi, refHanyakalangan } from "../component";
 import { reactLocalStorage } from "reactjs-localstorage";
+import ReactGA from "react-ga";
+
 const propsAnim = {
   delay: 1000,
   render: true,
@@ -100,6 +102,11 @@ class Page4 extends Component {
   onClickHandle = (e, quizIndex) => {
     //console.log("click ", e);
     if (this.state.currentQuiz !== 4) {
+      ReactGA.event({
+        category: `Question Answer`,
+        action: `Select ${e}`,
+        label: `Question ${quizIndex}`,
+      });
       let scorePage = [...this.state.scorePage];
       let score = this.state.score;
       scorePage[quizIndex] = { score: e, id: e };
@@ -115,6 +122,11 @@ class Page4 extends Component {
   onClickHandle3 = (id, e, quizIndex) => {
     //console.log("click ", e);
     if (this.state.currentQuiz !== 4) {
+      ReactGA.event({
+        category: `Question Answer`,
+        action: `Select ${e}`,
+        label: `Question ${quizIndex}`,
+      });
       let scorePage = [...this.state.scorePage];
       let score = this.state.score;
       scorePage[quizIndex] = { score: e, id: id };
@@ -128,6 +140,11 @@ class Page4 extends Component {
     //console.log("part ", part);
     let page4skor = [...this.state.page4skor];
     page4skor[part] = e;
+    ReactGA.event({
+      category: `Question Answer`,
+      action: `Select ${e}`,
+      label: `Question ${quizIndex} part ${part}`,
+    });
     this.setState({ page4skor }, () => {
       if (
         this.state.page4skor[0] > -1 &&
@@ -176,6 +193,11 @@ class Page4 extends Component {
     }
   };
   getScore = () => {
+    ReactGA.event({
+      category: `Question Result`,
+      action: `Result ${this.state.score}`,
+      label: `Result ${this.state.score}`,
+    });
     return this.state.score;
   };
 
@@ -231,7 +253,7 @@ class Page4 extends Component {
               <Tweenful.div {...propsAnim3} render={this.state.currentQuiz < 6 ? true : false}>
                 <div className="content1style SubtitlePage">
                   {
-                    "Isi skor (klik bulatan) di setiap gejala yang dialami pasien dokter dan temukan\nhasil skor di akhir questioner"
+                    "Isi skor (klik bulatan) di setiap gejala yang dialami pasien dokter dan temukan hasil skor di akhir questioner"
                   }
                 </div>
               </Tweenful.div>
@@ -423,15 +445,8 @@ class Page4 extends Component {
       </Col>
       <Col>
         <div className="content1style content4text titleQuiz"></div>
-        {this.cellQuestion3(
-          2,
-          3,
-          4,
-          "BAB agak cair,\nbukan karena infeksi",
-          "customquiz3",
-          "eek4_2"
-        )}
-        {this.cellQuestion3(2, 4, 6, "BAB cair dan\nencer", "customquiz3", "eek6")}
+        {this.cellQuestion3(2, 3, 4, "BAB agak cair,bukan karena infeksi", "customquiz3", "eek4_2")}
+        {this.cellQuestion3(2, 4, 6, "BAB cair dan encer", "customquiz3", "eek6")}
       </Col>
     </Row>
   );

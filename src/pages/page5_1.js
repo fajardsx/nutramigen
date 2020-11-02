@@ -106,7 +106,7 @@ class Page5_1 extends Component {
                 style={{ opacity: 0 }}>
                 <div className="titlestyle2 titlePage6">
                   {"Mengurangi risiko"} <a id="customtext">{"Allergic March"}</a>
-                  {" ketika\nusia 3 tahun "}
+                  {" ketika usia 3 tahun "}
                   <sup>*</sup>
                 </div>
               </Tweenful.div>
